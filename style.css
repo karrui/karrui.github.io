@@ -1,0 +1,266 @@
+body { 
+	color: #f9f9f9;
+	padding-top: 50px; 
+	color: #f9f9f9;
+	font-family: 'Montserrat', sans-serif;
+}
+@media screen and (max-width: 768px) {
+	body { padding-top: 0px; }
+}
+
+p {
+	font-size: 1em;
+}
+
+::-moz-selection { background: #66ff66 }
+::selection { 
+	background: #A7F432;
+	color: #f9f9f9;
+}
+
+a {
+	color: #f64c72;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.profile_pic {
+	width:45%;
+	max-width: 250px;
+}
+
+a:hover {
+	color: #f64c72;
+}
+
+.container-fluid {
+	padding: 0 10%;
+}
+
+.navbar-inverse {
+	background-color: #2f2fa2!important;
+	border-color: #2f2fa2!important;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #f9f9f9;
+}
+
+.navbar-inverse .navbar-toggle:hover .icon-bar {
+	background-color: #f9f9f9;
+	transition: 0.4s all linear;
+}
+
+.navbar-inverse .navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus {
+	background-color: transparent;
+	transition: 0.4s all linear;
+	color: #f64c72;
+	border-color: #f64c72;
+}
+
+.navbar-inverse .navbar-toggle {
+	border-color: #f9f9f9;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #f9f9f9;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: capitalize;
+	font-size: 1.3em;
+	font-weight: 300;
+	padding: 15px 20px 15px 20px;
+}
+
+.nav li {
+	display: inline;
+	color: #f9f9f9;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #f9f9f9;
+	font-family: 'Montserrat', sans-serif;
+	/* font-family: 'Montserrat', sans-serif; */
+	text-transform: lowercase;
+	font-size: 1.3em;
+	font-weight: 300;
+	padding: 15px 20px 15px 20px;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+	color: #fc4445;
+	background-color: #2f2fa2;
+	transition: 0.4s all linear;
+}
+
+.navbar-inverse .navbar-nav .active a {
+	color: #f64c72!important;
+	background-color: #2f2fa2!important;
+	transition: 0.4s all linear;
+}
+
+div .section {
+	position: relative;
+	min-height: 100vh;
+}
+
+h2 .intro-header {
+	max-width: 700;
+}
+
+.status_lookout {
+	padding-top: 5px;
+}
+
+.lookout_msg {
+	color: #f9f9f9;
+}
+
+.section_header {
+	text-align: center;
+	color: #f9f9f9;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: capitalize;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+
+.Blink {
+	padding-left: 0;
+	color: #f64c72;
+	animation: blinker 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+}
+@keyframes blinker {  
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+#main {
+	text-align: left;
+	padding-top: 15%;
+	font-weight: 400;
+}
+
+#even {
+	background-color: #2f2fa2;
+}
+
+#odd {
+	background-color: #242582;
+}
+
+span.about_header {
+	color: #fe8019;
+}
+span.about_highlight {
+	color: #fbf1c7;
+	font-weight: bold;
+}
+
+span.highlight {
+	font-weight: bold;
+}
+
+div .section_title {
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+
+.skill_cat .skill_cat_bullet {
+	margin-left: 0px;
+	font-size: 0.9em;
+}
+
+
+div .section_title > span.background {
+	color: #f64c90;
+}
+
+div .skill_cat {
+	min-height: 150px;
+}
+
+div .skill_cat_label {
+	color: #FEC5DF;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	font-size: 1em;
+	margin-bottom: 10px;
+}
+
+.resume-link {
+	font-size: 1.25em;
+}
+
+/* Scroll to top button styling */
+.scrollTo-top {
+	display: none;
+	position: fixed;
+	bottom: 25px;
+	right: 20px;
+	font-size: 32px;
+	color: #f9f9f99b;
+	border-radius: 0.3rem;
+	z-index: 500;
+}
+.scrollTo-top :hover {
+	transition: 0.4s all linear;
+}
+
+i {
+	padding: 3px 10px;
+}
+
+
+/* Portfolio image styles */
+.project-block {
+	display: inline-block;
+	padding: 2%;
+}
+
+.project-title {
+	margin-top: 2%;
+}
+
+.contact-blurb {
+	text-align: center;
+}
+
+.contact-wrapper {
+	max-width: 450px;
+	margin: auto;
+}
+
+/* form submission styling */
+.btn-info {
+	color: #f9f9f9;
+	background-color: transparent;
+	border-color: #f9f9f9;
+}
+
+.btn-info:hover {
+	color: #f64c72;
+	background-color: transparent;
+	border-color: #f64c72;
+	transition: 0.4s all linear;
+}
+
+/* footer */
+#footer{
+	background: #242582;
+	min-height: 50px;
+	text-align: left;
+	color: #b1b1b1;
+	padding-top: 20px;
+	font-size: 0.8em;
+	line-height: 20px;
+}
+
+.footer_links {
+	float: right;
+}

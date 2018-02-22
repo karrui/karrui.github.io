@@ -1,1040 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.3">
-<title>Lau Kar Rui - Project Portfolio</title>
-<link rel="stylesheet" href="../stylesheets/gh-pages.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Karrui's World</title>
+  <link rel="icon" href="https://i.imgur.com/PK4T152.png" type="image/x-icon">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body class="article">
-<div id="header">
-<h1>Lau Kar Rui - Project Portfolio</h1>
-</div>
-<div id="content">
-<div class="sect1">
-<h2 id="project-iungo"><a class="link" href="#project-iungo">Project: iungo</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>iungo is a desktop address book application used for learning Software Engineering principles. The user interacts with
-it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 6 kLoC.</p>
-</div>
-<div class="paragraph">
-<p><strong>Code contributed</strong>: [<a href="https://github.com/CS2103AUG2017-F11-B3/main/blob/master/collated/main/karrui.md">Functional code</a>]
-[<a href="https://github.com/CS2103AUG2017-F11-B3/main/blob/master/collated/test/karrui.md">Test code</a>]<br></p>
-</div>
-<div class="sect2">
-<h3 id="enhancement-added-setting-of-homepage"><a class="link" href="#enhancement-added-setting-of-homepage">Enhancement Added: Setting of homepage</a></h3>
-<div class="sect3">
-<h4 id="external-behavior"><a class="link" href="#external-behavior">External behavior</a></h4>
-<hr>
-<div class="paragraph">
-<p><mark>Start of Extract [from: User Guide] written primarily by original author, with relevant homepage information by me</mark></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="editing-a-person-code-edit-code-code-e-code"><a class="link" href="#editing-a-person-code-edit-code-code-e-code">Editing a person : <code>edit</code>, <code>e</code></a></h3>
-<div class="paragraph">
-<p><code>UNDOABLE</code><br>
-Edits an existing person in the address book.<br>
-Editable parameters: <code>name</code>, <code>phone</code>, <code>email</code>, <code>address</code>, <code>homepage</code>, <code>remark</code>, <code>tag</code><br>
-Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [h/HOMEPAGE] [re/REMARK] [t/TAG]&#8230;&#8203;</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Edits the person at the specified <code>INDEX</code>. The index refers to the index number shown in the last person listing. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>At least one of the optional fields must be provided.</p>
-</li>
-<li>
-<p>Existing values will be updated to the input values.</p>
-</li>
-<li>
-<p>When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.</p>
-</li>
-<li>
-<p>You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
-</li>
-<li>
-<p>You can reset the homepage to the default homepage by typing <code>h/</code> without specifying any URL after it.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If the name is edited and the contact did not previously have a custom homepage set, the default homepage will switch
- to a Google search of the new name. If there was a custom homepage set, the homepage will not change
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-There is also another way to edit a <code>remark</code> of a person; refer to the <a href="#remark">Remark</a> section
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>edit 1 p/91234567 e/johndoe@example.com</code><br>
-Edits the phone number and email address of the 1st person to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
-</li>
-<li>
-<p><code>e 2 n/Betsy Crower h/http://www.google.com t/</code><br>
-Edits the name of the 2nd person to be <code>Betsy Crower</code>, sets the homepage to be <code><a href="http://www.google.com" class="bare">http://www.google.com</a></code>,  and clears all existing tags.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="adding-a-person-code-add-code-code-a-code"><a class="link" href="#adding-a-person-code-add-code-code-a-code">Adding a person: <code>add</code>, <code>a</code></a></h3>
-<div class="paragraph">
-<p><code>UNDOABLE</code></p>
-</div>
-<div class="paragraph">
-<p>Adds a person to the address book<br>
-Addable parameters: <code>name</code>, <code>phone</code>, <code>email</code>, <code>address</code>, <code>homepage</code>, <code>remark</code>, <code>tag</code><br>
-Format: <code>add n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [h/HOMEPAGE] [re/REMARK] [t/TAG]&#8230;&#8203;</code></p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-A person can have any number of tags (including 0)<br>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-The <code>EMAIL</code>, <code>ADDRESS</code>, <code>HOMEPAGE</code>, <code>REMARK</code> and <code>TAG</code> parameters are OPTIONAL {since v1.5rc}
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-There is also another way to add a <code>remark</code> to a person; refer to the <a href="#remark">Remark</a> section
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-A person will have a default homepage of a Google search of his/her name, if <code>/h</code> was not included in the add command
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>HOMEPAGE</code> provided should be a complete URL, including the <code>http://</code> header.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<code>Avatars</code> cannot be added with this command, they need to be set separately. Refer to the <a href="#avatar">Set avatar</a> section
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01 h/http://www.johndoe.com</code></p>
-</li>
-<li>
-<p><code>add n/Betsy Crowe t/friend a/Newgate Prison p/1234567 t/criminal</code></p>
-</li>
-<li>
-<p><code>a n/Jane Doe p/87654321 e/janede@example.com</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><mark>End of Extract</mark></p>
-</div>
-<hr>
-<div class="sect3">
-<h4 id="justification"><a class="link" href="#justification">Justification</a></h4>
-<div class="paragraph">
-<p>Previous behaviour of both add and edit did not allow the user to set their homepage to something more useful.</p>
-</div>
-<div class="paragraph">
-<p>This implementation now enhances the usability of the application by allowing the user to set relevant homepages for
-each individual contact, such as their Facebook or LinkedIn profiles.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="implementation"><a class="link" href="#implementation">Implementation</a></h4>
-<hr>
-<div class="paragraph">
-<p><mark>Start of Extract [from: Developer Guide]</mark></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="setting-of-homepage-for-a-code-person-code"><a class="link" href="#setting-of-homepage-for-a-code-person-code">Setting of homepage for a <code>Person</code></a></h3>
-<div class="paragraph">
-<p>The mechanism to set a homepage for a specified <code>Person</code> relies on <code>AddCommand</code> and <code>EditCommand</code>.<br>
-It supports both the setting and resetting of a homepage. Resetting a homepage returns the homepage to the
-default homepage of a Google search of the Person&#8217;s full name.<br></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Care is also given to make sure the homepage is changed when the name is edited if the current homepage is the default
-homepage (i.e. not manually set).
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If the homepage has been set before, it will not change until it is reset by <code>h/</code> or a new homepage is manually set.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><code>AddCommand</code> and <code>EditCommand</code> both checks for the <code>h/</code> parameter that indicates whether the current homepage is to
-be modified.<br>
-If <code>h/</code> is parsed to be empty (<code>""</code> by <code>AddCommandParser</code> or <code>EditCommandParser</code>, a <code>Person</code> constructor is used to create
-the person with the default homepage.<br>
-If <code>h/</code> is a non-empty valid URL (determined by <code>Homepage.isValidHomepage</code>, a different <code>Person</code> constructor is invoked
-to create a person with the set homepage.<br>
-<code>AddCommandParser</code> code snippet to determine if user&#8217;s <code>AddCommand</code> contains <code>h/</code> parameter:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">if</span> (arePrefixesPresent(argMultimap, PREFIX_HOMEPAGE)) {
-    Homepage homepage = ParserUtil.parseHomepage(argMultimap.getValue(PREFIX_HOMEPAGE)).get();
-    person = <span class="keyword">new</span> Person(name, phone, email, address, tagList, homepage);
-} <span class="keyword">else</span> {
-    person = <span class="keyword">new</span> Person(name, phone, email, address, tagList);
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><code>EditCommand</code> will create an <code>EditPersonDescriptor</code> with the arguments entered, and pass the resulting
-<code>EditPersonDescriptor</code> into a method to create the updated <code>Person</code>.<br>
-<code>EditCommand.createEditedPerson</code> code snippet to check if homepage has been manually set before:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">private</span> <span class="directive">static</span> Person createEditedPerson(ReadOnlyPerson personToEdit, EditPersonDescriptor editPersonDescriptor) {
-    Homepage originalHomepage = personToEdit.getHomepage();
 
-    Homepage updatedHomepage = editPersonDescriptor.getHomepage().orElse(personToEdit.getHomepage());
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Lau Kar Rui</a>
+      </div>
 
-    <span class="comment">// ... other logic...</span>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
 
-    <span class="keyword">if</span> (updatedHomepage.value.equals(RESET_HOMEPAGE)) {
-        <span class="keyword">return</span> <span class="keyword">new</span> Person(updatedName, updatedPhone, updatedEmail, updatedAddress, updatedTags);
-    }
-    <span class="keyword">if</span> (personToEdit.isHomepageManuallySet() || !(originalHomepage.toString().equals(updatedHomepage.toString()))) {
-        <span class="keyword">return</span> <span class="keyword">new</span> Person(updatedName, updatedPhone, updatedEmail, updatedAddress, updatedTags, updatedHomepage);
-    } <span class="keyword">else</span> {
-        <span class="keyword">return</span> <span class="keyword">new</span> Person(updatedName, updatedPhone, updatedEmail, updatedAddress, updatedTags);
-    }
-}</code></pre>
-</div>
-</div>
-<div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
-<div class="paragraph">
-<p><strong>Aspect:</strong> Implementation of homepage changing when name of contact is changed<br>
-<strong>Alternative 1 (Current choice):</strong> Change homepage to a Google search of the name name when name is changed if homepage
-has not been manually set prior<br>
-<strong>Pros:</strong> Consistent behaviour - if name changes but the default homepage was still referring to the old name, user
-will be confused.<br>
-<strong>Cons:</strong> New developers will have to take note of the extra <code>Homepage</code> check when enhancing or refactoring <code>AddCommand</code> or
-<code>EditCommand</code><br>
-<strong>Alternative 2:</strong> <code>Homepage</code> will not be changed after creation.<br>
-<strong>Pros:</strong> Less complexity in the code, easier for new developers to handle.<br>
-<strong>Cons:</strong> Results in a less user friendly application.</p>
-</div>
-<div class="paragraph">
-<p><mark>End of Extract</mark></p>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect2">
-<h3 id="enhancement-added-sort"><a class="link" href="#enhancement-added-sort">Enhancement Added: Sort</a></h3>
-<div class="sect3">
-<h4 id="external-behavior-2"><a class="link" href="#external-behavior-2">External behavior</a></h4>
-<hr>
-<div class="paragraph">
-<p><mark>Start of Extract [from: User Guide]</mark></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="sorting-the-contact-list-code-sort-code"><a class="link" href="#sorting-the-contact-list-code-sort-code">Sorting the contact list : <code>sort</code></a></h3>
-<div class="paragraph">
-<p><code>UNDOABLE</code><br>
-{since v1.2}<br>
-Sorts the contact list in either [a]scending or [d]escending order and shows the list.<br>
-Format: <code>sort a</code> or <code>sort d</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>The parameters are OPTIONAL. <code>sort</code> on its own will default to a sort in ascending order.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><mark>End of Extract</mark></p>
-</div>
-<hr>
-<div class="sect3">
-<h4 id="justification-2"><a class="link" href="#justification-2">Justification</a></h4>
-<div class="paragraph">
-<p>Previously, the <code>list</code> view of the application would show contacts in the order they were added. For an address book
-with many contacts added, sorting would allow the user (who, for some reason, does not want to use the <code>find</code> command)
-to be able to view the contact list in alphabetical ascending/ descending order.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="implementation-2"><a class="link" href="#implementation-2">Implementation</a></h4>
-<hr>
-<div class="paragraph">
-<p><mark>Start of Extract [from: Developer Guide]</mark></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="sort-mechanism"><a class="link" href="#sort-mechanism">Sort mechanism</a></h3>
-<div class="paragraph">
-<p>The sort mechanism is facilitated by the <code>SortCommand</code>, which is an <code>UndoableCommand</code>.<br>
-<code>SortCommandParser</code> checks for the OPTIONAL <code>a</code> or <code>d</code> parameters, and calls the relevant <code>SortCommand</code>
-to sort the <code>internalList</code> backing the address book.</p>
-</div>
-<div class="paragraph">
-<p>The <code>internalList</code> is sorted using the full name of the contact using Java&#8217;s <code>sort</code>.<br>
-The following sequence diagrams shows how the sort mechanism works:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/SortCommandParserSequenceDiagram.png" alt="SortCommandParserSequenceDiagram">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/SortSequenceDiagram.png" alt="SortSequenceDiagram">
-</div>
-</div>
-<div class="paragraph">
-<p><mark>End of Extract</mark></p>
-</div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="enhancement-added-set-avatar"><a class="link" href="#enhancement-added-set-avatar">Enhancement Added: Set avatar</a></h3>
-<div class="sect3">
-<h4 id="external-behavior-3"><a class="link" href="#external-behavior-3">External behavior</a></h4>
-<hr>
-<div class="paragraph">
-<p><mark>Start of Extract [from: User Guide]</mark></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="setting-an-avatar-for-a-contact-code-setavatar-code-code-sa-code"><a class="link" href="#setting-an-avatar-for-a-contact-code-setavatar-code-code-sa-code">Setting an avatar for a contact : <code>setavatar</code>, <code>sa</code></a></h3>
-<div class="paragraph">
-<p>{since v1.3}<br>
-Sets an avatar for a contact referenced by the index number used in the last person listing.
-If <code>AVATAR_URL</code> is empty; i.e <code>sa INDEX sa/</code>, the current avatar (if any) will be deleted.<br>
-Format: <code>setavatar INDEX sa/[AVATAR_URL]</code><br>
-Alias: <code>sa INDEX sa/[AVATAR_URL]</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This requires an active Internet connection to work, as the application requires an URL to retrieve the image.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This command <strong>cannot</strong> be undone, if <code>sa INDEX sa/</code> is invoked, you will need to add the avatar again with an URL.
-</td>
-</tr>
-</table>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Sets the avatar for the contact at the specified <code>INDEX</code>.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the most recent listing.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
-</li>
-<li>
-<p>If <code>AVATAR_URL</code> is empty; i.e <code>""</code>, the avatar will be removed and the default avatar will be shown</p>
-</li>
-<li>
-<p>The image size <strong>must not be bigger than 50KB</strong>.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>setavatar 1 sa/https://i.imgur.com/xPHOeWL.png</code><br>
-Sets the avatar of the 1st person listed to be the image as referenced by <a href="https://i.imgur.com/xPHOeWL.png" class="bare">https://i.imgur.com/xPHOeWL.png</a>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><mark>End of Extract</mark></p>
-</div>
-<hr>
-<div class="sect3">
-<h4 id="justification-3"><a class="link" href="#justification-3">Justification</a></h4>
-<div class="paragraph">
-<p>Setting an avatar is a natural extension of an address book application</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="implementation-3"><a class="link" href="#implementation-3">Implementation</a></h4>
-<hr>
-<div class="paragraph">
-<p><mark>Start of Extract [from: Developer Guide]</mark></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="avatar-mechanism"><a class="link" href="#avatar-mechanism">Avatar mechanism</a></h3>
-<div class="sect3">
-<h4 id="logic-and-model-implementation"><a class="link" href="#logic-and-model-implementation">Logic and Model implementation</a></h4>
-<div class="paragraph">
-<p>The avatar mechanism is facilitated by the using <code>ImageView</code> in <code>JavaFX</code> to display the avatar in the UI.<br>
-The main driver to create an <code>Avatar</code> is handled by <code>SetAvatarCommandParser</code>, which is invoked after <code>AddressBookParser</code>
-parses the arguments provided by the user.</p>
-</div>
-<div class="paragraph">
-<p>The following sequence diagrams shows how the setting of avatar is achieved:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/SetAvatarCommandParserSequenceDiagram.png" alt="SetAvatarCommandParserSequenceDiagram" width="500">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/SetAvatarCommandSequenceDiagram.png" alt="SetAvatarCommandSequenceDiagram" width="500">
-</div>
-</div>
-<div class="paragraph">
-<p>The arguments needed are <code>INDEX</code> and <code>AVATAR_URL</code>.<br>
-An <code>Avatar</code> object is created using <code>AVATAR_URL</code> before being passed as a parameter into the creation of the <code>SetAvatarCommand</code>
-object.</p>
-</div>
-<div class="paragraph">
-<p>The <code>Avatar</code> class performs a series of validity checks to ensure the URL provided is valid. Validity is defined by having:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>A valid URL OR is empty</p>
-</li>
-<li>
-<p>The image must not be larger than 50KB (due to application slowdowns if the file is too big)</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><code>SetAvatarCommand</code> also performs a series of checks in order to decide the steps to take before editing the <code>Person</code> referenced.<br>
-Below is the code snippet of <code>SetAvatarCommand</code> for the various checks:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"> <span class="directive">public</span> CommandResult executeUndoableCommand() <span class="directive">throws</span> CommandException {
-     <span class="comment">// ... irrelevent logic ...</span>
+  <!-- Main body -->
+  <!-- main section -->
+  <div id="even">
+    <div class="container-fluid">
+      <div class='row'>
+        <div class="col-lg-12 col-md-12">
+          <div class="section" id='main'>
+            <div>
+              <h1 class='intro-header'>Hello World! </h1>
+              <br>
+              <h2 class="intro-header">I am
+                <span class="highlight"> Lau Kar Rui</span>, currently a Year 2 undergraduate at the National University of Singapore</h2>
+              <div class='intro-text'>
+                <p>I am extremely passionate about software engineering and building things. Check out my
+                  <a href="https://www.github.com/karrui">GitHub</a>
+                </p>
+                <p>Interested to find out more about me? Get in touch:
+                  <a href='mailto:karrui.lau@gmail.com'>karrui.lau@gmail.com</a>
+                </p>
 
-     <span class="comment">// avatar refers to the avatar object created during the construction of SetAvatarCommand</span>
-     <span class="keyword">if</span> (<span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>.equals(avatar.path) &amp;&amp; !<span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>.equals(personToSetAvatarPath)) { <span class="comment">// delete image from storage</span>
-         ProcessImage.removeImageFromStorage(personToSetAvatarPath);
-     } <span class="keyword">else</span> <span class="keyword">if</span> (!<span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>.equals(personToSetAvatarPath)) {   <span class="comment">// has a previously set avatar, remove first before processing</span>
-         ProcessImage.removeImageFromStorage(personToSetAvatarPath);
-     }
- }</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The utility class <code>ProcessImageUtil</code> is used to process images retrieved from the Internet. It contains
-methods such as <code>writeImageToStorage(&#8230;&#8203;)</code> and <code>removeImageFromStorage(&#8230;&#8203;)</code> which stores the image into the
-<code>DEFAULT_AVATAR_FILE_LOCATION</code> and removes the image respectively.<br>
-Below is the code snippet of the write method, which calls a helper method <code>getUniqueFile()</code> to generate a File with a unique path:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="type">void</span> writeImageToStorage(<span class="predefined-type">String</span> path) {
-    <span class="comment">// ... irrelevant ...</span>
+                <div class="status_lookout">
+                  <a href="./karrui_resume.pdf">
 
-    <span class="predefined-type">URL</span> url = <span class="keyword">new</span> <span class="predefined-type">URL</span>(path);
-    <span class="predefined-type">BufferedImage</span> image = <span class="predefined-type">ImageIO</span>.read(url);
+                    <i class="fa fa-circle text-danger Blink"></i>
+                    <span class="lookout_msg">
+                      I am also currently on the lookout for an internship!
+                    </span>
 
-    <span class="predefined-type">File</span> file = getUniqueFile();
-    <span class="predefined-type">ImageIO</span>.write(image, <span class="string"><span class="delimiter">&quot;</span><span class="content">jpg</span><span class="delimiter">&quot;</span></span>, file);
-    logger.info(<span class="string"><span class="delimiter">&quot;</span><span class="content">Image from </span><span class="delimiter">&quot;</span></span> + path + <span class="string"><span class="delimiter">&quot;</span><span class="content"> written to to file: </span><span class="delimiter">&quot;</span></span> + file.getName());
-    <span class="keyword">return</span> file.getPath().replace(<span class="string"><span class="delimiter">'</span><span class="char">\\</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">/</span><span class="delimiter">'</span></span>);
-}
+                  </a>
+                </div>
 
-<span class="predefined-type">File</span> getUniqueFile() {
-    <span class="predefined-type">Random</span> random = <span class="keyword">new</span> <span class="predefined-type">Random</span>();
-    <span class="comment">// random.nextInt() + checking if file exists assures uniqueness of name of created file</span>
-    <span class="predefined-type">File</span> file = <span class="keyword">new</span> <span class="predefined-type">File</span>(DEFAULT_AVATAR_FILE_LOCATION + random.nextInt() + <span class="string"><span class="delimiter">&quot;</span><span class="content">.jpg</span><span class="delimiter">&quot;</span></span>);
-    <span class="keyword">while</span> (file.exists()) {
-        file = <span class="keyword">new</span> <span class="predefined-type">File</span>(DEFAULT_AVATAR_FILE_LOCATION + random.nextInt() + <span class="string"><span class="delimiter">&quot;</span><span class="content">.jpg</span><span class="delimiter">&quot;</span></span>);
-    }
-    <span class="keyword">return</span> file;
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>As <code>SetAvatarCommand</code> is a <code>Command</code>, <code>removeImageFromStorage(&#8230;&#8203;)</code> deletes the image once invoked.<br>
-Below is the code snippet of the remove method:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="type">void</span> removeImageFromStorage(<span class="predefined-type">String</span> path) {
-    <span class="predefined-type">File</span> file = <span class="keyword">new</span> <span class="predefined-type">File</span>(path);
-    <span class="keyword">if</span> (file.delete()) {
-         logger.info(<span class="string"><span class="delimiter">&quot;</span><span class="content">File at path: </span><span class="delimiter">&quot;</span></span> + path + <span class="string"><span class="delimiter">&quot;</span><span class="content"> is deleted</span><span class="delimiter">&quot;</span></span>);
-    } <span class="keyword">else</span> {
-         logger.severe(<span class="string"><span class="delimiter">&quot;</span><span class="content">Failed to delete file at </span><span class="delimiter">&quot;</span></span> + path);
-    }
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="storage-implementation"><a class="link" href="#storage-implementation">Storage implementation</a></h4>
-<div class="paragraph">
-<p><code>AvatarStorage</code> is called during <code>Model</code> initialization to check for the existence of an <code>avatar</code> folder.
-If the folder does not exist, the folder will be created to store the avatar images.<br>
-Below is the code snippet for the relevant code flow:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">private</span> Model initModelManager(Storage storage, UserPrefs userPrefs, AvatarStorage avatarStorage) {
-    <span class="comment">// ... other logic ...</span>
+                <!-- <img class="profile_pic" src="https://avatars0.githubusercontent.com/u/22133008?v=4" alt=""> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    avatarDirectoryPath = userPrefs.getAvatarFileDirectoryPath();
-    <span class="keyword">if</span> (!<span class="keyword">new</span> <span class="predefined-type">File</span>(avatarDirectoryPath).exists()) {
-        logger.info(<span class="string"><span class="delimiter">&quot;</span><span class="content">Directory not found. Will be attempting to create new directory</span><span class="delimiter">&quot;</span></span>);
-        avatarStorage.createDirectory(avatarDirectoryPath);
-    }
-    <span class="comment">// ... other logic ...</span>
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="ui-implementation"><a class="link" href="#ui-implementation">Ui implementation</a></h4>
-<div class="paragraph">
-<p>The <code>PersonCard</code> is updated via the <code>bindListeners()</code>. The loose sequence diagram is displayed below:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/SetAvatarUISequenceDiagram.png" alt="SetAvatarUISequenceDiagram">
-</div>
-</div>
-<div class="paragraph">
-<p>Below is a more in-depth look at <code>initImage()</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">/**
- * Binds the correct image to the person.
- * If url is &quot;&quot;, default display picture will be assigned, else image from URL will be assigned
- */</span>
-<span class="directive">private</span> <span class="type">void</span> initImage(ReadOnlyPerson person) {
-    <span class="predefined-type">String</span> path = person.getAvatar().toString();
-    <span class="predefined-type">Image</span> image;
-    <span class="keyword">if</span> (!<span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>.equals(path)) {   <span class="comment">// not default image</span>
-        <span class="predefined-type">File</span> file = <span class="keyword">new</span> <span class="predefined-type">File</span>(path);
-        image = <span class="keyword">new</span> <span class="predefined-type">Image</span>(file.toURI().toString());
-        avatar.setImage(image);
-        avatar.setFitHeight(<span class="integer">90</span>);
-        avatar.setPreserveRatio(<span class="predefined-constant">true</span>);
-        avatar.setCache(<span class="predefined-constant">true</span>);
-    }
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">Design Considerations</a></h4>
-<div class="paragraph">
-<p><strong>Aspect:</strong> Saving of image from URL to local disk<br>
-<strong>Alternative 1 (Current choice):</strong> File is saved during construction of <code>Avatar</code> in <code>SetAvatarCommand</code>, before the Avatar is set to a <code>Person</code><br>
-<strong>Pros:</strong> Filepath (not URL) of avatar class will be ascertained during binding to <code>editedPerson</code><br>
-<strong>Cons:</strong> New developers might find it hard to follow the sequence<br>
-<strong>Alternative 2:</strong> Only save file after <code>Avatar</code> has been assigned to <code>Person</code>, assign URL as path when assigning before file is saved.<br>
-<strong>Pros:</strong> Easier for developers to follow the sequence flow<br>
-<strong>Cons:</strong> Possibility of program crashing (<code>NullPointerException</code>) if URL is added and Internet connection is disrupted before file creation is invoked.<br></p>
-</div>
-<hr>
-<div class="paragraph">
-<p><strong>Aspect:</strong> Image source<br>
-<strong>Alternative 1 (Current choice):</strong> Only accept image URL from the Internet<br>
-<strong>Pros:</strong> Easy for user to input source; Check guarantees validity of image from "HEAD" request<br>
-<strong>Cons:</strong> Requires internet connection.<br>
-<strong>Alternative 2:</strong> Accept images from user&#8217;s local disk in addition from the Internet<br>
-<strong>Pros:</strong> Natural extension of a function to set avatar.<br>
-<strong>Cons:</strong> Difficult for user to input source; difficulty in writing code to ascertain if file entered is entered.</p>
-</div>
-<div class="paragraph">
-<p><mark>End of Extract</mark></p>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect2">
-<h3 id="enhancement-added-recent-contacts"><a class="link" href="#enhancement-added-recent-contacts">Enhancement Added: Recent contacts</a></h3>
-<div class="sect3">
-<h4 id="external-behavior-4"><a class="link" href="#external-behavior-4">External behavior</a></h4>
-<hr>
-<div class="paragraph">
-<p><mark>Start of Extract [from: User Guide]</mark></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="display-recently-searched-contacts-code-recent-code-code-rc-code"><a class="link" href="#display-recently-searched-contacts-code-recent-code-code-rc-code">Display recently searched contacts : <code>recent</code>, <code>rc</code></a></h3>
-<div class="paragraph">
-<p>{since v1.4)<br>
-Shows a list of all contacts that was returned by <code>find</code> command since application was started.<br>
-Format: <code>recent</code></p>
-</div>
-<div class="paragraph">
-<p><mark>End of Extract</mark></p>
-</div>
-<hr>
-<div class="sect3">
-<h4 id="justification-4"><a class="link" href="#justification-4">Justification</a></h4>
-<div class="paragraph">
-<p>Finding recently searched for contacts is a natural extension of an address book application, provides convenience to user.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="implementation-4"><a class="link" href="#implementation-4">Implementation</a></h4>
-<hr>
-<div class="paragraph">
-<p><mark>Start of Extract [from: Developer Guide]</mark></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="recent-command-mechanism"><a class="link" href="#recent-command-mechanism">Recent command mechanism</a></h3>
-<div class="paragraph">
-<p><code>RecentCommand</code> uses a backing list from the <code>FindHistory</code> class to create predicates on which the <code>Model</code> will filter on and display to the user.<br>
-<code>FindHistory</code> is implemented with a LinkedList which is updated when relevant commands change persons returned by <code>FindCommand</code>.</p>
-</div>
-<div class="paragraph">
-<p>When <code>FindCommand</code> is invoked, the <code>LogicManager</code> adds the entired <code>FilteredList</code> into the LinkedList in <code>FindHistory</code>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/RecentCommandLogicManagerSequenceDiagram.png" alt="RecentCommandLogicManagerSequenceDiagram">
-</div>
-</div>
-<div class="paragraph">
-<p>When <code>EditCommand</code> is invoked, the <code>set</code> method in <code>FindHistory</code> is invoked to replace the old <code>Person</code> with the edited <code>Person</code>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/RecentCommandEditCommandSequenceDiagram.png" alt="RecentCommandEditCommandSequenceDiagram">
-</div>
-</div>
-<div class="paragraph">
-<p>The code snippet for the <code>set</code> method follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">/**
-* Changes {@code person} to {@code newPerson}
-*/</span>
-<span class="directive">public</span> <span class="type">void</span> set(ReadOnlyPerson person, ReadOnlyPerson newPerson) {
-    <span class="keyword">if</span> (userFindHistory.contains(person)) {
-        userFindHistory.set(userFindHistory.indexOf(person), newPerson);
-    }
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>When <code>DeleteCommand</code> is invoked, the <code>deletePerson</code> method in <code>FindHistory</code> is invoked to remove the person from the LinkedList.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/RecentCommandDeleteCommandSequenceDiagram.png" alt="RecentCommandDeleteCommandSequenceDiagram">
-</div>
-</div>
-<div class="paragraph">
-<p>A snapshot of the the LinkedList is also saved into <code>previousFindHistory</code> when an <code>UndoableCommand</code> is invoked, to preserve the
-changes in the backing list.</p>
-</div>
-<div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">Design Considerations</a></h4>
-<div class="paragraph">
-<p><strong>Aspect:</strong> Order of list view to show to user<br>
-<strong>Alternative 1:</strong> Shows the list reverse order of persons returned by FindCommand (similar to HistoryCommand)<br>
-<strong>Pros:</strong> Intuitive for user, better UX<br>
-<strong>Cons:</strong> Requires an additional hook to <code>Model</code> to swap between two lists (addressbook and findhistory), additional complexity and chance of regressions<br>
-<strong>Alternative 2 (Current choice):</strong> Shows the list in current order of addressbook backing list.<br>
-<strong>Pros:</strong> Follows design logic of all commands that shows the list to user, allowing new developers to easily understand implementation.<br>
-<strong>Cons:</strong> Worse UX.</p>
-</div>
-<hr>
-<div class="paragraph">
-<p><strong>Aspect:</strong> Data structure to store <code>FindHistory</code> backing list<br>
-<strong>Alternative 1 (Current choice):</strong> LinkedList<br>
-<strong>Pros:</strong> Preserves order, fast add, able to use set to preserve ordering when mutating elements. Good for future implementations (if any) of
-returning the list in order user searched for contacts.<br>
-<strong>Cons:</strong> Slightly slower than competition when traversing and deleting.<br>
-<strong>Alternative 2:</strong> LinkedHashMap or LinkedHashSet<br>
-<strong>Pros:</strong> Keeps order, faster than LinkedList<br>
-<strong>Cons:</strong> Unable to use set, which is used when user edits a person.</p>
-</div>
-<div class="paragraph">
-<p><mark>End of Extract</mark></p>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect2">
-<h3 id="enhancement-added-optional-add-command"><a class="link" href="#enhancement-added-optional-add-command">Enhancement Added: Optional add command</a></h3>
-<div class="sect3">
-<h4 id="external-behavior-5"><a class="link" href="#external-behavior-5">External behavior</a></h4>
-<hr>
-<div class="paragraph">
-<p><mark>Start of Extract [from: User Guide] written by original author as my enhancement is just a modification of the method</mark></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="adding-a-person-code-add-code-code-a-code-2"><a class="link" href="#adding-a-person-code-add-code-code-a-code-2">Adding a person: <code>add</code>, <code>a</code></a></h3>
-<div class="paragraph">
-<p><code>UNDOABLE</code></p>
-</div>
-<div class="paragraph">
-<p>Adds a person to the address book<br>
-Addable parameters: <code>name</code>, <code>phone</code>, <code>email</code>, <code>address</code>, <code>homepage</code>, <code>remark</code>, <code>tag</code><br>
-Format: <code>add n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [h/HOMEPAGE] [re/REMARK] [t/TAG]&#8230;&#8203;</code></p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-A person can have any number of tags (including 0)<br>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-The <code>EMAIL</code>, <code>ADDRESS</code>, <code>HOMEPAGE</code>, <code>REMARK</code> and <code>TAG</code> parameters are OPTIONAL {since v1.5rc}
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-There is also another way to add a <code>remark</code> to a person; refer to the <a href="#remark">Remark</a> section
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-A person will have a default homepage of a Google search of his/her name, if <code>/h</code> was not included in the add command
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>HOMEPAGE</code> provided should be a complete URL, including the <code>http://</code> header.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<code>Avatars</code> cannot be added with this command, they need to be set separately. Refer to the <a href="#avatar">Set avatar</a> section
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01 h/http://www.johndoe.com</code></p>
-</li>
-<li>
-<p><code>add n/Betsy Crowe t/friend a/Newgate Prison p/1234567 t/criminal</code></p>
-</li>
-<li>
-<p><code>a n/Jane Doe p/87654321 e/janede@example.com</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><mark>End of Extract</mark></p>
-</div>
-<hr>
-<div class="sect3">
-<h4 id="justification-5"><a class="link" href="#justification-5">Justification</a></h4>
-<div class="paragraph">
-<p>User might not always have all the details of the contact he/she wants to add. Only the name and phone number is compulsory.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="implementation-5"><a class="link" href="#implementation-5">Implementation</a></h4>
-<hr>
-<div class="paragraph">
-<p><mark>Start of Extract [from: Developer Guide]</mark></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="optional-add-mechanism"><a class="link" href="#optional-add-mechanism">Optional Add mechanism</a></h3>
-<div class="paragraph">
-<p>The enhancement is based on the existing <code>AddCommandParser</code>, with a more relaxed restriction of only the <code>Name</code> and <code>Phone</code> fields being
-mandatory.</p>
-</div>
-<div class="paragraph">
-<p>The relevant modifications are as follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> AddCommand parse(<span class="predefined-type">String</span> args) <span class="directive">throws</span> <span class="exception">ParseException</span> {
-    <span class="comment">// ... other logic ...</span>
-    <span class="comment">// only name and phone are compulsory</span>
-    <span class="keyword">if</span> (!arePrefixesPresent(argMultimap, PREFIX_NAME, PREFIX_PHONE)) {
-        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="exception">ParseException</span>(<span class="predefined-type">String</span>.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));
-    }
-    <span class="keyword">try</span> {
-        <span class="predefined-type">Name</span> name = ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME)).get();
-        Phone phone = ParserUtil.parsePhone(argMultimap.getValue(PREFIX_PHONE)).get();
-        Email email = ParserUtil.parseEmail(ParserUtil.parseValues(argMultimap.getValue(PREFIX_EMAIL))).get();
-        Address address = ParserUtil.parseAddress(ParserUtil.parseValues(argMultimap.getValue(PREFIX_ADDRESS))).get();
-        <span class="predefined-type">Set</span>&lt;Tag&gt; tagList = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));
-        <span class="comment">// ... other logic ...</span>
-        <span class="keyword">return</span> <span class="keyword">new</span> AddCommand(person);
-    } <span class="keyword">catch</span> (IllegalValueException ive) {
-        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="exception">ParseException</span>(ive.getMessage(), ive);
-    }
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><code>parse()</code> utilizes <code>ParserUtil.parseValues(&#8230;&#8203;)</code> to return an empty string if no such parameters were entered by the user, as seen below:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="directive">static</span> Optional&lt;<span class="predefined-type">String</span>&gt; parseValues(Optional&lt;<span class="predefined-type">String</span>&gt; value) {
-    <span class="keyword">return</span> Optional.of(value.orElse(STRING_IF_EMPTY));
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The relevant parameters are then passed to create a <code>Person</code> object.</p>
-</div>
-<div class="paragraph">
-<p><mark>End of Extract</mark></p>
-</div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="other-contributions"><a class="link" href="#other-contributions">Other contributions</a></h3>
-<div class="sect3">
-<h4 id="iungo"><a class="link" href="#iungo">iungo</a></h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Wrote user stories</p>
-</li>
-<li>
-<p>Wrote SampleData.xml and TestScript.adoc (Pull requests <a href="https://github.com/CS2103AUG2017-F11-B3/main/pull/92">#92</a>)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="volunteering-own-features-for-reuse"><a class="link" href="#volunteering-own-features-for-reuse">Volunteering own features for reuse</a></h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Recent command:</strong> [<a href="https://github.com/nus-cs2103-AY1718S1/forum/issues/168">forum post</a>]<br></p>
-</li>
-<li>
-<p><strong>Sort functionality:</strong> [<a href="https://github.com/nus-cs2103-AY1718S1/forum/issues/117">forum post</a>]<br></p>
-</li>
-<li>
-<p><strong>Avatar command:</strong> [<a href="https://github.com/nus-cs2103-AY1718S1/forum/issues/120#issuecomment-339020868">forum post</a>]</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="helped-in-finding-bugs"><a class="link" href="#helped-in-finding-bugs">Helped in finding bugs</a></h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Bug discovered in AB4: [<a href="https://github.com/se-edu/addressbook-level4/issues/727">forum post</a>]<br></p>
-</li>
-<li>
-<p>Bugs discovered in Planno: [<a href="https://github.com/CS2103AUG2017-W14-B4/main/issues/created_by/karrui">issues page</a>]</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="helping-others-with-issues"><a class="link" href="#helping-others-with-issues">Helping others with issues</a></h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Posts: [<a href="https://github.com/nus-cs2103-AY1718S1/forum/issues?utf8=%E2%9C%93&amp;q=is%3Aissue%20commenter%3Akarrui">issues page</a>]</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="footer">
-<div id="footer-text">
-Last updated 2017-11-13 15:39:41 +00:00
-</div>
-</div>
+  <!-- about section -->
+  <div id="odd">
+    <div class="container-fluid">
+      <div class="section" id='about'>
+        <div>
+          <br>
+          <br>
+          <br>
+          <p class="section_header">About me</p>
+          <div class="row">
+            <div class="col-lg-3 col-sm-3 col-xs-12">
+              <div class="section_title">
+                <span class="background">Background</span>
+              </div>
+            </div>
+            <div class="col-lg-9 col-sm-9 col-xs-12">
+              <div class="section_content">
+                <p>I'm a second year undergraduate at the
+                  <a href="http://www.nus.edu.sg/">National University of Singapore</a>, with an expected graduation date in January 2021. I am passionate
+                  about embarking on learning projects where I dive deep into a new technology and try my best to create.</p>
+                <p>Even though my main interest is in software engineering and artificial intelligence, I find design interaction
+                  a fascinating field, where engineering and design combines to create an efficient, beautiful, and most
+                  importantly usable product. I hope I have managed to do that with my personal website, at least!</p>
+                <p>When I'm not spending time tinkering with my projects (i.e in front a computer), I can be found playing wonderful
+                  board games like Carcassonne, Castles of Burgundy, and most recently Gloomhaven.</p>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row">
+            <div class="col-lg-3 col-sm-3 col-xs-12">
+              <div class="section_title">
+                <span class="background">Skills</span>
+              </div>
+            </div>
+            <div class="col-lg-9 col-sm-9 col-xs-12">
+              <div class="section_content">
+
+                <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 skill_cat">
+                    <div class="skill_cat_label">Languages</div>
+                    <ul>
+                      <li class="skill_cat_bullet">Java</li>
+                      <li class="skill_cat_bullet">Swift</li>
+                      <li class="skill_cat_bullet">C</li>
+                      <li class="skill_cat_bullet">SQL</li>
+                      <li class="skill_cat_bullet">HTML/CSS</li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 skill_cat">
+                    <div class="skill_cat_label">Tools</div>
+                    <ul>
+                      <li class="skill_cat_bullet">Git/ Github</li>
+                      <li class="skill_cat_bullet">Bash</li>
+                      <li class="skill_cat_bullet">Node.js</li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 skill_cat">
+                    <div class="skill_cat_label">Design</div>
+                    <ul>
+                      <li class="skill_cat_bullet">Adobe Photoshop</li>
+                      <li class="skill_cat_bullet">Sketch</li>
+                      <li class="skill_cat_bullet">InVision</li>
+                      <li class="skill_cat_bullet">Prototyping</li>
+                    </ul>
+
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 skill_cat">
+                    <div class="skill_cat_label">Misc</div>
+                    <ul>
+                      <li class="skill_cat_bullet">Fluent in English</li>
+                      <li class="skill_cat_bullet">Conversatonal in Mandarin</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-3 col-sm-3 col-xs-12">
+
+            </div>
+            <div class="col-lg-9 col-sm-9 col-xs-12">
+              <div class="section_content">
+                <a href="./karrui_resume.pdf" class="resume-link">
+                  View My Resume
+                  <i class="fa fa-angle-right"></i>
+                </a>
+                <br>
+                <br>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- portfolio section -->
+  <div id="even">
+    <div class="container-fluid">
+      <div class="section" id='portfolio'>
+        <div>
+          <br>
+          <br>
+          <br>
+          <p class="section_header">Project Portfolio</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-sm-6 project-block">
+            <img src="https://i.imgur.com/HEkVw1W.png" class="img-responsive" alt="iungo">
+            <p class="project-title">
+              <b>
+                <a href="https://github.com/CS2103AUG2017-F11-B3/main">iungo</a>
+              </b>&nbsp;&nbsp; A software engineering project for CS2103.
+              <br>iungo aims to be an addressbook software for command-line aficionados. If you hate using the mouse for every
+              small action, this application is for you!
+              <br> Documentation of what I did can be found <a href="./docs/karrui-iungo-contribution">here</a>
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-sm-6 project-block">
+            <img src="https://i.imgur.com/WgIH9Rd.jpg" class="img-responsive" alt="SimiMovies">
+            <p class="project-title">
+              <a href="https://github.com/karrui/SimiMovies">
+                <b>SimiMovies</b>
+              </a> &nbsp;&nbsp; A proof of concept movie showtimes application to teach myself Swift and PostgreSQL.
+              <br> The icon was designed by me and made use of
+              <a href="https://github.com/ivantjh/sgShowtimesApi">a generous soul's</a> scraper for the data.
+            </p>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class="col-lg-6 col-sm-6 project-block">
+            <img src="https://i.imgur.com/Bd8n4LF.jpg" class="img-responsive" alt="Taskrr">
+            <p class="project-title">
+              <b> Taskrr </b>&nbsp;&nbsp; A task matching (think TaskRabbit) web project for CS2102.
+              <br>Was building this web application that uses a variety of full stack technologies like Express and Node.js integrated
+              with PostgreSQL. Unfortunately scrapped and went with another technology to complete the project, but still
+              serves as a good showcase!
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-sm-6 project-block">
+            <img src="https://i.imgur.com/zizMEs9.jpg" class="img-responsive" alt="No alt text! Are you disappointed...?">
+            <p class="project-title">
+              <b> This website </b>&nbsp;&nbsp; ... Yeah.
+              <br>Ignore that Chrome does not exist on an iPad. It's still responsive, ok!!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact section -->
+  <div id="odd">
+    <div class="container-fluid">
+      <div class='row'>
+        <div class="section" id='contact'>
+          <div>
+            <br>
+            <br>
+            <br>
+            <p class="section_header"> Contact me</p>
+            <p class="contact-blurb">Want to collaborate or just have comments for me? Drop me a message!</p>
+            <div class="row">
+              <div class="contact-wrapper">
+
+                <form id="contactform" method="POST">
+                  <input type="hidden" name="_subject" value="New post!" />
+                  <input type="text" name="_gotcha" style="display:none" />
+
+                  <div class="form-group">
+                    <label for="InputName">your name</label>
+                    <input type="text" class="form-control" name="name" id="InputName" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="InputEmail">your email</label>
+
+                    <input type="email" class="form-control" id="InputEmail" name="_replyto" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="InputMessage">your message</label>
+
+                    <textarea name="InputMessage" id="InputMessage" class="form-control" rows="3" required></textarea>
+                  </div>
+                  <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+
+                </form>
+                <script>
+                  var contactform = document.getElementById('contactform');
+                  contactform.setAttribute('action', '//formspree.io/' + 'karrui.lau' + '@' + 'gmail' + '.' + 'com');
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="" class="scrollTo-top" style="display: inline;">
+    <i class="fa fa-angle-double-up"></i>
+  </a>
+
+  <!-- FOOTER -->
+  <div id="odd">
+    <div class="container-fluid">
+      <div class='row'>
+        <div id='footer'>
+          © 2018 Lau Kar Rui
+          <span class="footer_links">
+            <a href="mailto:karrui.lau@gmail.com">>>Email</a>&nbsp;&nbsp;
+            <a href="https://www.github.com/karrui/">>>GitHub</a>&nbsp;&nbsp;
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script>
+    var $root = $('html, body');
+
+    $('a[href^="#"]').click(function () {
+      $root.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+
+      return false;
+    });
+
+    $('.navbar-collapse ul li a').click(function () {
+      $('.navbar-toggle:visible').click();
+    });
+
+    $(function () {
+      var viewPortWidth = $(window).width();
+
+      $(window).scroll(function (event) {
+        event.preventDefault();
+        if (viewPortWidth > 480) {
+          if ($(this).scrollTop() > 180) {
+            $('.scrollTo-top').fadeIn();
+          } else {
+            $('.scrollTo-top').fadeOut();
+          }
+        }
+      });
+
+      $('.scrollTo-top').click(function (event) {
+        $('html, body').animate({ scrollTop: 0 }, 600);
+        event.preventDefault();
+      });
+    });
+  </script>
 </body>
+
 </html>
