@@ -36,11 +36,16 @@ a:hover {
 	color: #f64c72;
 }
 
+.row {
+	padding: 0 10%;
+}
+
 .container-fluid {
 	padding: 0 10%;
 }
 
 .navbar-inverse {
+	padding-right: 30px;
 	background-color: #2f2fa2!important;
 	border-color: #2f2fa2!important;
 }
@@ -54,8 +59,7 @@ a:hover {
 	transition: 0.4s all linear;
 }
 
-.navbar-inverse .navbar-brand:hover, 
-.navbar-inverse .navbar-brand:focus {
+.navbar-inverse .navbar-brand:hover {
 	background-color: transparent;
 	transition: 0.4s all linear;
 	color: #f64c72;
@@ -72,7 +76,7 @@ a:hover {
 	text-transform: capitalize;
 	font-size: 1.3em;
 	font-weight: 300;
-	padding: 15px 20px 15px 20px;
+	padding: 15px 20px 15px 40px;
 }
 
 .nav li {
