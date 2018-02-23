@@ -246,12 +246,24 @@ div .skill_cat {
 	min-height: 150px;
 }
 
-div .skill_cat_label {
+div .skill_cat_label, div .project_title_label {
 	color: #FEC5DF;
 	text-transform: uppercase;
 	letter-spacing: 1.2px;
 	font-size: 1em;
 	margin-bottom: 10px;
+}
+
+div .project-description {
+	color: #FFF;
+	opacity: .9;
+}
+
+div .project_misc {
+	font-family: Inconsolata,monospace;
+    font-size: .85em;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 
