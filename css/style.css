@@ -9,12 +9,6 @@ p {
 	font-size: 1em;
 }
 
-::-moz-selection { background: #66ff66 }
-::selection { 
-	background: #A7F432;
-	color: #f9f9f9;
-}
-
 a {
 	color: #f64c72;
 }
@@ -265,6 +259,23 @@ div .project_misc {
     display: inline-block;
     margin-top: 10px;
 }
+
+/* technology not real button */
+.btn-static {
+	margin-top: 5px;
+	display: inline-block;
+    padding: 3px 6px;
+    margin-bottom: 0;
+    font-size: 0.8em;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+	border: 1px solid transparent;
+    border-radius: 2px;
+	color: #bdc6ff;
+	background-color: transparent;
+	border-color: #bdc6ff;
+  }
 
 
 
