@@ -4,9 +4,6 @@ body {
 	color: #f9f9f9;
 	font-family: 'Montserrat', sans-serif;
 }
-@media screen and (max-width: 768px) {
-	body { padding-top: 0px; }
-}
 
 p {
 	font-size: 1em;
@@ -40,16 +37,31 @@ a:visited {
 	color: #f64c72;
 }
 
-.row {
-	padding: 0 10%;
+.container-fluid {
+	max-width: 75%;
 }
 
-.container-fluid {
-	padding: 0 10%;
+
+/* styling for small screens */
+
+@media screen and (max-width: 768px) {
+	body { padding-top: 0px; }
+}
+
+@media (max-width: 768px) {
+	.container-fluid {
+		width: 90%;
+		max-width: 90%;
+	}
+	
+	.container {
+		width: 100;
+		max-width: 100%;
+	}
 }
 
 .navbar-inverse {
-	padding-right: 30px;
+	/* padding-right: 30px; */
 	background-color: #2f2fa2!important;
 	border-color: #2f2fa2!important;
 }
@@ -80,7 +92,6 @@ a:visited {
 	text-transform: capitalize;
 	font-size: 1.3em;
 	font-weight: 300;
-	padding: 15px 20px 15px 40px;
 }
 
 .nav li {
@@ -150,7 +161,7 @@ h2 .intro-header {
 }
 
 .down-arrow {
-	margin-top: 15%;
+	margin-top: 10%;
 	text-align: center;
 	font-size: 3em;
 	
@@ -191,7 +202,7 @@ h2 .intro-header {
 
 #main {
 	text-align: left;
-	padding-top: 15%;
+	padding-top: 12%;
 	font-weight: 400;
 }
 
@@ -223,6 +234,7 @@ div .section_title {
 
 .skill_cat .skill_cat_bullet {
 	margin-left: 0px;
+	margin-bottom: 2px;
 	font-size: 0.9em;
 }
 
@@ -242,6 +254,8 @@ div .skill_cat_label {
 	font-size: 1em;
 	margin-bottom: 10px;
 }
+
+
 
 .resume-link {
 	font-size: 1.25em;
@@ -283,11 +297,30 @@ i {
 }
 
 .contact-wrapper {
-	max-width: 450px;
-	margin: auto;
+	max-width: 500px;
 }
 
 /* form submission styling */
+.form-control {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #f9f9f9;
+	border-radius: 0px;
+	color: #f9f9f9;
+}
+
+textarea[name=InputMessage] {
+	resize: none;
+}
+
+.form-control:focus {
+	border-color: transparent;
+	border-bottom: 2px solid #f64c72;
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
 .btn-info {
 	color: #f9f9f9;
 	background-color: transparent;
