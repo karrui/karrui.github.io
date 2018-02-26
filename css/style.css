@@ -225,14 +225,14 @@ div .section_title {
 }
 
 
-.skill_cat .skill_cat_bullet {
+.skill_cat .skill_cat_bullet, .course_cat_bullet {
 	margin-left: 0px;
 	margin-bottom: 2px;
 	font-size: 0.9em;
 }
 
 
-div .section_title > span.background {
+div .section_title > .background {
 	color: #f64c90;
 }
 
@@ -240,12 +240,28 @@ div .skill_cat {
 	min-height: 150px;
 }
 
-div .skill_cat_label, div .project_title_label {
+div .skill_cat_label, div .project_title_label, div .course_cat_label {
 	color: #FEC5DF;
 	text-transform: uppercase;
 	letter-spacing: 1.2px;
 	font-size: 1em;
 	margin-bottom: 10px;
+}
+
+.course_id {
+	display: inline-block;
+    padding: 2px 2px;
+    font-size: 0.8em;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+	color: #bdc6ff;
+}
+
+.in_progress {
+	display: inline-block;
+    font-size: 0.7em;
+	color: #b1b6d5;
 }
 
 div .project-description {
