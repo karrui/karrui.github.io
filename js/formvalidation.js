@@ -120,6 +120,7 @@
 			errorMsg.fadeIn(800);
 			// alert("You have some fields that need tending to.");
 		} else {
+			var successMsg = $('#error_message').text("Thanks for the submission!");
 			var contactform = document.getElementById('contactform');
 			contactform.submit();
 		}
