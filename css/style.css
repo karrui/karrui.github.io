@@ -345,6 +345,7 @@ i {
 	border-bottom: 1px solid #f9f9f9;
 	border-radius: 0px;
 	color: #f9f9f9;
+	box-shadow: none;
 }
 
 textarea[name=InputMessage] {
@@ -370,6 +371,29 @@ textarea[name=InputMessage] {
 	background-color: transparent;
 	border-color: #f64c72;
 	transition: 0.4s all linear;
+}
+
+.btn-info:focus {
+	color: #f64c72;
+	background-color: transparent;
+	border-color: #f64c72;
+	transition: 0.4s all linear;
+}
+
+.invalid-feedback {
+	padding-top: 5px;
+	font-size: 0.8em;
+	color: #f64c72;
+}
+
+.form-group {
+	min-height: 79px;
+}
+
+#error_message {
+	color: #f64c72;
+	text-align: center;
+	min-height: 20px;
 }
 
 /* footer */
