@@ -199,11 +199,11 @@ div .down-arrow {
 	font-weight: 400;
 }
 
-#even {
+.even {
 	background-color: #2f2fa2;
 }
 
-#odd {
+.odd {
 	background-color: #242582;
 }
 
