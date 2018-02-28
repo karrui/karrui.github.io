@@ -120,7 +120,8 @@
 			errorMsg.fadeIn(800);
 			// alert("You have some fields that need tending to.");
 		} else {
-			$(this).closest('form').submit();
+			var contactform = document.getElementById('contactform');
+			contactform.submit();
 		}
 		e.preventDefault();
 	});
