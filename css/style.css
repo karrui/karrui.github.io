@@ -1,7 +1,6 @@
 body { 
 	color: #f9f9f9;
 	padding-top: 50px; 
-	color: #f9f9f9;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -36,6 +35,16 @@ a:visited {
 	max-width: 1080px;
 }
 
+.fa-github {
+	font-size: 1.3em;
+	margin-bottom: 0px;
+	/* color: #f9f9f9; */
+}
+
+.fa-envelope-open {
+	font-size: 1.1em;
+	margin-bottom: 2px;
+}
 
 /* styling for small screens */
 
