@@ -8,26 +8,9 @@ p {
 	font-size: 1em;
 }
 
-a {
-	color: #f64c72;
-}
-
 ul {
 	list-style: none;
 	padding: 0;
-}
-
-.profile_pic {
-	width:45%;
-	max-width: 250px;
-}
-
-a:hover {
-	color: #f64c72;
-}
-
-a:visited {
-	color: #f64c72;
 }
 
 .container-fluid {
@@ -84,6 +67,7 @@ a:visited {
 	transition: 0.4s all linear;
 	color: #f64c72;
 	border-color: #f64c72;
+	border-bottom: none;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -117,12 +101,28 @@ a:visited {
 	color: #fc4445;
 	background-color: #2f2fa2;
 	transition: 0.4s all linear;
+	border-bottom: none;
 }
 
 .navbar-inverse .navbar-nav .active a {
 	color: #f64c72!important;
 	background-color: #2f2fa2!important;
 	transition: 0.4s all linear;
+}
+
+a {
+	color: #97c6ff;
+}
+
+a:hover {
+	color: #97c6ff;
+	text-decoration: none;
+	border-bottom: 3px solid #bfdcff;
+	transition: 0.4s;
+}
+
+a:visited {
+	color: #97c6ff;
 }
 
 div .landing {
@@ -165,8 +165,7 @@ div .down-arrow {
 	bottom: 5%;  /* position the bottom edge of the element at the middle of the parent */
 	left: 50%; /* position the left edge of the element at the middle of the parent */
 	transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
-	font-size: 3em;
-	
+	font-size: 3em;	
 }
 
 .down-arrow > a {
@@ -176,6 +175,7 @@ div .down-arrow {
 .down-arrow > a:hover {
 	color: #f64c72;
 	transition: 0.4s all linear;
+	border-bottom: none;
 }
 
 .Bounce {
@@ -200,6 +200,17 @@ div .down-arrow {
 @keyframes blinker {  
 	from { opacity: 1; }
 	to { opacity: 0; }
+}
+
+.resume-link {
+	text-align: center;
+	color: #f9f9f9;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	margin-bottom: 10px;
 }
 
 #main {
@@ -259,17 +270,17 @@ div .skill_cat_label, div .project_title_label, div .course_cat_label {
 
 .course_id {
 	display: inline-block;
-    padding: 2px 2px;
-    font-size: 0.8em;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
+	padding: 2px 2px;
+	font-size: 0.8em;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
 	color: #bdc6ff;
 }
 
 .in_progress {
 	display: inline-block;
-    font-size: 0.7em;
+	font-size: 0.7em;
 	color: #b1b6d5;
 }
 
@@ -280,33 +291,33 @@ div .project-description {
 
 div .project_misc {
 	font-family: Inconsolata,monospace;
-    font-size: .85em;
-    display: inline-block;
-    margin-top: 10px;
+	font-size: .85em;
+	display: inline-block;
+	margin-top: 10px;
 }
 
 /* technology not real button */
 .btn-static {
 	margin-top: 5px;
 	display: inline-block;
-    padding: 3px 6px;
-    margin-bottom: 0;
-    font-size: 0.8em;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
+	padding: 3px 6px;
+	margin-bottom: 0;
+	font-size: 0.8em;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
 	border: 1px solid transparent;
-    border-radius: 2px;
+	border-radius: 2px;
 	color: #bdc6ff;
 	background-color: transparent;
 	border-color: #bdc6ff;
-  }
-
-
-
-.resume-link {
-	font-size: 1.25em;
 }
+
+.col-centered{
+	float: none;
+	margin: 0 auto;
+}
+
 
 /* Scroll to top button styling */
 .scrollTo-top {
