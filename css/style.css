@@ -313,9 +313,69 @@ div .project_misc {
 	border-color: #bdc6ff;
 }
 
-.col-centered{
-	float: none;
-	margin: 0 auto;
+/* Hover effect */
+
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+.hovereffect .overlay {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+	top: auto;
+	bottom: 0;
+	padding: 1em;
+	height: 4.75em;
+	color: #3c4a50;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+	visibility: hidden;
+
+}
+
+
+.hovereffect p.icon-links a {
+	float: right;
+	color: #6f848d;
+	font-size: 2em;
+	padding-left: 5px;
+	padding-right: 5px;
+	background: #f9f9f9a7;
+}
+
+.hovereffect:hover p.icon-links a:hover {
+	color: #1b2f48;
+	border-bottom: none;
+}
+
+.hovereffect h2,
+.hovereffect p.icon-links a {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+	visibility: visible;
+}
+
+.hovereffect:hover .overlay,
+.hovereffect:hover p.icon-links a {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.hovereffect:hover, p.icon-links,
+.hovereffect:active, p.icon-links {
+	-webkit-transition-delay: 0.4s;
+	transition-delay: 0.4s;
 }
 
 
