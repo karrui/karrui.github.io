@@ -1,6 +1,6 @@
-body { 
+body {
 	color: #f9f9f9;
-	padding-top: 50px; 
+	padding-top: 50px;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -40,7 +40,7 @@ ul {
 		width: 90%;
 		max-width: 90%;
 	}
-	
+
 	.container {
 		width: 100;
 		max-width: 100%;
@@ -157,7 +157,7 @@ div .section {
 	font-size: 0.7em;
 	padding-left: 0;
 	color: #f64c72;
-	animation: blinker 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+	animation: blinker 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;
 }
 
 div .down-arrow {
@@ -165,7 +165,7 @@ div .down-arrow {
 	bottom: 5%;  /* position the bottom edge of the element at the middle of the parent */
 	left: 50%; /* position the left edge of the element at the middle of the parent */
 	transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
-	font-size: 3em;	
+	font-size: 3em;
 }
 
 .down-arrow > a {
@@ -197,7 +197,7 @@ div .down-arrow {
 }
 
 
-@keyframes blinker {  
+@keyframes blinker {
 	from { opacity: 1; }
 	to { opacity: 0; }
 }
@@ -315,7 +315,7 @@ div .project_misc {
 
 /* Hover effect */
 
-.hovereffect {
+.overlayeffect {
     width: 100%;
     height: 100%;
     float: left;
@@ -324,7 +324,8 @@ div .project_misc {
     text-align: center;
     cursor: default;
 }
-.hovereffect .overlay {
+
+.overlay {
     width: 100%;
     position: absolute;
     overflow: hidden;
@@ -334,16 +335,16 @@ div .project_misc {
 	padding: 1em;
 	height: 4.75em;
 	color: #3c4a50;
-	-webkit-transition: -webkit-transform 0.35s;
+	/* -webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,100%,0);
-	transform: translate3d(0,100%,0);
-	visibility: hidden;
+	transform: translate3d(0,100%,0); */
+	/* visibility: hidden; */
 
 }
 
 
-.hovereffect p.icon-links a {
+.overlay p.icon-links a {
 	float: right;
 	color: #6f848d;
 	font-size: 2em;
@@ -352,30 +353,9 @@ div .project_misc {
 	background: #f9f9f9a7;
 }
 
-.hovereffect:hover p.icon-links a:hover {
+.overlay:hover p.icon-links a:hover {
 	color: #1b2f48;
 	border-bottom: none;
-}
-
-.hovereffect h2,
-.hovereffect p.icon-links a {
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,200%,0);
-	transform: translate3d(0,200%,0);
-	visibility: visible;
-}
-
-.hovereffect:hover .overlay,
-.hovereffect:hover p.icon-links a {
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-
-.hovereffect:hover, p.icon-links,
-.hovereffect:active, p.icon-links {
-	-webkit-transition-delay: 0.4s;
-	transition-delay: 0.4s;
 }
 
 
