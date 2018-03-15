@@ -160,16 +160,13 @@ div .section {
 	animation: blinker 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;
 }
 
-div .down-arrow {
-	position: absolute;
-	bottom: 5%;  /* position the bottom edge of the element at the middle of the parent */
-	left: 50%; /* position the left edge of the element at the middle of the parent */
-	transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+.down-arrow {
+	margin-top: 50px;
 	font-size: 3em;
 }
 
 .down-arrow > a {
-	color: #f9f9f97f;
+	color: #f9f9f9;
 }
 
 .down-arrow > a:hover {
@@ -335,12 +332,6 @@ div .project_misc {
 	padding: 1em;
 	height: 4.75em;
 	color: #3c4a50;
-	/* -webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,100%,0);
-	transform: translate3d(0,100%,0); */
-	/* visibility: hidden; */
-
 }
 
 
