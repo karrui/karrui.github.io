@@ -4,6 +4,11 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 36px;
+}
+
 p {
 	font-size: 1em;
 }
@@ -11,6 +16,10 @@ p {
 ul {
 	list-style: none;
 	padding: 0;
+}
+
+.row {
+	padding-bottom: 5px;
 }
 
 .container-fluid {
@@ -22,11 +31,6 @@ ul {
 	font-size: 1.3em;
 	margin-bottom: 0px;
 	/* color: #f9f9f9; */
-}
-
-.fa-envelope-open {
-	font-size: 1.1em;
-	margin-bottom: 2px;
 }
 
 /* styling for small screens */
@@ -125,13 +129,47 @@ a:visited {
 	color: #97c6ff;
 }
 
-div .landing {
-	position: relative;
-	min-height: 100vh;
+@media (max-width: 1280px) {
+	div .landing {
+		position: relative;
+		min-height: 100vh;
+	}
+	.down-arrow {
+		margin-top: 20%;
+		font-size: 3em;
+	}
+
+	.down-arrow > a {
+		color: #f9f9f9;
+	}
+
+	.down-arrow > a:hover {
+		color: #f64c72;
+		transition: 0.4s all linear;
+		border-bottom: none;
+	}
+
+	.Bounce {
+		-moz-animation: bounce 2s 1;
+		-webkit-animation: bounce 2s 1;
+		animation: bounce 2s 1;
+	}
+}
+
+@media (min-width: 1280px) {
+	div .landing {
+		min-height: 55vh;
+		overflow: auto;
+	}
+
+	.down-arrow {
+		visibility: hidden;
+	}
 }
 
 div .section {
-	padding-bottom: 5%;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 .status_lookout {
@@ -144,11 +182,12 @@ div .section {
 
 .section_header {
 	text-align: center;
+	padding-bottom: 25px;
 	color: #f9f9f9;
 	font-family: 'Montserrat', sans-serif;
 	text-transform: capitalize;
-	font-size: 1.5em;
-	font-weight: 300;
+	font-size: 1.8em;
+	font-weight: 500;
 }
 
 
@@ -158,27 +197,6 @@ div .section {
 	padding-left: 0;
 	color: #f64c72;
 	animation: blinker 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;
-}
-
-.down-arrow {
-	margin-top: 50px;
-	font-size: 3em;
-}
-
-.down-arrow > a {
-	color: #f9f9f9;
-}
-
-.down-arrow > a:hover {
-	color: #f64c72;
-	transition: 0.4s all linear;
-	border-bottom: none;
-}
-
-.Bounce {
-	-moz-animation: bounce 2s 1;
-	-webkit-animation: bounce 2s 1;
-	animation: bounce 2s 1;
 }
 
 @keyframes bounce {
@@ -200,6 +218,7 @@ div .section {
 }
 
 .resume-link {
+	padding-top: 15px;
 	text-align: center;
 	color: #f9f9f9;
 	font-family: 'Montserrat', sans-serif;
@@ -233,14 +252,13 @@ span.about_highlight {
 }
 
 span.highlight {
-	font-weight: bold;
+	font-weight: 600;
 }
 
 div .section_title {
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
 }
-
 
 .skill_cat .skill_cat_bullet, .course_cat_bullet {
 	margin-left: 0px;
