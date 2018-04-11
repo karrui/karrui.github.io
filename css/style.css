@@ -463,6 +463,19 @@ textarea[name=InputMessage] {
 	min-height: 20px;
 }
 
+.contact-icons {
+	text-align: center;
+	font-size: 3em;
+}
+
+.contact-icons a {
+	color: #f9f9f9!important;
+}
+
+.contact-icons a:visited {
+	color: #f9f9f9!important;
+}
+
 /* footer */
 #footer{
 	background: #242582;
