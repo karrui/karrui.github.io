@@ -96,7 +96,7 @@ ul {
 	background-color: #f9f9f9;
 }
 
-.navbar-inverse .navbar-toggle:hover .icon-bar {
+.navbar-inverse .navbar-toggle:hover{
 	background-color: #f9f9f9;
 	transition: 0.4s all linear;
 }
@@ -107,6 +107,31 @@ ul {
 	color: #f64c72;
 	border-color: #f64c72;
 	border-bottom: none;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+	background-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle:hover .icon-bar{
+	background-color: #F9f9f9;
+}
+
+
+.navbar-inverse .navbar-toggle:focus {
+	background-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle:focus .icon-bar {
+	background-color: #f9f9f9;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+	border: none;
+}
+
+.navbar-collapse {
+	text-align: center;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -134,15 +159,19 @@ ul {
 
 .navbar-inverse .navbar-nav li a:hover {
 	color: #fc4445;
-	background-color: #2f2fa2;
+	background-color: transparent;
 	transition: 0.4s all linear;
 	border-bottom: none;
 }
 
 .navbar-inverse .navbar-nav .active a {
 	color: #f64c72!important;
-	background-color: #2f2fa2!important;
+	background-color: transparent;
 	transition: 0.4s all linear;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+	background-color: transparent;
 }
 
 a {
