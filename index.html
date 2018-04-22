@@ -7,10 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Lau Kar Rui.</title>
   <link rel="icon" href="./images/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <link rel="stylesheet" href="./css/style.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,500,600' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Roboto+Mono|Rubik:700,900" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -29,6 +29,9 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="./docs/karrui_resume.pdf">Résumé</a>
+          </li>
           <li>
             <a href="#about">About</a>
           </li>
@@ -50,21 +53,28 @@
       <div class='row'>
         <div class="col-lg-12 col-md-12">
           <div class="landing section" id='main'>
-
             <h1 class='intro-header'>Hello world! </h1>
-            <h2 class="intro-header">I am
-              <span class="highlight"> Lau Kar Rui</span>, currently a Year 3 undergraduate at the National University of Singapore</h2>
+            <h2 class="intro-tagline">I'm currently a Year 3 undergraduate at the National University of Singapore, studying Computer Science</h2>
             <div class='intro-text'>
-              <p>My projected graduation year is 2020.</p>
+              <!-- <p>My projected graduation year is <span class="highlight">2020</span>.</p> -->
               <p>I am extremely passionate about software engineering and building things. Check out my
-                <a href="https://www.github.com/karrui">GitHub</a>
+                <a href="https://www.github.com/karrui">GitHub</a>.
               </p>
-              <p>Interested to find out more about me? Get in touch:
-                <a href='mailto:karrui.lau@gmail.com'> karrui.lau@gmail.com</a>
-              </p>
+              <div class="contact-icons">
+                <a href="https://github.com/karrui">
+                  <i class="fab fa-github-alt"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/karrui/">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:karrui.lau@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                </a>
+              </div>
             </div>
 
-            <div class="status_lookout">
+            <!-- <div class="status_lookout">
               <i class="fa fa-circle text-danger Blink"></i>
               <a href="./docs/karrui_resume.pdf">
                 <span class="lookout_msg">
@@ -72,17 +82,19 @@
                 </span>
 
               </a>
-            </div>
+            </div> -->
             <!-- <img class="profile_pic" src="https://avatars0.githubusercontent.com/u/22133008?v=4" alt=""> -->
-            <div class="down-arrow text-center">
+            <p class="find-more">
               <a href="#about">
-                <i class="far fa-hand-point-down Bounce"></i>
+                Find out more about me and my projects
+                <br>
+                <i class="fas fa-caret-down"></i>
               </a>
-            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <!-- about section -->
@@ -93,6 +105,7 @@
           <p class="section_header">About me</p>
         </div>
 
+        <!-- Start background -->
         <div class="row">
           <div class="col-lg-3 col-sm-3 col-xs-12">
             <div class="section_title">
@@ -114,7 +127,9 @@
             </div>
           </div>
         </div>
+        <!-- End background -->
 
+        <!-- Start skills -->
         <div class="row">
           <div class="col-lg-3 col-sm-3 col-xs-12">
             <div class="section_title">
@@ -167,7 +182,9 @@
             </div>
           </div>
         </div>
+        <!-- End skills -->
 
+        <!-- Start of coursework section -->
         <div class="row">
           <div class="col-lg-3 col-sm-3 col-xs-12">
             <div class="section_title">
@@ -245,14 +262,17 @@
             </div>
           </div>
         </div>
-
+        <!-- End coursework -->
+        <!-- Start resume -->
         <div class="row">
           <div class="resume-link">
-            <a href="./docs/karrui_resume.pdf">
-              View My Resume
+            <a class="btn btn-info" href="./docs/karrui_resume.pdf">
+              View my resume
+              <!-- <i class="far fa-file-alt resume-icon"></i> -->
             </a>
           </div>
         </div>
+        <!-- End resume -->
       </div>
     </div>
   </div>
@@ -456,10 +476,19 @@
       <div class="section" id='contact'>
         <div>
           <p class="section_header"> Contact me</p>
+          <div class="avatar">
+            <img src="./images/avatar.jpg">
+          </div>
           <div class="contact-icons">
-            <a href="https://github.com/karrui"><i class="fab fa-github-alt"></i></a>
-            <a href="https://www.linkedin.com/in/karrui/"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:karrui.lau@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/karrui">
+              <i class="fab fa-github-alt"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/karrui/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:karrui.lau@gmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
           <p class="contact-blurb">Want to collaborate or just have comments for me? Drop me a message!</p>
         </div>
