@@ -339,6 +339,21 @@ div .section_title {
 	letter-spacing: 1.5px;
 }
 
+.skill {
+	display: inline-block;
+}
+
+.skill .skill-icon {
+	text-align: center;
+	font-size: 4em;		
+}
+
+.skill .skill-name {
+	margin-top: 5px;
+	font-size: .8em;
+	text-align: center;
+}
+
 .skill_cat, .course_cat_bullet {
 	margin-left: 0px;
 	margin-bottom: 2px;
