@@ -127,6 +127,10 @@ ul {
     font-weight: 500;
     text-align: left;
   }
+
+  .footer_links {
+    text-align: left;
+  }
 }
 
 @media (min-width: 768px) {
@@ -150,6 +154,10 @@ ul {
     font-family: "Rubik", sans-serif;
     font-weight: 500;
     text-align: right;
+  }
+
+  .footer_links {
+    float: right;
   }
 }
 
@@ -598,10 +606,6 @@ textarea[name="InputMessage"] {
   padding-bottom: 10px;
   font-size: 0.8em;
   line-height: 20px;
-}
-
-.footer_links {
-  float: right;
 }
 
 canvas {
