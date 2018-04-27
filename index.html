@@ -7,43 +7,39 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Lau Kar Rui.</title>
   <link rel="icon" href="./images/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Roboto+Mono|Rubik:700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Roboto+Mono|Rubik:500,700,900" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#main">Lau Kar Rui</a>
-      </div>
+    <a class="navbar-brand" href="#main">Lau Kar Rui</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="./docs/karrui_resume.pdf">Résumé</a>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./docs/karrui_resume.pdf">Résumé</a>
           </li>
-          <li>
-            <a href="#about">About</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
           </li>
-          <li>
-            <a href="#experience">Experience</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
           </li>
-          <li>
-            <a href="#portfolio">Portfolio</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
-          <li>
-            <a href="#contact">Contact</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -55,7 +51,7 @@
   <div class="even">
     <div class="container-fluid">
       <div class='row'>
-        <div class="col-lg-12 col-md-12">
+        <div class="col">
           <div id="particles-js"></div>
           <div class="landing section" id='main'>
             <h1 class='intro-header'>Hello world! </h1>
@@ -66,9 +62,9 @@
                 <a href="https://www.github.com/karrui">GitHub</a>.
               </p>
               <div class="contact-icons">
-                <a href="https://github.com/karrui"><i class="fab fa-github-alt"></i></a>
-                <a href="https://www.linkedin.com/in/karrui/"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:karrui.lau@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a data-toggle="tooltip" data-placement="bottom" title="GitHub&#013;&#010;@karrui" href="https://github.com/karrui"><i class="fab fa-github-alt"></i></a>
+                <a data-toggle="tooltip" data-placement="bottom" title="LinkedIn&#013;&#010;Lau Kar Rui" href="https://www.linkedin.com/in/karrui/"><i class="fab fa-linkedin"></i></a>
+                <a data-toggle="tooltip" data-placement="bottom" title="Email me!&#013;&#010;karrui.lau [at] gmail [dot] com" href="mailto:karrui.lau@gmail.com"><i class="fas fa-envelope"></i></a>
               </div>
             </div>
 
@@ -105,12 +101,12 @@
 
         <!-- Start background -->
         <div class="row">
-          <div class="col-lg-2 col-sm-2 col-xs-12">
+          <div class="col-xl-2 col-xs-12">
             <div class="section_title">
               <span class="background">Background</span>
             </div>
           </div>
-          <div class="col-lg-10 col-sm-10 col-xs-12">
+          <div class="col-xl-10 col-xs-12">
             <div class="section_content">
               <p>I'm a third year undergraduate at the
                 <a href="http://www.nus.edu.sg/">National University of Singapore</a>, with expected graduation in 2020. I am passionate about embarking on
@@ -128,38 +124,38 @@
 
         <!-- Start skills -->
         <div class="row">
-          <div class="col-lg-2 col-sm-2 col-xs-12">
+          <div class="col-xl-2 col-xs-12">
             <div class="section_title">
               <span class="background">Skills</span>
             </div>
           </div>
-          <div class="col-lg-10 col-sm-10 col-xs-12">
+          <div class="col-xl-10 col-xs-12">
             <div class="section_content">
               <div class="project_title_label">Not terrible at</div>
               <div class="row">
-                <div class="col-lg-12">
+                <div class="col mx-auto">
                   <div class="skill">
-                    <i class="skill-icon devicon-java-plain"></i>
+                    <i data-toggle="tooltip" data-placement="bottom" title="2 years" class="skill-icon devicon-java-plain"></i>
                     <p class="skill-name">Java</p>
                   </div>
                   <div class="skill">
-                    <i class="skill-icon devicon-postgresql-plain"></i>
+                    <i data-toggle="tooltip" data-placement="bottom" title="6 months" class="skill-icon devicon-postgresql-plain"></i>
                     <p class="skill-name">PostgreSQL</p>
                   </div>
                   <div class="skill">
-                    <i class="skill-icon devicon-git-plain"></i>
+                    <i data-toggle="tooltip" data-placement="bottom" title="2 years" class="skill-icon devicon-git-plain"></i>
                     <p class="skill-name">git</p>
                   </div>
                   <div class="skill">
-                    <i class="skill-icon devicon-nodejs-plain"></i>
+                    <i data-toggle="tooltip" data-placement="bottom" title="6 months" class="skill-icon devicon-nodejs-plain"></i>
                     <p class="skill-name">Node.js</p>
                   </div>
                   <div class="skill">
-                    <i class="skill-icon devicon-express-original"></i>
+                    <i data-toggle="tooltip" data-placement="bottom" title="6 months" class="skill-icon devicon-express-original"></i>
                     <p class="skill-name">Express.js</p>
                   </div>
                   <div class="skill">
-                    <i class="skill-icon devicon-c-plain"></i>
+                    <i data-toggle="tooltip" data-placement="bottom" title="1 year" class="skill-icon devicon-c-plain"></i>
                     <p class="skill-name">C</p>
                   </div>
                   <div class="skill">
@@ -175,13 +171,13 @@
 
               <div class="project_title_label">Learning</div>
               <div class="row">
-                <div class="col-lg-12">
+                <div class="col mx-auto">
                   <div class="skill">
-                    <i class="skill-icon devicon-swift-plain"></i>
+                    <i data-toggle="tooltip" data-placement="bottom" title="2 months" class="skill-icon devicon-swift-plain"></i>
                     <p class="skill-name">Swift</p>
                   </div>
                   <div class="skill">
-                    <i class="skill-icon devicon-javascript-plain"></i>
+                    <i data-toggle="tooltip" data-placement="bottom" title="6 months" class="skill-icon devicon-javascript-plain"></i>
                     <p class="skill-name">JavaScript</p>
                   </div>
                 </div>
@@ -196,22 +192,22 @@
     <div class="even">
       <div class="container-fluid">
         <div class="section" id="experience">
-          <div class="row">
+          <div class="col">
             <p class="section_header">Experience</p>
           </div>
 
           <div class="row vertical-align">
-            <div class="col-lg-2 col-sm-2 col-xs-12">
+            <div class="col-xl-2 col-xs-12">
               <div class="company-logo-section">
                 <img class="logo" src="./images/nus-logo.png">
               </div>
             </div>
-            <div class="col-lg-10 col-sm-10 col-xs-12">
+            <div class="col-xl-10 col-xs-12 mx-auto">
               <div class="section_content">
                 <p class="job-title">Teaching Assistant</p>
-                <div class="company-details">
-                  <span class="company">National University of Singapore</span>
-                  <span class="timeline">Jan - May 2018</span>
+                <div class="company-details row">
+                  <span class="company col">National University of Singapore</span>
+                  <span class="timeline col">Jan - May 2018</span>
                 </div>
                 <ul>
                   <li>> Conduct weekly tutorials on Software Engineering</li>
@@ -223,7 +219,7 @@
             </div>
           </div>
           <!-- Start resume -->
-          <div class="row">
+          <div class="col">
             <div class="resume-link">
               <a class="btn btn-info" href="./docs/karrui_resume.pdf">
                 View my resume
@@ -324,20 +320,20 @@
   <div class="odd">
     <div class="container-fluid">
       <div class="section" id='portfolio'>
-        <div class="row">
+        <div class="col">
           <p class="section_header">Project Portfolio</p>
         </div>
 
         <div class="row">
-          <div class="col-lg-6 col-sm-6 project-block">
+          <div class="col-lg-6 project-block">
             <div class="overlayeffect">
-              <img src="./images/iungo.jpg" class="img-responsive" alt="iungo">
+              <img src="./images/iungo.jpg" class="img-fluid" alt="iungo">
               <div class="overlay">
                 <p class="icon-links">
-                  <a href="https://github.com/CS2103AUG2017-F11-B3/main">
+                  <a data-toggle="tooltip" data-placement="bottom" title="source code" href="https://github.com/CS2103AUG2017-F11-B3/main">
                     <i class="fab fa-github-alt"></i>
                   </a>
-                  <a href="./docs/karrui-iungo-contribution.pdf">
+                  <a data-toggle="tooltip" data-placement="bottom" title="documentation" href="./docs/karrui-iungo-contribution.pdf">
                     <i class="far fa-file-alt"></i>
                   </a>
                 </p>
@@ -362,15 +358,15 @@
             </p>
           </div>
 
-          <div class="col-lg-6 col-sm-6 project-block">
+          <div class="col-lg-6 project-block">
             <div class="overlayeffect">
-              <img src="./images/taskrr.jpg" class="img-responsive" alt="Taskrr">
+              <img src="./images/taskrr.jpg" class="img-fluid" alt="Taskrr">
               <div class="overlay">
                 <p class="icon-links">
-                  <a href="https://github.com/karrui/taskrr">
+                  <a data-toggle="tooltip" data-placement="bottom" title="source code" href="https://github.com/karrui/taskrr">
                     <i class="fab fa-github-alt"></i>
                   </a>
-                  <a href="./docs/taskrr-report.pdf">
+                  <a data-toggle="tooltip" data-placement="bottom" title="documentation" href="./docs/taskrr-report.pdf">
                     <i class="far fa-file-alt"></i>
                   </a>
                 </p>
@@ -400,12 +396,12 @@
         </div>
 
         <div class='row'>
-          <div class="col-lg-6 col-sm-6 project-block">
+          <div class="col-lg-6 project-block">
             <div class="overlayeffect">
-              <img src="./images/simimovies.jpg" class="img-responsive" alt="SimiMovies">
+              <img src="./images/simimovies.jpg" class="img-fluid" alt="SimiMovies">
               <div class="overlay">
                 <p class="icon-links">
-                  <a href="https://github.com/karrui/SimiMovies">
+                  <a data-toggle="tooltip" data-placement="bottom" title="source code" href="https://github.com/karrui/SimiMovies">
                     <i class="fab fa-github-alt"></i>
                   </a>
                 </p>
@@ -428,12 +424,12 @@
             </p>
           </div>
 
-          <div class="col-lg-6 col-sm-6 project-block">
+          <div class="col-lg-6 project-block">
             <div class="overlayeffect">
-              <img src="./images/website.jpg" class="img-responsive" alt="No alt text! Are you disappointed...?">
+              <img src="./images/website.jpg" class="img-fluid" alt="No alt text! Are you disappointed...?">
               <div class="overlay">
                 <p class="icon-links">
-                  <a href="https://github.com/karrui/karrui.github.io">
+                  <a data-toggle="tooltip" data-placement="bottom" title="source code" href="https://github.com/karrui/karrui.github.io">
                     <i class="fab fa-github-alt"></i>
                   </a>
                 </p>
@@ -457,16 +453,18 @@
         </div>
 
         <div class="row">
-          <p class="section_header">Other noteworthy projects</p>
+          <div class="col">
+            <p class="section_header">Other noteworthy projects</p>
+          </div>
         </div>
         <!-- Start of other proj -->
         <div class="row">
-          <div class="col-lg-2 col-sm-2 col-xs-12">
+          <div class="col-xl-2 col-xs-12">
             <div class="section_title">
               <span class="background">Hackathons</span>
             </div>
           </div>
-          <div class="col-lg-10 col-sm-10 col-xs-12">
+          <div class="col-xl-10 col-xs-12">
             <div class="section_content">
               <div class="project_title_label">Hack & Roll 2018</div>
               <div class="project-description">
@@ -488,12 +486,12 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-2 col-sm-2 col-xs-12">
+          <div class="col-xl-2 col-xs-12">
             <div class="section_title">
               <span class="background">Artificial Intelligence</span>
             </div>
           </div>
-          <div class="col-lg-10 col-sm-10 col-xs-12">
+          <div class="col-xl-10 col-xs-12">
             <div class="section_content">
               <div class="project-description">
                 <span class="highlight">AI Tetris</a>
@@ -524,9 +522,9 @@
             <img src="./images/avatar.jpg">
           </div>
           <div class="contact-icons">
-            <a href="https://github.com/karrui"><i class="fab fa-github-alt"></i></a>
-            <a href="https://www.linkedin.com/in/karrui/"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:karrui.lau@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a data-toggle="tooltip" data-placement="bottom" title="GitHub&#013;&#010;@karrui" href="https://github.com/karrui"><i class="fab fa-github-alt"></i></a>
+            <a data-toggle="tooltip" data-placement="bottom" title="LinkedIn&#013;&#010;Lau Kar Rui" href="https://www.linkedin.com/in/karrui/"><i class="fab fa-linkedin"></i></a>
+            <a data-toggle="tooltip" data-placement="bottom" title="Email me!&#013;&#010;karrui.lau [at] gmail [dot] com" href="mailto:karrui.lau@gmail.com"><i class="fas fa-envelope"></i></a>
           </div>
           <p class="contact-blurb">Want to collaborate or just have comments for me? Drop me a message!</p>
         </div>
@@ -552,7 +550,7 @@
 
                 <textarea name="InputMessage" id="InputMessage" class="form-control" rows="1" data-validate="required"></textarea>
               </div>
-              <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right" data-submit>
+              <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info float-right" data-submit>
 
             </form>
             <script>
@@ -570,11 +568,11 @@
   </a>
 
   <!-- FOOTER -->
-  <div class="odd">
+  <div class="even">
     <div class="container-fluid">
       <div class='row'>
-        <div id='footer'>
-          © 2018 Lau Kar Rui
+          <div class="col">© 2018 Lau Kar Rui</div>
+          <div class="col">
           <span class="footer_links">
             <a href="mailto:karrui.lau@gmail.com">>>Email</a>&nbsp;&nbsp;
             <a href="https://www.github.com/karrui/">>>GitHub</a>&nbsp;&nbsp;
@@ -586,167 +584,11 @@
   </div>
 
   <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/formvalidation.js"></script>
-  <script>
-    $('textarea').each(function () {
-      this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
-    }).on('input', function () {
-      this.style.height = 'auto';
-      this.style.height = (this.scrollHeight) + 'px';
-    });
-
-    var $root = $('html, body');
-
-    $('a[href^="#"]').click(function () {
-      $root.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-      }, 500);
-
-      return false;
-    });
-
-    $('.navbar-collapse ul li a').click(function () {
-      $('.navbar-toggle:visible').click();
-    });
-
-    $(function () {
-      var viewPortWidth = $(window).width();
-
-      $(window).scroll(function (event) {
-        event.preventDefault();
-        if (viewPortWidth > 180) {
-          if ($(this).scrollTop() > 180) {
-            $('.scrollTo-top').fadeIn();
-          } else {
-            $('.scrollTo-top').fadeOut();
-          }
-        }
-      });
-
-      $('.scrollTo-top').click(function (event) {
-        $('html, body').animate({
-          scrollTop: 0
-        }, 600);
-        event.preventDefault();
-      });
-    });
-  </script>
   <script src="./js/particles.js"></script>
-  <script>
-    particlesJS("particles-js", {
-        "particles": {
-          "number": {
-            "value": 160,
-            "density": {
-              "enable": true,
-              "value_area": 800
-            }
-          },
-          "color": {
-            "value": "#f9f9f9"
-          },
-          "shape": {
-            "type": "circle",
-            "stroke": {
-              "width": 0,
-              "color": "#000000"
-            },
-            "polygon": {
-              "nb_sides": 5
-            },
-            "image": {
-              "src": "img/github.svg",
-              "width": 100,
-              "height": 100
-            }
-          },
-          "opacity": {
-            "value": 1,
-            "random": true,
-            "anim": {
-              "enable": true,
-              "speed": 1,
-              "opacity_min": 0,
-              "sync": false
-            }
-          },
-          "size": {
-            "value": 3,
-            "random": true,
-            "anim": {
-              "enable": false,
-              "speed": 4,
-              "size_min": 0.3,
-              "sync": false
-            }
-          },
-          "line_linked": {
-            "enable": false,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 1,
-            "direction": "none",
-            "random": true,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 600
-            }
-          }
-        },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": false,
-              "mode": "bubble"
-            },
-            "onclick": {
-              "enable": false,
-              "mode": "repulse"
-            },
-            "resize": true
-          },
-          "modes": {
-            "grab": {
-              "distance": 400,
-              "line_linked": {
-                "opacity": 1
-              }
-            },
-            "bubble": {
-              "distance": 250,
-              "size": 0,
-              "duration": 2,
-              "opacity": 0,
-              "speed": 3
-            },
-            "repulse": {
-              "distance": 400,
-              "duration": 0.4
-            },
-            "push": {
-              "particles_nb": 4
-            },
-            "remove": {
-              "particles_nb": 2
-            }
-          }
-        },
-        "retina_detect": true
-      }
-
-    );;
-  </script>
+  <script src="./js/scripts.js"></script>
 </body>
 
 </html>

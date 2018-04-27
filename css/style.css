@@ -6,9 +6,52 @@
   background: #97c6ff;
 }
 
-body {
+
+.bg-custom {
+  /* padding-right: 30px; */
+  background-color: #2f2fa2;
+}
+
+
+.navbar .navbar-brand:hover {
+  background-color: transparent;
+  transition: 0.4s all linear;
+  color: #f64c72;
+  border-color: #f64c72;
+  border-bottom: none;
+}
+
+.navbar .navbar-brand {
   color: #f9f9f9;
-  padding-top: 50px;
+  text-transform: capitalize;
+  font-size: 1.3em;
+}
+
+a.nav-link {color:#f9f9f9!important}
+
+.navbar .navbar-nav > li > a {
+  color: #f9f9f9;
+  font-family: "Montserrat", sans-serif;
+  text-transform: lowercase;
+  font-size: 1.3em;
+  padding: 10px 0px 10px 10px;
+}
+
+.navbar .navbar-nav > li > a:hover {
+  color: #fc4445!important;
+  opacity: 1;
+  transition: 0.4s all linear;
+  border-bottom: none;
+}
+
+li > a.active {
+  color: #f64c72!important;
+  transition: 0.4s all linear;
+}
+
+body {
+  font-size: 14px;
+  color: #f9f9f9;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -16,16 +59,24 @@ h1 {
   font-size: 36px;
 }
 
-p {
-  font-size: 1em;
-}
-
 ul {
   list-style: none;
   padding: 0;
 }
 
+.tooltip.bs-tooltip-bottom .tooltip-inner {
+  background:#130f30 !important;
+  white-space:pre-wrap;
+}
+
+.tooltip .arrow:before {
+  border-bottom-color:#130f30 !important;
+  border-top-color:#130f30 !important;
+}
+
+
 .intro-header {
+  margin-top: 20%;
   font-family: "Rubik", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -36,36 +87,16 @@ ul {
 .intro-tagline {
   /* font-family: 'Roboto Mono', monospace; */
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .intro-text {
   text-align: center;
-  font-size: 1em;
-}
-
-.row {
-  padding-bottom: 5px;
 }
 
 .container-fluid {
   width: 75%;
   max-width: 1080px;
-}
-
-.fa-github {
-  font-size: 1.3em;
-  margin-bottom: 0px;
-  /* color: #f9f9f9; */
-}
-
-.resume-icon {
-  font-size: 2em;
-  transition: transform 0.5s;
-}
-.resume-icon:hover {
-  transform: scale(1.25);
-  border-bottom: none;
 }
 
 @media (max-width: 768px) {
@@ -109,96 +140,6 @@ ul {
     display: flex;
     align-items: center; /* Align the flex-items vertically */
   }
-}
-
-.navbar-inverse {
-  /* padding-right: 30px; */
-  background-color: #2f2fa2 !important;
-  border-color: #2f2fa2 !important;
-}
-
-.navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #f9f9f9;
-}
-
-.navbar-inverse .navbar-toggle:hover {
-  background-color: #f9f9f9;
-  transition: 0.4s all linear;
-}
-
-.navbar-inverse .navbar-brand:hover {
-  background-color: transparent;
-  transition: 0.4s all linear;
-  color: #f64c72;
-  border-color: #f64c72;
-  border-bottom: none;
-}
-
-.navbar-inverse .navbar-toggle:hover {
-  background-color: transparent;
-}
-
-.navbar-inverse .navbar-toggle:hover .icon-bar {
-  background-color: #f9f9f9;
-}
-
-.navbar-inverse .navbar-toggle:focus {
-  background-color: transparent;
-}
-
-.navbar-inverse .navbar-toggle:focus .icon-bar {
-  background-color: #f9f9f9;
-}
-
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
-  border: none;
-}
-
-.navbar-collapse {
-  text-align: center;
-}
-
-.navbar-inverse .navbar-toggle {
-  border-color: #f9f9f9;
-}
-
-.navbar-inverse .navbar-brand {
-  color: #f9f9f9;
-  text-transform: capitalize;
-  font-size: 1.3em;
-}
-
-.nav li {
-  display: inline;
-  color: #f9f9f9;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-  color: #f9f9f9;
-  font-family: "Montserrat", sans-serif;
-  text-transform: lowercase;
-  font-size: 1.3em;
-  padding: 15px 20px 15px 20px;
-}
-
-.navbar-inverse .navbar-nav li a:hover {
-  color: #fc4445;
-  background-color: transparent;
-  transition: 0.4s all linear;
-  border-bottom: none;
-}
-
-.navbar-inverse .navbar-nav .active a {
-  color: #f64c72 !important;
-  background-color: transparent;
-  transition: 0.4s all linear;
-}
-
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-  background-color: transparent;
 }
 
 a {
@@ -277,6 +218,10 @@ div .section {
   font-weight: 700;
 }
 
+.section_content {
+  margin-bottom: 10px;
+}
+
 .Blink {
   margin-bottom: 1px;
   font-size: 0.7em;
@@ -335,9 +280,6 @@ div .section {
 }
 
 #main {
-  padding-top: 10%;
-  text-align: left;
-  font-weight: 400;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -364,8 +306,10 @@ span.highlight {
 }
 
 div .section_title {
+  font-family: "Rubik", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.3px;
+  font-size: 1.2em;
 }
 
 .skill {
@@ -402,14 +346,15 @@ div .skill_cat {
   min-height: 150px;
 }
 
+.job-title,
 div .skill_cat_label,
 div .project_title_label,
 div .course_cat_label {
-  color: #fec5df;
+  font-family: "Rubik", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-size: 1em;
-  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #fec5df;
+  margin-bottom: 3px;
 }
 
 .course_id {
@@ -439,26 +384,21 @@ div .course_cat_label {
   justify-content: space-between;
 }
 
-.timeline {
-  font-size: 0.8em;
-  font-weight: bold;
-}
-
 .company {
-  font-size: 0.8em;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  text-align: left;
 }
 
-.job-title {
-  color: #fec5df;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-size: 1em;
-  margin-bottom: 0px;
+.timeline {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  text-align: right;
 }
+
 
 div .project-description {
-  color: #fff;
-  opacity: 0.9;
+  color: #f9f9f9;
 }
 
 div .project_misc {
@@ -580,6 +520,13 @@ textarea[name="InputMessage"] {
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+  color: #f9f9f9;
+  background-color: transparent;
+}
+
+.custom-select.is-invalid:focus, .form-control.is-invalid:focus, .was-validated .custom-select:invalid:focus, .was-validated .form-control:invalid:focus,
+.custom-select.is-valid:focus, .form-control.is-valid:focus, .was-validated .custom-select:valid:focus, .was-validated .form-control:valid:focus {
+  box-shadow: none;
 }
 
 .btn-info {
@@ -640,11 +587,10 @@ textarea[name="InputMessage"] {
 
 /* footer */
 #footer {
-  background: #242582;
-  min-height: 50px;
-  text-align: left;
+  min-height: 40px;
   color: #bdc6ff;
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 0.8em;
   line-height: 20px;
 }
