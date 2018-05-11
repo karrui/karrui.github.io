@@ -62,6 +62,7 @@ h1 {
 ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
 }
 
 .tooltip.bs-tooltip-bottom .tooltip-inner {
@@ -122,12 +123,6 @@ ul {
                               horizontally within the column  */
   }
 
-  .timeline {
-    font-family: "Rubik", sans-serif;
-    font-weight: 500;
-    text-align: left;
-  }
-
   .footer_links {
     text-align: left;
   }
@@ -153,7 +148,7 @@ ul {
   .timeline {
     font-family: "Rubik", sans-serif;
     font-weight: 500;
-    text-align: right;
+    margin-bottom: 0;
   }
 
   .footer_links {
@@ -398,15 +393,16 @@ div .course_cat_label {
   padding-bottom: 10px;
 }
 
-.company-details {
+/* .company-details {
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .company {
   font-family: "Rubik", sans-serif;
+  font-size: 1.15em;
   font-weight: 500;
-  text-align: left;
+  margin-bottom: 0;
 }
 
 
@@ -424,6 +420,11 @@ div .project_misc {
 .project-title {
   margin-top: 10px;
 }
+
+.tech-used {
+  margin-bottom: 5px;
+}
+
 /* technology not real button */
 .btn-static {
   margin-top: 5px;
