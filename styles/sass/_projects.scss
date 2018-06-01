@@ -1,0 +1,162 @@
+section.projects {
+  .section-content {
+    ul.project-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 3em;
+
+      .project-wrapper {
+        border-bottom: 1px solid rgba($secondary-color, 0.5);
+        padding: 2em 0 1em 0;
+        display: inline-block;
+
+        .image {
+          position: relative;
+          margin-bottom: 2em;
+          max-height: 260px;
+          max-width: 900px;
+          overflow: hidden;
+
+          &:hover .overlay-content {
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+          }
+
+          &:hover .overlay {
+            opacity: 1;
+            backdrop-filter: blur(7px);
+          }
+
+          .overlay {
+            background: rgba(40, 40, 43, 0.8);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-transition: all 0.2s ease-in-out 0s;
+            -moz-transition: all 0.2s ease-in-out 0s;
+            transition: all 0.2s ease-in-out 0s;
+          }
+
+          .overlay-content {
+            position: absolute;
+            text-align: center;
+            padding-left: 1em;
+            padding-right: 1em;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+            top: 80%;
+
+            .overlay-btns {
+              
+              a {
+                color: #f9f9ff;
+                padding: 8px 40px 8px 24px;
+                border: 1px solid $secondary-color;
+                border-radius: 5px;
+                font-weight: 300;
+                margin-right: 16px;
+                background: transparent;
+
+                &:hover {
+                  text-decoration: none;
+                  border: 1px solid gold;
+                  color: gold;
+                }
+              }
+              
+              .github-btn, .doc-btn {
+                &:hover .arrow {
+                  -webkit-transform: translateX(4px);
+                  transform: translateX(4px);
+                }
+
+                .arrow {
+                  padding-left: 5px;
+                  -webkit-transform: translateZ(0);
+                  transform: translateZ(0);
+                  -webkit-transition-duration: 0.2s;
+                  transition-duration: 0.2s;
+                  -webkit-transition-property: transform;
+                  transition-property: transform;
+                  -webkit-transition-timing-function: ease-out;
+                  transition-timing-function: ease-out;
+                  position: fixed;
+                }
+              }
+            }
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .project-desc {
+          font-size: 1.1em;
+
+          .project-title {
+            font-size: 1.4em;
+            margin-right: 1em;
+            font-style: italic;
+            font-weight: bold;
+          }
+        }
+
+        .full-desc {
+          margin-top: .5em;
+        }
+
+        .tools {
+          
+          i {
+            margin-left: 8px;
+            margin-right: 0;
+            width: auto;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tools {
+  margin-top: 1em;
+  width: 100%;
+
+  i {
+    font-size: 3em;
+    margin-right: 8px;
+    display: inline-grid;
+    text-align: center;
+    min-width: 10%;
+
+    &:hover .text {
+      opacity: 1;
+      transition-duration: 0.2s;
+    }
+
+    .text {
+      font-size: 14px;
+      opacity: 0;
+      color: $primary-color;
+      padding-top: 0.5em;
+      font-family: 'Inconsolata', monospace;
+    }
+  }
+}

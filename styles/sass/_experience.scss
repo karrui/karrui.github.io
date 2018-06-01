@@ -1,0 +1,74 @@
+.experience {
+  .section-content {
+    .resume-section {
+      margin-bottom: 3em;
+
+      .resume-header {
+        font-size: 1.3em;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+
+    ul.company-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1em;
+
+
+      .company-wrapper {
+        border-bottom: 1px solid rgba($secondary-color, 0.5);
+        margin-bottom: 2em;
+        display: inline-block;
+
+        ul {
+          list-style: none;
+          padding-left: 1.5em;
+
+          li:before {
+            content: '> ';
+            font-weight: bold;
+            font-family: 'Inconsolata', Courier, monospace;
+          }
+        }
+
+        .timeline {
+          text-transform: uppercase;
+          color: lighten($primary-color, 20%);
+          font-size: .9em;
+          font-family: 'Courier New', Courier, monospace;
+        }
+
+        .company-desc {
+          font-size: 1.1em;
+          margin-bottom: 0.5em;
+
+          .company-name {
+            font-size: 1.2em;
+            margin-left: 1em;
+            font-style: italic;
+            font-weight: bold;
+          }
+        }
+
+        .job-title {
+          font-size: 1.2em;
+          font-weight: bold;
+        }
+
+        .full-desc {
+          margin-top: 1em;
+        }
+
+        .tech-stack {
+          margin: 0.5em 0;
+
+          .stack {
+            font-size: 1.1em;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

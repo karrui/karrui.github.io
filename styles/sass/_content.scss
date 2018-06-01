@@ -1,0 +1,67 @@
+$link-color: #A1B8E7;
+
+.container {
+  font-family: 'Radley', serif !important;
+  font-size: 16px !important;
+  color: $primary-color;
+  max-width:750px;
+  margin: 0 auto;
+  padding: 0 2em;
+
+  p {
+    line-height: 1.5em;
+  }
+
+  a { 
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: 600;
+    font-style: italic;
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(35%,rgba(32, 89, 197, 0.2)),color-stop(35%,transparent));
+    background: linear-gradient(to top,rgba(32, 89, 197, 0.2) 35%,transparent 35%);
+  }
+
+  a:hover {
+    background: rgba(32, 89, 197, 0.2);
+    color: darken($primary-color, 10%);
+  }
+
+  .section-header {
+    .section-title {
+      font-size: 2.2em;
+      font-weight: bold;
+    }
+  }
+
+  .section-subheader {
+    .subheader-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 0.5em 0;
+    }
+  }
+
+  .section-content {
+    margin: 1em 0;
+  }
+
+  .subheader-sub {
+    font-size: 1.1em;
+  }
+}
+
+.divider {
+  height: 1px;
+  background: rgba($primary-color, 0.5);
+  margin-bottom: 2em;
+}
+
+section.contact {
+  .section-content {
+    font-size: 1.3em;
+  }
+}
+
+@import 'intro';
+@import 'experience';
+@import 'projects';

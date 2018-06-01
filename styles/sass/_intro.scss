@@ -1,0 +1,28 @@
+section.intro {
+  margin: 4em auto;
+
+  .intro-header {
+    font-size: 2em;
+    margin-top: 64px;
+    line-height: 40px;
+  }
+
+  .intro-tagline {
+    font-size: 1.5em;
+    margin: 1em 0;
+  }
+
+  .current-status {
+    font-size: 1.2em;
+    margin: .5em 0;
+  }
+
+  .social-media-container {
+    font-size: 1.2em;
+    float: right;
+
+    a {
+      margin-right: .5em;
+    }
+  }
+}
