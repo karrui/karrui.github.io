@@ -135,13 +135,13 @@
 .burger-target.clicked + .nav-toggle .toggle-icon:after {
   transform: translateY(-10px) rotate(-135deg); }
 
-.scroll-top {
+.scroll-to-top {
   position: fixed;
   bottom: 16px;
   right: 0;
   z-index: 999;
   background: rgba(249, 249, 255, 0.5); }
-  .scroll-top svg {
+  .scroll-to-top svg {
     fill: #444c5c;
     transform: rotate(90deg);
     width: 25px;
@@ -149,15 +149,15 @@
     cursor: pointer;
     overflow: visible;
     padding: 1em; }
-    .scroll-top svg polygon, .scroll-top svg path {
+    .scroll-to-top svg polygon, .scroll-to-top svg path {
       transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1); }
     @media screen and (min-width: 645px) {
-      .scroll-top svg:hover polygon, .scroll-top svg:hover path {
+      .scroll-to-top svg:hover polygon, .scroll-to-top svg:hover path {
         transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
         fill: #84fab0; }
-      .scroll-top svg:hover .arrow {
+      .scroll-to-top svg:hover .arrow {
         animation: arrow-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite; }
-      .scroll-top svg:hover .arrow-fixed {
+      .scroll-to-top svg:hover .arrow-fixed {
         animation: arrow-fixed-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite; } }
 
 @keyframes arrow-anim {
