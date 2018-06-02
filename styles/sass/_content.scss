@@ -1,9 +1,41 @@
 $link-color: #A1B8E7;
 
+body.day-mode {
+  .container {
+    color: $primary-color;
+
+    a {
+      color: $primary-color;
+      background-image: linear-gradient(120deg, $gradient-left 0%, $gradient-right 100%);
+    }
+
+    .divider {
+      background: rgba($primary-color, 0.5);
+    }
+  }
+}
+
+
+body.night-mode {
+  .container {
+    color: $night-primary-color;
+
+    a {
+      color: $night-primary-color;
+      background-image: linear-gradient(120deg, $night-gradient-left 0%, $night-gradient-right 100%);
+    }
+
+    .divider {
+      background: rgba($night-primary-color, 0.5);
+    }
+  }
+}
+
 .container {
+  top: -60px;
+  position: relative;
   font-family: 'Radley', serif !important;
   font-size: 18px !important;
-  color: $primary-color;
   max-width:750px;
   margin: 0 auto;
 
@@ -13,12 +45,10 @@ $link-color: #A1B8E7;
 
   a { 
     text-decoration: none;
-    color: $primary-color;
     font-weight: 600;
     font-style: italic;
     // background: -webkit-gradient(linear,left bottom,left top,color-stop(35%,rgba(32, 89, 197, 0.2)),color-stop(35%,transparent));
     // background: linear-gradient(to top,rgba(32, 89, 197, 0.2) 35%,transparent 35%);
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.3em;
     background-position: 0 88%;
@@ -74,7 +104,6 @@ $link-color: #A1B8E7;
 
 .divider {
   height: 1px;
-  background: rgba($primary-color, 0.5);
   margin-bottom: 2em;
 }
 

@@ -1,18 +1,38 @@
+body.day-mode {
+  .navbar-container {
+    color: $primary-color;
+
+    a, a:active, a:focus {
+      color: $primary-color;
+      text-decoration: none;
+  
+      &:visited {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+body.night-mode {
+  .navbar-container {
+    color: $night-primary-color;
+
+    a, a:active, a:focus {
+      color: $night-primary-color;
+      text-decoration: none;
+  
+      &:visited {
+        color: $night-primary-color;
+      }
+    }
+  }
+}
+
 .navbar-container {
-  color: $primary-color;
   font-family: 'Playfair Display', serif;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-
-  a, a:active, a:focus {
-    color: $primary-color;
-    text-decoration: none;
-
-    &:visited {
-      color: $primary-color;
-    }
-  }
 
   .wrapper {
     height: 45px;
@@ -37,6 +57,31 @@
 
 // DESKTOP
 @media screen and (min-width: $navbar-breakpoint) {
+  body.day-mode {
+    .navbar-container {
+      .menu {
+        li.nav-item {
+          a:hover {
+            background-image: linear-gradient(120deg, $gradient-left 0%, $gradient-right 100%);
+          }
+        }
+      }
+    }
+  }
+
+  body.night-mode {
+    .navbar-container {
+      .menu {
+        li.nav-item {
+          a:hover {
+            background-image: linear-gradient(120deg, $night-gradient-left 0%, $night-gradient-right 100%);
+          }
+        }
+      }
+    }
+  }
+
+
   .navbar-container {
     padding-left: 2em;
     padding-right: 2em;
@@ -59,12 +104,6 @@
 
         &:hover {
           text-decoration: none;
-          color: $primary-color;
-          // font-weight: 600;
-          // font-style: italic;
-          // background: -webkit-gradient(linear,left bottom,left top,color-stop(35%,rgba(32, 89, 197, 0.2)),color-stop(35%,transparent));
-          // background: linear-gradient(to top,rgba(32, 89, 197, 0.2) 35%,transparent 35%);
-          background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
           background-repeat: no-repeat;
           background-size: 100% 0.3em;
           background-position: 0 88%;

@@ -1,22 +1,169 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display:400,700,700i|Radley:400,400i');
 $navbar-breakpoint: 645px;
+
+$bg-color: #f9f9ff;
 $primary-color: #444c5c;
 $secondary-color: #acbebe;
-$highlight-color: #84fab0;
+$gradient-left: #84fab0;
+$gradient-right: #8fd3f4;
+$highlight-color: $gradient-left;
 $ease: cubic-bezier(.2,1,.3,1);
+
+$night-primary-color: #C7CCDB;
+$night-bg-color: #2A324B;
+$night-gradient-left: #7b4397;
+$night-gradient-right: #dc2430;
+$night-highlight-color: $night-gradient-right;
 
 @import 'navbar';
 
+/* Created By Joseph Shenton @TeamiHackify */
+// START TOGGLE CSS
+.button-con {
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-bottom: 3em;
+}
+
+#dayIcon {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  top: -3px;
+  margin: 0 7px;
+  fill: #9caec0;
+}
+
+#nightIcon {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  top: -3px;
+  margin: 0 7px;
+  fill: #9caec0;
+}
+
+#dayIcon, #nightIcon {
+  cursor: pointer;
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle, .toggle:after, .toggle:before, .toggle *, .toggle *:after, .toggle *:before, .toggle + .toggle-button {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.toggle::-moz-selection, .toggle:after::-moz-selection, .toggle:before::-moz-selection, .toggle *::-moz-selection, .toggle *:after::-moz-selection, .toggle *:before::-moz-selection, .toggle + .toggle-button::-moz-selection {
+  background: none;
+}
+
+.toggle::selection, .toggle:after::selection, .toggle:before::selection, .toggle *::selection, .toggle *:after::selection, .toggle *:before::selection, .toggle + .toggle-button::selection {
+  background: none;
+}
+
+.toggle + .toggle-button {
+  outline: 0;
+  display: inline-block;
+  width: 64px;
+  height: 32px;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid #333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.toggle + .toggle-button:after, .toggle + .toggle-button:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+
+.toggle + .toggle-button:after {
+  left: 0;
+}
+
+.toggle + .toggle-button:before {
+  display: none;
+}
+
+.toggle:checked + .toggle-button:after {
+  left: 50%;
+}
+
+.toggle + .toggle-button {
+  padding: 2px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  border: 2px solid rgba(156, 174, 192, 0.27);
+  border-radius: 2em;
+}
+
+.toggle + .toggle-button:after {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  background: rgba(156, 174, 192, 0.27);
+  content: "";
+  border-radius: 1em;
+}
+
+.toggle:checked + .toggle-button:after {
+  left: 50%;
+}
+// END TOGGLE CSS
+
+body.day-mode {
+  background: $bg-color !important;
+
+  #go-to-header {
+    background: rgba($bg-color, 0.5);
+    svg {
+      fill: $primary-color;
+
+      // DESKTOP ONLY ANIMATION
+      @media screen and (min-width: $navbar-breakpoint) {
+        &:hover polygon, &:hover path {
+          fill: $highlight-color;
+        }
+      }
+    }
+  }
+}
+
+body.night-mode {
+  background: $night-bg-color !important;
+
+  #go-to-header {
+    background: rgba($night-bg-color, 0.5);
+    svg {
+      fill: $night-primary-color;
+
+      // DESKTOP ONLY ANIMATION
+      @media screen and (min-width: $navbar-breakpoint) {
+        &:hover polygon, &:hover path {
+          fill: $night-highlight-color;
+        }
+      }
+    }
+  }
+}
 
 #go-to-header {
   position: fixed;
   bottom: 16px;
   right: 0;
   z-index: 999;
-  background: rgba(#f9f9ff, 0.5);
   
   svg {
-    fill: $primary-color;
     transform: rotate(90deg);
     width: 25px;
     height: auto;
@@ -31,7 +178,6 @@ $ease: cubic-bezier(.2,1,.3,1);
     @media screen and (min-width: $navbar-breakpoint) {
       &:hover polygon, &:hover path {
         transition: all 1s $ease;
-        fill: $highlight-color;
       }
         
       &:hover .arrow {
@@ -81,10 +227,6 @@ $ease: cubic-bezier(.2,1,.3,1);
 
 ::selection {
   background: #fef9d8;
-}
-
-body {
-  background: #f9f9ff !important;
 }
 
 section {

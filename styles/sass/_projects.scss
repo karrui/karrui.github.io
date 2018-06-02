@@ -13,6 +13,78 @@
   }
 }
 
+body.day-mode {
+  section.projects {
+    .section-content {
+      ul.project-list {
+        .project-wrapper {
+          border-bottom: 1px solid rgba($secondary-color, 0.5);
+
+          .image {
+            .overlay-content {
+              a {
+                color: $bg-color;
+                border: 1px solid $secondary-color;
+
+                &:hover {
+                  border: 1px solid $highlight-color;
+                  color: $highlight-color;
+                }
+              }
+            }
+          }
+
+          .project-desc {
+            .project-subtext {
+              color: rgba($primary-color, 0.7);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tools i .text {
+    color: $primary-color;
+  }
+}
+
+body.night-mode {
+  section.projects {
+    .section-content {
+      ul.project-list {
+        .project-wrapper {
+          border-bottom: 1px solid rgba($secondary-color, 0.5);
+
+          .image {
+            .overlay-content {
+              a {
+                color: $bg-color;
+                border: 1px solid $secondary-color;
+
+                &:hover {
+                  border: 1px solid $night-highlight-color;
+                  color: $night-highlight-color;
+                }
+              }
+            }
+          }
+
+          .project-desc {
+            .project-subtext {
+              color: rgba($night-primary-color, 0.7);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tools i .text {
+    color: $night-primary-color;
+  }
+}
+
 section.projects {
   .section-content {
     ul.project-list {
@@ -21,7 +93,6 @@ section.projects {
       margin-bottom: 3em;
 
       .project-wrapper {
-        border-bottom: 1px solid rgba($secondary-color, 0.5);
         padding: 2em 0 1em 0;
         display: inline-block;
 
@@ -86,11 +157,6 @@ section.projects {
             .overlay-content {
               display: none;
               visibility: hidden;
-
-              .overlay-btns {
-                // display: inline-grid;
-                // display: grid;
-              }
             }
           }
 
@@ -123,9 +189,7 @@ section.projects {
             }
 
             a {
-              color: #f9f9ff;
               padding: 8px 24px;
-              border: 1px solid $secondary-color;
               margin: 0 8px;
               background: transparent;
               font-weight: 300;
@@ -133,8 +197,6 @@ section.projects {
 
               &:hover {
                 text-decoration: none;
-                border: 1px solid $highlight-color;
-                color: $highlight-color;
               }
             }
             
@@ -180,7 +242,6 @@ section.projects {
           }
 
           .project-subtext {
-            color: rgba($primary-color, 0.7);
             font-size: 18px;
           }
         }
@@ -222,7 +283,6 @@ section.projects {
     .text {
       font-size: 14px;
       opacity: 0;
-      color: $primary-color;
       padding-top: 0.5em;
       font-family: 'Inconsolata', monospace;
     }

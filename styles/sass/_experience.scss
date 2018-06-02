@@ -7,6 +7,59 @@
   }
 }
 
+body.day-mode {
+  .experience {
+    .section-content {
+      ul.company-list {
+        .company-wrapper {
+          border-bottom: 1px solid rgba($secondary-color, 0.5);
+
+          .timeline {
+            color: rgba($primary-color, 0.7);
+          }
+
+          .company-info {
+            .company-name {
+              color: rgba($primary-color, 0.9);
+            }
+          }
+
+          .company-desc {
+            color: rgba($primary-color, 0.7);
+          }
+        }
+      }
+    }
+  }
+}
+
+body.night-mode {
+  .experience {
+    .section-content {
+      ul.company-list {
+        .company-wrapper {
+          border-bottom: 1px solid rgba($secondary-color, 0.5);
+
+          .timeline {
+            color: rgba($night-primary-color, 0.7);
+          }
+
+          .company-info {
+            .company-name {
+              color: rgba($night-primary-color, 0.9);
+            }
+          }
+
+          .company-desc {
+            color: rgba($night-primary-color, 0.7);
+          }
+        }
+      }
+    }
+  }
+}
+
+
 .experience {
   .section-content {
     .resume-section {
@@ -25,7 +78,6 @@
 
 
       .company-wrapper {
-        border-bottom: 1px solid rgba($secondary-color, 0.5);
         margin-bottom: 2em;
         display: inline-block;
 
@@ -48,7 +100,6 @@
 
         .timeline {
           text-transform: uppercase;
-          color: rgba($primary-color, 0.7);
           font-size: .9em;
           font-family: 'Courier New', Courier, monospace;
         }
@@ -60,7 +111,6 @@
           .company-name {
             font-style: italic;
             font-weight: bold;
-            color: rgba($primary-color, 0.9);
             letter-spacing: -0.5px;
 
             &:before {
@@ -76,7 +126,6 @@
         }
 
         .company-desc {
-          color: rgba($primary-color, 0.7);
           font-size: 18px;
         }
 
