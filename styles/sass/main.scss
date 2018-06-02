@@ -9,11 +9,12 @@ $gradient-right: #8fd3f4;
 $highlight-color: $gradient-left;
 $ease: cubic-bezier(.2,1,.3,1);
 
-$night-primary-color: #C7CCDB;
+$night-primary-color: #EFF1F3;
+// kiv colors: E1FAF9, EFF1F3
 $night-bg-color: #2A324B;
-$night-gradient-left: #7b4397;
-$night-gradient-right: #dc2430;
-$night-highlight-color: $night-gradient-right;
+$night-gradient-left: #bc4e9c;
+$night-gradient-right: #f80759;
+$night-highlight-color: $night-gradient-left;
 
 @import 'navbar';
 
