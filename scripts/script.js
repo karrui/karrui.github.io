@@ -17,22 +17,21 @@ $(document).ready(function () {
       $('body').addClass('night-mode');
       $('.tools i').removeClass('colored');
     }
-    localStorage.nightmode = $('#cb1').prop('checked'); 
   } else {
     //set theme according to stored value;
-    if (localStorage.nightmode) {
+    if (localStorage.nightmode == "true") {
       $('#cb1').prop('checked', true);
       $('body').removeClass('day-mode');
       $('body').addClass('night-mode');
       $('.tools i').removeClass('colored');
-      localStorage.nightmode = $('#cb1').prop('checked'); 
     } else {
       $('#cb1').prop('checked', false);
       $('body').removeClass('night-mode');
       $('body').addClass('day-mode');
       $('.tools i').addClass('colored');
-      localStorage.nightmode = $('#cb1').prop('checked'); 
     }
+
+    localStorage.nightmode = $('#cb1').prop('checked'); 
   }
 
   $('.nav-toggle').on('click', function () {
