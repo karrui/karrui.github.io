@@ -369,7 +369,9 @@ section.projects .section-content ul.project-list {
           padding: 8px 24px;
           border: 2px solid #acbebe;
           margin: 0 8px;
-          background: transparent; }
+          background: transparent;
+          font-weight: 300;
+          font-style: normal; }
           section.projects .section-content ul.project-list .project-wrapper .image .overlay-content a:hover {
             text-decoration: none;
             border: 2px solid gold;
