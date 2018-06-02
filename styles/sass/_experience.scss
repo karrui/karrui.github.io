@@ -61,6 +61,12 @@
             font-style: italic;
             font-weight: bold;
             color: rgba($primary-color, 0.9);
+            letter-spacing: -0.5px;
+
+            &:before {
+              content: "@ ";
+              font-style: normal;
+            }
           }
           
           .job-title {

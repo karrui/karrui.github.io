@@ -125,7 +125,7 @@ section.projects {
             a {
               color: #f9f9ff;
               padding: 8px 24px;
-              border: 2px solid $secondary-color;
+              border: 1px solid $secondary-color;
               margin: 0 8px;
               background: transparent;
               font-weight: 300;
@@ -133,8 +133,8 @@ section.projects {
 
               &:hover {
                 text-decoration: none;
-                border: 2px solid gold;
-                color: gold;
+                border: 1px solid $highlight-color;
+                color: $highlight-color;
               }
             }
             

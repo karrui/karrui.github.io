@@ -309,7 +309,11 @@ section.intro .social-media-container {
       .experience .section-content ul.company-list .company-wrapper .company-info .company-name {
         font-style: italic;
         font-weight: bold;
-        color: rgba(68, 76, 92, 0.9); }
+        color: rgba(68, 76, 92, 0.9);
+        letter-spacing: -0.5px; }
+        .experience .section-content ul.company-list .company-wrapper .company-info .company-name:before {
+          content: "@ ";
+          font-style: normal; }
       .experience .section-content ul.company-list .company-wrapper .company-info .job-title {
         font-weight: bold;
         margin-right: 1em; }
@@ -405,15 +409,15 @@ section.projects .section-content ul.project-list {
         section.projects .section-content ul.project-list .project-wrapper .image .overlay-content a {
           color: #f9f9ff;
           padding: 8px 24px;
-          border: 2px solid #acbebe;
+          border: 1px solid #acbebe;
           margin: 0 8px;
           background: transparent;
           font-weight: 300;
           font-style: normal; }
           section.projects .section-content ul.project-list .project-wrapper .image .overlay-content a:hover {
             text-decoration: none;
-            border: 2px solid gold;
-            color: gold; }
+            border: 1px solid #84fab0;
+            color: #84fab0; }
         section.projects .section-content ul.project-list .project-wrapper .image .overlay-content .github-btn:hover .arrow, section.projects .section-content ul.project-list .project-wrapper .image .overlay-content .doc-btn:hover .arrow {
           -webkit-transform: translateX(4px);
           transform: translateX(4px); }

@@ -2,6 +2,7 @@
 $navbar-breakpoint: 645px;
 $primary-color: #444c5c;
 $secondary-color: #acbebe;
+$highlight-color: #84fab0;
 $ease: cubic-bezier(.2,1,.3,1);
 
 @import 'navbar';
@@ -30,7 +31,7 @@ $ease: cubic-bezier(.2,1,.3,1);
     @media screen and (min-width: $navbar-breakpoint) {
       &:hover polygon, &:hover path {
         transition: all 1s $ease;
-        fill: #84fab0;
+        fill: $highlight-color;
       }
         
       &:hover .arrow {
