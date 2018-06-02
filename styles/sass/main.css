@@ -252,10 +252,14 @@ section.intro .social-media-container {
     .experience .section-content ul.company-list .company-wrapper ul {
       list-style: none;
       padding-left: 0; }
+      .experience .section-content ul.company-list .company-wrapper ul li {
+        display: flex;
+        align-items: baseline; }
       .experience .section-content ul.company-list .company-wrapper ul li:before {
         content: '> ';
         font-weight: bold;
-        font-family: 'Inconsolata', Courier, monospace; }
+        font-family: 'Inconsolata', Courier, monospace;
+        margin-right: 8px; }
     .experience .section-content ul.company-list .company-wrapper .timeline {
       text-transform: uppercase;
       color: rgba(68, 76, 92, 0.7);
@@ -429,7 +433,6 @@ section.projects .section-content ul.project-list {
   text-decoration: none;
   color: #444c5c;
   font-weight: 600;
-  font-style: italic;
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   background-repeat: no-repeat;
   background-size: 100% 0.3em;
