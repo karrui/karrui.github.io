@@ -2,19 +2,75 @@
 $navbar-breakpoint: 645px;
 $primary-color: #444c5c;
 $secondary-color: #acbebe;
+$ease: cubic-bezier(.2,1,.3,1);
 
 @import 'navbar';
 
+
 .scroll-top {
   position: fixed;
-  bottom: 24px;
-  right: 16px;
+  bottom: 16px;
+  right: 0;
   z-index: 999;
-  font-size: 24px;
+  background: rgba(#f9f9ff, 0.5);
+  
+  svg {
+    fill: $primary-color;
+    transform: rotate(90deg);
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+    overflow: visible;
+    padding: 1em;
+    polygon, path {
+      transition: all 0.5s $ease;
+    }
+
+    // DESKTOP ONLY ANIMATION
+    @media screen and (min-width: $navbar-breakpoint) {
+      &:hover polygon, &:hover path {
+        transition: all 1s $ease;
+        fill: #84fab0;
+      }
+        
+      &:hover .arrow {
+        animation: arrow-anim 2.5s $ease infinite;
+      }
+      &:hover .arrow-fixed {
+        animation: arrow-fixed-anim 2.5s $ease infinite;
+      }
+    }
+  }
+}
+
+@keyframes arrow-anim {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	5% {
+		transform: translateX(-0.1rem);
+	}
+	100% {
+		transform: translateX(1rem);
+		opacity: 0;
+	}
+}
+
+@keyframes arrow-fixed-anim {
+	5% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0.4;
+	}
+	100% {
+		opacity: 1;
+	}
 
   a {
     text-decoration: none;
-    color: rgba($primary-color, .5);
+    color: rgba($primary-color, 1);
 
     &:hover {
       color: rgba($primary-color, .5);

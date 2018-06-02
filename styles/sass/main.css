@@ -137,15 +137,51 @@
 
 .scroll-top {
   position: fixed;
-  bottom: 24px;
-  right: 16px;
+  bottom: 16px;
+  right: 0;
   z-index: 999;
-  font-size: 24px; }
-  .scroll-top a {
+  background: rgba(249, 249, 255, 0.5); }
+  .scroll-top svg {
+    fill: #444c5c;
+    transform: rotate(90deg);
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+    overflow: visible;
+    padding: 1em; }
+    .scroll-top svg polygon, .scroll-top svg path {
+      transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1); }
+    @media screen and (min-width: 645px) {
+      .scroll-top svg:hover polygon, .scroll-top svg:hover path {
+        transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+        fill: #84fab0; }
+      .scroll-top svg:hover .arrow {
+        animation: arrow-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite; }
+      .scroll-top svg:hover .arrow-fixed {
+        animation: arrow-fixed-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite; } }
+
+@keyframes arrow-anim {
+  0% {
+    opacity: 1;
+    transform: translateX(0); }
+  5% {
+    transform: translateX(-0.1rem); }
+  100% {
+    transform: translateX(1rem);
+    opacity: 0; } }
+
+@keyframes arrow-fixed-anim {
+  5% {
+    opacity: 0; }
+  20% {
+    opacity: 0.4; }
+  100% {
+    opacity: 1; }
+  a {
     text-decoration: none;
-    color: rgba(68, 76, 92, 0.5); }
-    .scroll-top a:hover {
-      color: rgba(68, 76, 92, 0.5); }
+    color: #444c5c;
+    :hover {
+      color: rgba(68, 76, 92, 0.5); } } }
 
 ::selection {
   background: #fef9d8; }
