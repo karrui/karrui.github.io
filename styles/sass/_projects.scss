@@ -169,8 +169,12 @@ section.projects {
           .project-title {
             font-size: 26px;
             margin: 10px 1em 10px 0;
-            font-style: italic;
+            font-style: normal;
             font-weight: bold;
+
+            a {
+              font-style: normal;
+            }
           }
 
           .project-subtext {

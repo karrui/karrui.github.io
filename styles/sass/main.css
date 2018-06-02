@@ -1,25 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display:400,700i|Radley:400,400i");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700");
-.scroll-top {
-  position: fixed;
-  bottom: 56px;
-  right: 32px; }
-  .scroll-top a {
-    text-decoration: none;
-    color: #444c5c;
-    font-size: 2em; }
-    .scroll-top a:hover {
-      color: rgba(68, 76, 92, 0.5); }
-
-::selection {
-  background: #fef9d8; }
-
-body {
-  background: #f9f9ff !important; }
-
-section {
-  margin-bottom: 2em; }
-
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display:400,700,700i|Radley:400,400i");
 .navbar-container {
   color: #444c5c;
   font-family: 'Playfair Display', serif;
@@ -79,7 +58,8 @@ section {
   .menu {
     display: none; }
   .dropdown-menu .mobile-menu {
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
     .dropdown-menu .mobile-menu li.mobile-nav-item {
       list-style: none;
       font-size: 1.1em;
@@ -153,6 +133,27 @@ section {
 .burger-target.clicked + .nav-toggle .toggle-icon:after {
   transform: translateY(-10px) rotate(-135deg); }
 
+.scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 16px;
+  z-index: 999;
+  font-size: 24px; }
+  .scroll-top a {
+    text-decoration: none;
+    color: rgba(68, 76, 92, 0.5); }
+    .scroll-top a:hover {
+      color: rgba(68, 76, 92, 0.5); }
+
+::selection {
+  background: #fef9d8; }
+
+body {
+  background: #f9f9ff !important; }
+
+section {
+  margin-bottom: 2em; }
+
 .container {
   font-family: 'Radley', serif !important;
   font-size: 18px !important;
@@ -181,6 +182,8 @@ section {
     font-weight: bold; }
   .container .section-content {
     margin: 1em 0; }
+    .container .section-content .contact-blurb {
+      font-size: 24px; }
 
 @media screen and (min-width: 645px) {
   .container {
@@ -194,9 +197,6 @@ section {
   height: 1px;
   background: rgba(68, 76, 92, 0.5);
   margin-bottom: 2em; }
-
-section.contact .section-content {
-  font-size: 1.3em; }
 
 @media screen and (max-width: 645px) {
   section.intro {
@@ -238,9 +238,8 @@ section.intro .social-media-container {
 .experience .section-content .resume-section {
   margin-bottom: 3em; }
   .experience .section-content .resume-section .resume-header {
-    font-size: 1.3em;
-    font-weight: bold;
-    text-align: center; }
+    font-size: 24px;
+    font-weight: bold; }
 
 .experience .section-content ul.company-list {
   list-style: none;
@@ -392,8 +391,10 @@ section.projects .section-content ul.project-list {
     section.projects .section-content ul.project-list .project-wrapper .project-desc .project-title {
       font-size: 26px;
       margin: 10px 1em 10px 0;
-      font-style: italic;
+      font-style: normal;
       font-weight: bold; }
+      section.projects .section-content ul.project-list .project-wrapper .project-desc .project-title a {
+        font-style: normal; }
     section.projects .section-content ul.project-list .project-wrapper .project-desc .project-subtext {
       color: rgba(68, 76, 92, 0.7);
       font-size: 18px; }
@@ -429,20 +430,20 @@ section.projects .section-content ul.project-list {
   color: #444c5c;
   font-weight: 600;
   font-style: italic;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(35%, rgba(32, 89, 197, 0.2)), color-stop(35%, transparent));
-  background: linear-gradient(to top, rgba(32, 89, 197, 0.2) 35%, transparent 35%); }
-
-#footer a:hover {
-  background: rgba(32, 89, 197, 0.2);
-  color: #2e343f; }
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in; }
+  #footer a:hover {
+    background-size: 100% 88%; }
 
 @media screen and (min-width: 645px) {
   #footer {
     display: flex;
     margin: 1em 2em;
     text-align: center;
-    justify-content: space-between;
-    font-family: 'Playfair Display', serif; }
+    justify-content: space-between; }
     #footer ul.links {
       list-style: none;
       padding: 0;
@@ -452,8 +453,7 @@ section.projects .section-content ul.project-list {
 
 @media screen and (max-width: 645px) {
   #footer {
-    margin: 0 2em 1em 2em;
-    font-family: 'Playfair Display', serif;
+    padding: 1em;
     display: grid; }
     #footer span.copyright {
       margin-bottom: 0.5em; }

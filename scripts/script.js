@@ -1,3 +1,4 @@
+// toggle mobile nav function
 $(document).ready(function() {
   $('.nav-toggle').on('click',function() {
 
@@ -12,17 +13,27 @@ $(document).ready(function() {
   });
 });
 
+// close mobile dropdown menu on click function
+$(function() {
+    $('.navbar-container a').on('click', function(){ 
+        if($('.dropdown-menu').css('display') !='none'){
+            $('.nav-toggle').trigger( "click" );
+        }
+    });
+});
 
+// navbar scroll to section function
 var $root = $('html, body');
 
 $('a[href^="#"]').click(function () {
     $root.animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
+        scrollTop: $( $.attr(this, 'href') ).offset().top - 250
     }, 500);
 
     return false;
 });
 
+// scroll to top function
 $(function () {
   var viewPortWidth = $(window).width();
 

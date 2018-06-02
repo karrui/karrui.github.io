@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display:400,700i|Radley:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display:400,700,700i|Radley:400,400i');
 $navbar-breakpoint: 645px;
 $primary-color: #444c5c;
 $secondary-color: #acbebe;
 
+@import 'navbar';
+
 .scroll-top {
   position: fixed;
-  bottom: 56px;
-  right: 32px;
+  bottom: 24px;
+  right: 16px;
+  z-index: 999;
+  font-size: 24px;
 
   a {
     text-decoration: none;
-    color: $primary-color;
-    font-size: 2em;
+    color: rgba($primary-color, .5);
 
     &:hover {
       color: rgba($primary-color, .5);
@@ -32,6 +35,5 @@ section {
 }
 
 
-@import 'navbar';
 @import 'content';
 @import 'footer';

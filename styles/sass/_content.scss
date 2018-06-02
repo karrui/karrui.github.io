@@ -51,6 +51,10 @@ $link-color: #A1B8E7;
 
   .section-content {
     margin: 1em 0;
+
+    .contact-blurb {
+      font-size: 24px;
+    }
   }
 }
 
@@ -74,11 +78,6 @@ $link-color: #A1B8E7;
   margin-bottom: 2em;
 }
 
-section.contact {
-  .section-content {
-    font-size: 1.3em;
-  }
-}
 
 @import 'intro';
 @import 'experience';
