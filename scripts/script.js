@@ -26,17 +26,23 @@ $(function() {
 var $root = $('html, body');
 
 $('a[href^="#"]').click(function () {
-    $root.animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top - 250
-    }, 500);
-
-    return false;
+    var windowWidth = $(window).width();
+    if (windowWidth < 628) {
+        $root.animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top - 250
+        }, 500);
+        return false;
+    } else {
+        $root.animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+        return false;
+    }
 });
 
 // scroll to top function
 $(function () {
-  var viewPortWidth = $(window).width();
-
+    var viewPortWidth = $(window).width();
   $(window).scroll(function (event) {
       event.preventDefault();
       if (viewPortWidth > 180) {
