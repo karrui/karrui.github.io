@@ -66,6 +66,14 @@ body.night-mode .navbar-container {
     display: none; } }
 
 @media screen and (max-width: 645px) {
+  body.day-mode .toggle-icon {
+    border-bottom: 4px solid #444c5c; }
+    body.day-mode .toggle-icon:before, body.day-mode .toggle-icon:after {
+      border-top: 4px solid #444c5c; }
+  body.night-mode .toggle-icon {
+    border-bottom: 4px solid #C7CCDB; }
+    body.night-mode .toggle-icon:before, body.night-mode .toggle-icon:after {
+      border-top: 4px solid #C7CCDB; }
   .navbar-container {
     padding-left: 1em;
     padding-right: 1em; }
@@ -94,13 +102,11 @@ body.night-mode .navbar-container {
         transition-property: transform, border-color;
         transition-duration: 0.25s;
         transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
-        border-bottom: 4px solid #494c4e;
         padding-top: 22px;
         display: block; }
         .mobile-hamburger .nav-toggle .toggle-icon:before, .mobile-hamburger .nav-toggle .toggle-icon:after {
           transition-delay: 0s;
           transform-origin: center;
-          border-top: 4px solid #494c4e;
           content: '';
           position: absolute;
           left: 0;

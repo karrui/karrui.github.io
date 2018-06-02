@@ -123,6 +123,26 @@ body.night-mode {
 
 // MOBILE
 @media screen and (max-width: $navbar-breakpoint) {
+  body.day-mode {
+    .toggle-icon {
+      border-bottom: 4px solid $primary-color;
+
+      &:before, &:after {
+        border-top: 4px solid $primary-color;
+      }
+    }
+  }
+
+  body.night-mode {
+    .toggle-icon {
+      border-bottom: 4px solid $night-primary-color;
+
+      &:before, &:after {
+        border-top: 4px solid $night-primary-color;
+      }
+    }
+  }
+
   .navbar-container {
     padding-left: 1em;
     padding-right: 1em;
@@ -165,14 +185,12 @@ body.night-mode {
         transition-property: transform, border-color;
         transition-duration: 0.25s;
         transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
-        border-bottom: 4px solid #494c4e;
         padding-top: 22px;
         display: block;
 
         &:before, &:after {
           transition-delay: 0s;
           transform-origin: center;
-          border-top: 4px solid #494c4e;
           content: '';
           position: absolute;
           left: 0;
