@@ -47,14 +47,14 @@ $(function () {
       event.preventDefault();
       if (viewPortWidth > 180) {
           if ($(this).scrollTop() > 180) {
-              $('.scroll-to-top').fadeIn();
+              $('#go-to-header').fadeIn();
           } else {
-              $('.scroll-to-top').fadeOut();
+              $('#go-to-header').fadeOut();
           }
       }
   });
 
-  $('.scroll-to-top').click(function (event) {
+  $('#go-to-header').click(function (event) {
       $('html, body').animate({
           scrollTop: 0
       }, 600);
