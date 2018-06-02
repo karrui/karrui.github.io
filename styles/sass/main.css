@@ -324,8 +324,11 @@ body.night-mode {
     :hover {
       color: rgba(68, 76, 92, 0.5); } } }
 
-::selection {
+body.day-mode ::selection {
   background: #fef9d8; }
+
+body.night-mode ::selection {
+  background: #9CADCE; }
 
 section {
   margin-bottom: 2em; }

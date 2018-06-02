@@ -256,8 +256,16 @@ body.night-mode {
   }
 }
 
-::selection {
-  background: #fef9d8;
+body.day-mode {
+  ::selection {
+    background: #fef9d8;
+  }
+}
+
+body.night-mode {
+  ::selection {
+    background: #9CADCE;
+  }
 }
 
 section {
