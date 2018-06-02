@@ -1,3 +1,18 @@
+// MOBILE
+@media screen and (max-width: $navbar-breakpoint) {
+  section.projects {
+    .section-content {
+      ul.project-list {
+        .project-wrapper {
+          .project-desc {
+            display: grid;
+          }
+        }
+      }
+    }
+  }
+}
+
 section.projects {
   .section-content {
     ul.project-list {
@@ -17,15 +32,38 @@ section.projects {
           max-width: 900px;
           overflow: hidden;
 
-          &:hover .overlay-content {
-            top: 50%;
-            left: 50%;
-            opacity: 1;
+          // MOBILE
+          @media screen and (max-width: $navbar-breakpoint) {
+            &:hover .overlay-content,
+            &:focus .overlay-content {
+              top: 50%;
+              left: 50%;
+              display: grid;
+              visibility: visible;
+            }
+  
+            &:hover .overlay,
+            &:focus .overlay, {
+              opacity: 1;
+              backdrop-filter: blur(7px);
+            }
           }
 
-          &:hover .overlay {
-            opacity: 1;
-            backdrop-filter: blur(7px);
+          // DESKTOP
+          @media screen and (min-width: $navbar-breakpoint) {
+            &:hover .overlay-content,
+            &:focus .overlay-content {
+              top: 50%;
+              left: 50%;
+              visibility: visible;
+              opacity: 1;
+            }
+  
+            &:hover .overlay,
+            &:focus .overlay, {
+              opacity: 1;
+              backdrop-filter: blur(7px);
+            }
           }
 
           .overlay {
@@ -43,15 +81,35 @@ section.projects {
             transition: all 0.2s ease-in-out 0s;
           }
 
+          // MOBILE
+          @media screen and (max-width: $navbar-breakpoint) {
+            .overlay-content {
+              display: none;
+              visibility: hidden;
+
+              .overlay-btns {
+                // display: inline-grid;
+                // display: grid;
+              }
+            }
+          }
+
+           // DESKTOP
+           @media screen and (min-width: $navbar-breakpoint) {
+            .overlay-content {
+              visibility: hidden;
+              opacity: 0;
+            }
+          }
+
           .overlay-content {
+            width: 100%;
             position: absolute;
             text-align: center;
             padding-left: 1em;
             padding-right: 1em;
-            width: 100%;
             top: 50%;
             left: 50%;
-            opacity: 0;
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -59,43 +117,43 @@ section.projects {
             -moz-transition: all 0.3s ease-in-out 0s;
             transition: all 0.3s ease-in-out 0s;
             top: 80%;
+            
+            span {
+              margin: 6px 0;
+            }
 
-            .overlay-btns {
-              
-              a {
-                color: #f9f9ff;
-                padding: 8px 40px 8px 24px;
-                border: 1px solid $secondary-color;
-                border-radius: 5px;
-                font-weight: 300;
-                margin-right: 16px;
-                background: transparent;
+            a {
+              color: #f9f9ff;
+              padding: 8px 24px;
+              border: 2px solid $secondary-color;
+              margin: 0 8px;
+              background: transparent;
 
-                &:hover {
-                  text-decoration: none;
-                  border: 1px solid gold;
-                  color: gold;
-                }
+              &:hover {
+                text-decoration: none;
+                border: 2px solid gold;
+                color: gold;
               }
-              
-              .github-btn, .doc-btn {
-                &:hover .arrow {
-                  -webkit-transform: translateX(4px);
-                  transform: translateX(4px);
-                }
+            }
+            
+            .github-btn, .doc-btn {
+              &:hover .arrow {
+                -webkit-transform: translateX(4px);
+                transform: translateX(4px);
+              }
 
-                .arrow {
-                  padding-left: 5px;
-                  -webkit-transform: translateZ(0);
-                  transform: translateZ(0);
-                  -webkit-transition-duration: 0.2s;
-                  transition-duration: 0.2s;
-                  -webkit-transition-property: transform;
-                  transition-property: transform;
-                  -webkit-transition-timing-function: ease-out;
-                  transition-timing-function: ease-out;
-                  position: fixed;
-                }
+              .arrow {
+                padding-left: 5px;
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+                -webkit-transition-duration: 0.2s;
+                transition-duration: 0.2s;
+                -webkit-transition-property: transform;
+                transition-property: transform;
+                -webkit-transition-timing-function: ease-out;
+                transition-timing-function: ease-out;
+                display: inline-block;
+                font-style: normal;
               }
             }
           }
@@ -107,13 +165,17 @@ section.projects {
         }
 
         .project-desc {
-          font-size: 1.1em;
 
           .project-title {
-            font-size: 1.4em;
-            margin-right: 1em;
+            font-size: 26px;
+            margin: 10px 1em 10px 0;
             font-style: italic;
             font-weight: bold;
+          }
+
+          .project-subtext {
+            color: rgba($primary-color, 0.7);
+            font-size: 18px;
           }
         }
 
@@ -147,8 +209,8 @@ section.projects {
     min-width: 10%;
 
     &:hover .text {
-      opacity: 1;
       transition-duration: 0.2s;
+      opacity: 1;
     }
 
     .text {

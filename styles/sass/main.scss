@@ -3,10 +3,6 @@ $navbar-breakpoint: 645px;
 $primary-color: #444c5c;
 $secondary-color: #acbebe;
 
-@import 'navbar';
-@import 'content';
-
-
 .scroll-top {
   position: fixed;
   bottom: 56px;
@@ -35,4 +31,7 @@ section {
   margin-bottom: 2em;
 }
 
+
+@import 'navbar';
+@import 'content';
 @import 'footer';

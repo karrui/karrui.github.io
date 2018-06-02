@@ -2,12 +2,10 @@
 
 .navbar-container {
   color: $primary-color;
-  padding-left: 2em;
-  padding-right: 2em;
-  margin-left: auto;
-  margin-right: auto;
   font-family: 'Playfair Display', serif;
   max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 
   a, a:active, a:focus {
     color: $primary-color;
@@ -36,10 +34,16 @@
       margin: auto 0;
       font-weight: bold;
     }
-  }
+  } 
 }
 
+// DESKTOP
 @media screen and (min-width: $navbar-breakpoint) {
+  .navbar-container {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  
   .menu {
     margin: auto 0;
     padding: 0;
@@ -54,8 +58,15 @@
       a:hover {
         text-decoration: none;
         color: $primary-color;
-        background: -webkit-gradient(linear,left bottom,left top,color-stop(35%,rgba(32, 89, 197, 0.2)),color-stop(35%,transparent));
-        background: linear-gradient(to top,rgba(32, 89, 197, 0.2) 35%,transparent 35%);
+        // font-weight: 600;
+        // font-style: italic;
+        // background: -webkit-gradient(linear,left bottom,left top,color-stop(35%,rgba(32, 89, 197, 0.2)),color-stop(35%,transparent));
+        // background: linear-gradient(to top,rgba(32, 89, 197, 0.2) 35%,transparent 35%);
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0.3em;
+        background-position: 0 88%;
+        transition: background-size 0.25s ease-in;
       }
     }
   }
@@ -69,7 +80,13 @@
   }
 }
 
+// MOBILE
 @media screen and (max-width: $navbar-breakpoint) {
+  .navbar-container {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  
   .menu {
     display: none;
   }
@@ -83,10 +100,8 @@
         font-size: 1.1em;
         padding: 1em 0;
 
-        a:hover {
-          border-bottom: 4px solid #acbebe;
-          padding-bottom: 5px;
-          text-decoration: none;
+        a:focus {
+          background-size: 100% 88%;
         }
       }
     }

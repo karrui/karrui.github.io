@@ -1,3 +1,12 @@
+// MOBILE
+@media screen and (max-width: $navbar-breakpoint) {
+  .experience {
+    .company-info {
+      display: grid;
+    }
+  }
+}
+
 .experience {
   .section-content {
     .resume-section {
@@ -23,7 +32,7 @@
 
         ul {
           list-style: none;
-          padding-left: 1.5em;
+          padding-left: 0;
 
           li:before {
             content: '> ';
@@ -34,26 +43,30 @@
 
         .timeline {
           text-transform: uppercase;
-          color: lighten($primary-color, 20%);
+          color: rgba($primary-color, 0.7);
           font-size: .9em;
           font-family: 'Courier New', Courier, monospace;
         }
 
-        .company-desc {
-          font-size: 1.1em;
-          margin-bottom: 0.5em;
+        .company-info {
+          margin: 10px auto;
+          font-size: 26px;
 
           .company-name {
-            font-size: 1.2em;
-            margin-left: 1em;
             font-style: italic;
             font-weight: bold;
+            color: rgba($primary-color, 0.9);
+          }
+          
+          .job-title {
+            font-weight: bold;
+            margin-right: 1em;
           }
         }
 
-        .job-title {
-          font-size: 1.2em;
-          font-weight: bold;
+        .company-desc {
+          color: rgba($primary-color, 0.7);
+          font-size: 18px;
         }
 
         .full-desc {
