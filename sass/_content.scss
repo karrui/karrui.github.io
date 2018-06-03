@@ -1,0 +1,116 @@
+@import 'jacket';
+
+@include jacket(critical) {
+
+  body.day-mode {
+    .container {
+      color: $primary-color;
+
+      a {
+        color: $primary-color;
+        background-image: linear-gradient(120deg, $gradient-left 0%, $gradient-right 100%);
+      }
+
+      .divider {
+        background: rgba($primary-color, 0.5);
+      }
+    }
+  }
+
+
+  body.night-mode {
+    .container {
+      color: $night-primary-color;
+
+      a {
+        color: $night-primary-color;
+        background-image: linear-gradient(120deg, $night-gradient-left 0%, $night-gradient-right 100%);
+      }
+
+      .divider {
+        background: rgba($night-primary-color, 0.5);
+      }
+    }
+  }
+
+  .container {
+    top: -60px;
+    position: relative;
+    font-family: 'Radley', serif !important;
+    font-size: 18px !important;
+    max-width:750px;
+    margin: 0 auto;
+
+    p {
+      line-height: 1.5em;
+    }
+
+    a { 
+      text-decoration: none;
+      font-weight: 600;
+      font-style: italic;
+      // background: -webkit-gradient(linear,left bottom,left top,color-stop(35%,rgba(32, 89, 197, 0.2)),color-stop(35%,transparent));
+      // background: linear-gradient(to top,rgba(32, 89, 197, 0.2) 35%,transparent 35%);
+      background-repeat: no-repeat;
+      background-size: 100% 0.3em;
+      background-position: 0 88%;
+      transition: background-size 0.25s ease-in;
+
+      &:hover {
+        background-size: 100% 88%;
+      }
+    }
+
+    // a:hover {
+    //   background: rgba(32, 89, 197, 0.2);
+    //   color: darken($primary-color, 10%);
+    //   transition: 0.2s all linear;
+    // }
+
+    .section-header {
+      .section-title {
+        font-size: 34px;
+        font-weight: bold;
+      }
+    }
+
+    .section-subheader {
+      .subheader-title {
+        font-size: 26px;
+        font-weight: bold;
+      }
+    }
+
+    .section-content {
+      margin: 1em 0;
+
+      .contact-blurb {
+        font-size: 24px;
+      }
+    }
+  }
+
+  // DESKTOP
+  @media screen and (min-width: $navbar-breakpoint) {
+    .container {
+      padding: 0 2em;
+    }
+  }
+
+  // MOBILE
+  @media screen and (max-width: $navbar-breakpoint) {
+    .container {
+      padding: 0 1em;
+    }
+  }
+
+  .divider {
+    height: 1px;
+    margin-bottom: 2em;
+  }
+}
+
+
+@import 'intro';
+@import 'experience';
+@import 'projects';

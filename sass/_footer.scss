@@ -1,0 +1,83 @@
+@import 'jacket';
+
+@include jacket(non-critical) {
+  body.day-mode {
+    #footer {
+      color: $primary-color;
+
+      a {
+        color: $primary-color;
+        background-image: linear-gradient(120deg, $gradient-left 0%, $gradient-right 100%);
+      }
+    }
+  }
+
+  body.night-mode {
+    #footer {
+      color: $night-primary-color;
+
+      a {
+        color: $night-primary-color;
+        background-image: linear-gradient(120deg, $night-gradient-left 0%, $night-gradient-right 100%);
+      }
+    }
+  }
+
+  #footer {
+    a { 
+      text-decoration: none;
+      font-weight: 600;
+      background-repeat: no-repeat;
+      background-size: 100% 0.3em;
+      background-position: 0 88%;
+      transition: background-size 0.25s ease-in;
+
+      &:hover {
+        background-size: 100% 88%;
+      }
+    }
+
+  }
+
+  // DESKTOP
+  @media screen and (min-width: $navbar-breakpoint) {
+    #footer {
+      display: flex;
+      margin: 1em 2em;
+      text-align: center;
+      justify-content: space-between;
+
+      ul.links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li a {
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+
+  // MOBILE
+  @media screen and (max-width: $navbar-breakpoint) {
+    #footer {
+      padding: 1em;
+      display: grid;
+
+      span.copyright {
+        margin-bottom: 0.5em;
+      }
+
+      ul.links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li a {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}

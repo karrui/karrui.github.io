@@ -1,0 +1,4 @@
+@import 'jacket';
+/* non-critical.scss - to be asynchronously loaded */
+$jacket: non-critical;
+@import "main";
