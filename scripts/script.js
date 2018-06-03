@@ -77,7 +77,7 @@ $(function () {
 $(document).ready(function () {
   if (typeof localStorage.nightmode === "undefined") {
     var hours = new Date().getHours();
-    var dayMode = hours > 8 && h < 20;
+    var dayMode = hours > 8 && hours < 20;
 
     if (dayMode) {
       $('#cb1').prop('checked', false);

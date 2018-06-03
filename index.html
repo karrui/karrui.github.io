@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="description" content="Lau Kar Rui's online portfolio!">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display:400,700,700i|Radley:400,400i"> -->
   <link rel="preload" href="./styles/non-critical.css" as="style" onload="this.rel='stylesheet'">
-  <link rel="preload" href="./styles/devicon.min.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="./styles/devicon-reduced.min.css" as="style" onload="this.rel='stylesheet'">
   <link rel="preload" href="./styles/devicon-colors.css" as="style" onload="this.rel='stylesheet'">
   <title>Lau Kar Rui.</title>
+  <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" href="./images/favicon.png" type="image/x-icon">
   <!-- <link rel="stylesheet" href="./styles/critical.css"> -->
   <style>
@@ -16,6 +18,7 @@
   </style>
   <script src="./scripts/jquery-3.3.1.min.js" defer></script>
   <script src="./scripts/script.min.js" defer></script>
+  <script src="./scripts/jquery.lazyloadxt.js" defer></script>
 </head>
 <body class="day-mode">
   <div id="go-to-header" style="display: none;">
@@ -222,7 +225,7 @@
           <li class="project-wrapper">
             <div class="image">
               <div class="overlay"></div>
-              <img src="./images/taskrr-min.jpg" alt="An image of Taskrr, a task matching web application">
+              <img data-src="./images/taskrr-min.jpg" alt="An image of Taskrr, a task matching web application">
               <div class="overlay-content">
                 <span class="github-btn">
                   <a href="https://github.com/karrui/taskrr">
@@ -262,7 +265,7 @@
           <li class="project-wrapper">
             <div class="image">
               <div class="overlay"></div>
-              <img src="./images/iungo.jpg" alt="iungo, an addressbook desktop application">
+              <img data-src="./images/iungo.jpg" alt="An image of iungo, an addressbook desktop application">
               <div class="overlay-content">
                 <span class="github-btn">
                   <a href="https://github.com/CS2103AUG2017-F11-B3/main">
@@ -297,7 +300,7 @@
           <li class="project-wrapper">
             <div class="image">
               <div class="overlay"></div>
-              <img src="./images/website.jpg" alt="Version 1 of the website you are seeing now">
+              <img data-src="./images/website.jpg" alt="An image of version 1 of this website">
               <div class="overlay-content">
                 <span class="github-btn">
                   <a href="https://github.com/karrui/v1">
