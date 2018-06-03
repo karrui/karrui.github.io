@@ -1,51 +1,15 @@
 /* eslint-disable */
-
-// toggle mobile nav function
-$(document).ready(function () {
-  if (typeof localStorage.nightmode === "undefined") {
-    var hours = new Date().getHours();
-    var dayMode = hours > 8 && h < 20;
-
-    if (dayMode) {
-      $('#cb1').prop('checked', false);
-      $('body').removeClass('night-mode');
-      $('body').addClass('day-mode');
-      $('.tools i').addClass('colored');
-    } else {
-      $('#cb1').prop('checked', true);
-      $('body').removeClass('day-mode');
-      $('body').addClass('night-mode');
-      $('.tools i').removeClass('colored');
-    }
-  } else {
-    //set theme according to stored value;
-    if (localStorage.nightmode == "true") {
-      $('#cb1').prop('checked', true);
-      $('body').removeClass('day-mode');
-      $('body').addClass('night-mode');
-      $('.tools i').removeClass('colored');
-    } else {
-      $('#cb1').prop('checked', false);
-      $('body').removeClass('night-mode');
-      $('body').addClass('day-mode');
-      $('.tools i').addClass('colored');
-    }
-
-    localStorage.nightmode = $('#cb1').prop('checked'); 
+$('.nav-toggle').on('click', function () {
+  if ($('.burger-target').hasClass('clicked')) {
+    $('.burger-target').removeClass('clicked');
+    $('.dropdown-menu').slideUp();
   }
-
-  $('.nav-toggle').on('click', function () {
-
-    if ($('.burger-target').hasClass('clicked')) {
-      $('.burger-target').removeClass('clicked');
-      $('.dropdown-menu').slideUp();
-    }
-    else {
-      $('.burger-target').addClass('clicked');
-      $('.dropdown-menu').slideDown();
-    }
-  });
+  else {
+    $('.burger-target').addClass('clicked');
+    $('.dropdown-menu').slideDown();
+  }
 });
+
 
 $('#cb1').on('change', function () {
   if (this.checked) {
@@ -108,4 +72,38 @@ $(function () {
     }, 600);
     event.preventDefault();
   });
+});
+
+$(document).ready(function () {
+  if (typeof localStorage.nightmode === "undefined") {
+    var hours = new Date().getHours();
+    var dayMode = hours > 8 && h < 20;
+
+    if (dayMode) {
+      $('#cb1').prop('checked', false);
+      $('body').removeClass('night-mode');
+      $('body').addClass('day-mode');
+      $('.tools i').addClass('colored');
+    } else {
+      $('#cb1').prop('checked', true);
+      $('body').removeClass('day-mode');
+      $('body').addClass('night-mode');
+      $('.tools i').removeClass('colored');
+    }
+  } else {
+    //set theme according to stored value;
+    if (localStorage.nightmode == "true") {
+      $('#cb1').prop('checked', true);
+      $('body').removeClass('day-mode');
+      $('body').addClass('night-mode');
+      $('.tools i').removeClass('colored');
+    } else {
+      $('#cb1').prop('checked', false);
+      $('body').removeClass('night-mode');
+      $('body').addClass('day-mode');
+      $('.tools i').addClass('colored');
+    }
+
+    localStorage.nightmode = $('#cb1').prop('checked'); 
+  }
 });
