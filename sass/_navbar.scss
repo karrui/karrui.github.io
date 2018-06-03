@@ -47,7 +47,7 @@
     nav {
       padding: 2em 0;
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
 
       .name {
         cursor: default;
@@ -91,7 +91,7 @@
     }
     
     .menu {
-      margin: auto 0;
+      margin: auto 0 auto auto;
       padding: 0;
       display: inline-table;
 
@@ -159,6 +159,7 @@
       .mobile-menu {
         padding: 0;
         margin: 0;
+        margin-top: 2em;
 
         li.mobile-nav-item {
           list-style: none;
@@ -219,7 +220,9 @@
       }
     }
   }
+}
 
+@include jacket(non-critical) {
   .toggle-icon,
   .toggle-icon:before,
   .toggle-icon:after {
