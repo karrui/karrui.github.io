@@ -8,7 +8,8 @@
       padding-bottom: 4em;
 
       .intro-header {
-        margin-top: 1em;
+        margin-top: 2em;
+        font-size: 1.8em;
       }
     }
   }
@@ -21,14 +22,16 @@
 
       .intro-header {
         margin-top: 4em;
+        font-size: 2em;
       }
     }
   }
 
   section.intro {
     .intro-header {
-      font-size: 38px;
-      line-height: 40px;
+      font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+      letter-spacing: -1px;
+      font-weight: bold;
     }
 
     .intro-tagline {

@@ -234,10 +234,12 @@
           .project-desc {
 
             .project-title {
-              font-size: 26px;
+              font-size: 24px;
               margin: 10px 1em 10px 0;
               font-style: normal;
               font-weight: bold;
+              font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+              letter-spacing: -1px;
 
               a {
                 font-style: normal;
@@ -281,13 +283,13 @@
       &:hover .text {
         transition-duration: 0.2s;
         opacity: 1;
+        font-family: 'Inconsolata', 'Courier New', Courier, monospace;
       }
 
       .text {
         font-size: 14px;
         opacity: 0;
         padding-top: 0.5em;
-        font-family: 'Inconsolata', monospace;
       }
     }
   }

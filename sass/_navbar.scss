@@ -32,7 +32,7 @@
   }
 
   .navbar-container {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
@@ -51,7 +51,7 @@
 
       .name {
         cursor: default;
-        font-size: 1.6em;
+        font-size: 1.8em;
         margin: auto 0;
         font-weight: bold;
       }
@@ -97,7 +97,7 @@
 
       li.nav-item {
         float: left;
-        margin-left: 2em;
+        margin-left: 1em;
         list-style: none;
         font-size: 1.1em;
 
@@ -173,7 +173,7 @@
     }
 
     .mobile-hamburger {
-      margin: auto 0;
+      margin-top: -4px;
 
       .nav-toggle {
         width: 30px;
