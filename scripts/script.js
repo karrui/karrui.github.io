@@ -41,7 +41,7 @@ $('a[href^="#"]').click(function () {
   var windowWidth = $(window).width();
   if (windowWidth < 628) {
     $root.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top - 250
+      scrollTop: $($.attr(this, 'href')).offset().top - 270
     }, 500);
     return false;
   } else {
