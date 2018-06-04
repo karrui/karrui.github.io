@@ -107,3 +107,26 @@ $(document).ready(function () {
     localStorage.nightmode = $('#cb1').prop('checked'); 
   }
 });
+
+var DOMTokenListSupports = function(tokenList, token) {
+  if (!tokenList || !tokenList.supports) {
+    return;
+  }
+  try {
+    return tokenList.supports(token);
+  } catch (e) {
+    if (e instanceof TypeError) {
+      console.log("The DOMTokenList doesn't have a supported tokens list");
+    } else {
+      console.error("That shouldn't have happened");
+    }
+  }
+};
+
+// check for preload compatibility!
+var linkSupportsPreload = DOMTokenListSupports(document.createElement("link").relList, "preload"); 
+if (!linkSupportsPreload) {
+  $('head').append('<link rel="stylesheet" type="text/css" href="./styles/non-critical.css">');
+  $('head').append('<link rel="stylesheet" type="text/css" href="./styles/devicon-reduced.min.css">');
+  $('head').append('<link rel="stylesheet" type="text/css" href="./styles/devicon-colors.css">');
+};
