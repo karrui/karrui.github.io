@@ -30,8 +30,13 @@
                   border: 1px solid $secondary-color;
 
                   &:hover {
-                    border: 1px solid $highlight-color;
-                    color: $highlight-color;
+                    background: rgba(246,244,246,0.7);
+                    border: 1px solid rgba(238,233,237,0.8);
+                    color: $primary-color;
+                    // background: $secondary-color;
+                    // border: 1px solid $primary-color;
+                    // border: 1px solid $highlight-color;
+                    // color: $highlight-color;
                   }
                 }
               }
@@ -64,10 +69,16 @@
                 a {
                   color: $bg-color;
                   border: 1px solid $secondary-color;
+                  -webkit-transition: all 0.2s ease-in-out 0s;
+                  -moz-transition: all 0.2s ease-in-out 0s;
+                  transition: all 0.2s ease-in-out 0s;
 
                   &:hover {
-                    border: 1px solid $night-highlight-color;
-                    color: $night-highlight-color;
+                    color: $night-primary-color;
+                    background: rgba(72,86,101,0.7);
+                    border: 1px solid rgba(105,116,129,0.8);
+                    // border: 1px solid $night-highlight-color;
+                    // color: $night-highlight-color;
                   }
                 }
               }
@@ -257,13 +268,7 @@
           }
 
           .tools {
-            
-            i {
-              margin-left: 8px;
-              margin-right: 0;
-              width: auto;
-              float: right;
-            }
+            justify-content: flex-end;
           }
         }
       }
@@ -273,13 +278,17 @@
   .tools {
     margin-top: 1em;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 
     i {
       font-size: 3em;
-      margin-right: 8px;
+      // margin-right: 8px;
       display: inline-grid;
       text-align: center;
-      min-width: 10%;
+      // min-width: 10%;
+      padding: .75rem;
+      width: 68px;
 
       &:hover .text {
         transition-duration: 0.2s;
@@ -291,6 +300,7 @@
         font-size: 14px;
         opacity: 0;
         padding-top: 0.5em;
+        font-family: 'Inconsolata', 'Courier New', Courier, monospace;
       }
     }
   }
