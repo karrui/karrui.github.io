@@ -2,7 +2,7 @@
 
 @include jacket(critical) {
   // MOBILE
-  @media screen and (max-width: $navbar-breakpoint) {
+  @media screen and (max-width: $navbar-breakpoint-smaller) {
     section.intro {
       // margin-top: 2em;
       // padding-bottom: 4em;
@@ -20,7 +20,7 @@
   }
 
   // DESKTOP
-  @media screen and (min-width: $navbar-breakpoint) {
+  @media screen and (min-width: $navbar-breakpoint-smaller) {
     section.intro {
       // padding-top: 4em;
       // padding-bottom: 4em;
@@ -39,6 +39,7 @@
     .intro-header {
       font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
       letter-spacing: -1px;
+      line-height: 1.5em;
     }
 
     .intro-tagline {
