@@ -2,7 +2,7 @@
 
 @include jacket(critical) {
   // MOBILE
-  @media screen and (max-width: $navbar-breakpoint-smaller) {
+  @media screen and (max-width: $navbar-breakpoint) {
     section.intro {
       // margin-top: 2em;
       // padding-bottom: 4em;
@@ -14,13 +14,55 @@
 
       .intro-header {
         // margin-top: 3em;
-        font-size: 1.9em;
+        font-size: 2.5em;
+      }
+
+      .intro-tagline {
+        font-size: 1.2em;
+      }
+  
+      .current-status {
+        font-size: 1.1em;
+      }
+  
+      .contact-pages {
+        margin: 1em 0 2em;
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  @media screen and (max-width: $navbar-breakpoint-xs) {
+    section.intro {
+      .intro-header {
+        margin: 10px 0;
+
+        .line-1 {
+          .intro-name {
+            display: block;
+          }
+        }
+      }
+
+      .intro-tagline {
+        font-size: 1.1em;
+        margin: 0;
+      }
+  
+      .current-status {
+        font-size: 1.1em;
+        margin: 0;
+      }
+  
+      .contact-pages {
+        font-size: 1.1em;
+        margin: 0;
       }
     }
   }
 
   // DESKTOP
-  @media screen and (min-width: $navbar-breakpoint-smaller) {
+  @media screen and (min-width: $navbar-breakpoint) {
     section.intro {
       // padding-top: 4em;
       // padding-bottom: 4em;
@@ -30,31 +72,46 @@
 
       .intro-header {
         // padding-top: 4em;
-        font-size: 2.5em;
+        font-size: 3.5em;
+      }
+
+      .intro-tagline {
+        font-size: 26px;
+      }
+  
+      .current-status {
+        font-size: 22px;
+      }
+  
+      .contact-pages {
+        font-size: 1.2em;
       }
     }
   }
 
   section.intro {
     .intro-header {
-      font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+      font-family: Inconsolata, monospace;
+      font-weight: normal;
+      // font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
       letter-spacing: -1px;
-      line-height: 1.5em;
+      // line-height: 1.5em;
+
+      .intro-name {
+        font-weight: bold;
+      }
     }
 
     .intro-tagline {
-      font-size: 26px;
       margin: 1em 0;
     }
 
     .current-status {
-      font-size: 22px;
       margin: 1em 0;
     }
 
     .contact-pages {
       margin: 1em 0 2em;
-      font-size: 1.2em;
       display: flex;
       justify-content: flex-end;
       // float: right;

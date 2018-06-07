@@ -130,3 +130,8 @@ if (!linkSupportsPreload) {
   $('head').append('<link rel="stylesheet" type="text/css" href="./styles/devicon-reduced.min.css">');
   $('head').append('<link rel="stylesheet" type="text/css" href="./styles/devicon-colors.css">');
 };
+
+// Intro text fade
+$(window).scroll(function(){
+  $(".intro").css("opacity", 1 - ($(window).scrollTop() - 200) / 600);
+});
