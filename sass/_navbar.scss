@@ -2,9 +2,7 @@
 
 @include jacket(critical) {
   body.day-mode {
-    .navbar-container {
-      color: $primary-color;
-
+    header {
       a, a:active, a:focus {
         color: $primary-color;
         text-decoration: none;
@@ -13,13 +11,15 @@
           color: $primary-color;
         }
       }
+
+      .navbar-container {
+        color: $primary-color;
+      }
     }
   }
 
   body.night-mode {
-    .navbar-container {
-      color: $night-primary-color;
-
+    header {
       a, a:active, a:focus {
         color: $night-primary-color;
         text-decoration: none;
@@ -27,6 +27,10 @@
         &:visited {
           color: $night-primary-color;
         }
+      }
+
+      .navbar-container {
+        color: $night-primary-color;
       }
     }
   }
@@ -36,26 +40,17 @@
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    margin: auto 0;
 
-    .wrapper {
-      height: 45px;
-      width: 100%;
-      justify-content: space-between;
-      display: flex;
+    .name {
+      cursor: default;
+      font-size: 1.8em;
+      font-weight: bold;
     }
-
-    nav {
-      padding: 2em 0;
-      display: flex;
-      // justify-content: space-between;
-
-      .name {
-        cursor: default;
-        font-size: 1.8em;
-        margin: auto 0;
-        font-weight: bold;
-      }
-    } 
   }
 
   // DESKTOP
@@ -86,8 +81,9 @@
 
 
     .navbar-container {
-      padding-left: 2em;
-      padding-right: 2em;
+      padding-left: 2.2em;
+      padding-right: 2.2em;
+      margin: 0 auto;
     }
     
     .menu {
@@ -157,18 +153,20 @@
 
     .dropdown-menu {
       .mobile-menu {
-        padding: 0;
+        padding: 0 1em;
         margin: 0;
-        margin-top: 2em;
 
         li.mobile-nav-item {
           list-style: none;
-          font-size: 1.1em;
-          padding: 1em 0;
+          font-size: 1.5em;
+          padding: .5em 0;
 
           a:focus {
             background-size: 100% 88%;
           }
+        }
+        li:first-child {
+          padding-top: 0;
         }
       }
     }

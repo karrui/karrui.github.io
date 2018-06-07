@@ -31,7 +31,7 @@ $('#light').on('change', function () {
 
 // close mobile dropdown menu on click function
 $(function () {
-  $('.navbar-container a').on('click', function () {
+  $('header a').on('click', function () {
     if ($('.dropdown-menu').css('display') != 'none') {
       $('.nav-toggle').trigger("click");
     }
@@ -45,12 +45,12 @@ $('a[href^="#"]').click(function () {
   var windowWidth = $(window).width();
   if (windowWidth < 628) {
     $root.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top - 270
+      scrollTop: $($.attr(this, 'href')).offset().top - 230
     }, 500);
     return false;
   } else {
     $root.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top
+      scrollTop: $($.attr(this, 'href')).offset().top - 30
     }, 500);
     return false;
   }
