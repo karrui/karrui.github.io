@@ -11,15 +11,19 @@ $('.nav-toggle').on('click', function () {
 });
 
 
-$('#cb1').on('change', function () {
+$('#light').on('change', function () {
   if (this.checked) {
     $('body').removeClass('day-mode');
     $('body').addClass('night-mode');
     $('.tools i').removeClass('colored');
+    $('.moon-icon').removeClass('off');
+    $('.sun-icon').addClass('off');
   } else {
     $('body').removeClass('night-mode');
     $('body').addClass('day-mode');
     $('.tools i').addClass('colored');
+    $('.sun-icon').removeClass('off');
+    $('.moon-icon').addClass('off');
   }
   localStorage.nightmode = this.checked;
 });
@@ -80,31 +84,39 @@ $(document).ready(function () {
     var dayMode = hours > 8 && hours < 20;
 
     if (dayMode) {
-      $('#cb1').prop('checked', false);
+      $('#light').prop('checked', false);
       $('body').removeClass('night-mode');
       $('body').addClass('day-mode');
       $('.tools i').addClass('colored');
+      $('.sun-icon').removeClass('off');
+      $('.moon-icon').addClass('off');
     } else {
-      $('#cb1').prop('checked', true);
+      $('#light').prop('checked', true);
       $('body').removeClass('day-mode');
       $('body').addClass('night-mode');
       $('.tools i').removeClass('colored');
+      $('.moon-icon').removeClass('off');
+      $('.sun-icon').addClass('off');
     }
   } else {
     //set theme according to stored value;
     if (localStorage.nightmode == "true") {
-      $('#cb1').prop('checked', true);
+      $('#light').prop('checked', true);
       $('body').removeClass('day-mode');
       $('body').addClass('night-mode');
       $('.tools i').removeClass('colored');
+      $('.moon-icon').removeClass('off');
+      $('.sun-icon').addClass('off');
     } else {
-      $('#cb1').prop('checked', false);
+      $('#light').prop('checked', false);
       $('body').removeClass('night-mode');
       $('body').addClass('day-mode');
       $('.tools i').addClass('colored');
+      $('.sun-icon').removeClass('off');
+      $('.moon-icon').addClass('off');
     }
 
-    localStorage.nightmode = $('#cb1').prop('checked'); 
+    localStorage.nightmode = $('#light').prop('checked'); 
   }
 });
 

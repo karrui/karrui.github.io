@@ -31,6 +31,27 @@ $night-border-color: #697481;
     font-display: swap;
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
+
+  
+  #go-to-header {
+    position: fixed;
+    bottom: 48px;
+    right: 16px;
+    z-index: 999;
+    
+    svg {
+      transform: rotate(90deg);
+      width: 25px;
+      height: auto;
+      cursor: pointer;
+      overflow: visible;
+      padding: 14px;
+      polygon, path {
+        transition: all 0.5s $ease;
+      }
+    }
+  }
+
   
   body.day-mode {
     #go-to-header {
@@ -165,28 +186,16 @@ $night-border-color: #697481;
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
-
-  #go-to-header {
-    position: fixed;
-    bottom: 40px;
-    right: 16px;
-    z-index: 999;
-    
-    svg {
-      transform: rotate(90deg);
-      width: 25px;
-      height: auto;
-      cursor: pointer;
-      overflow: visible;
-      padding: 14px;
-      polygon, path {
-        transition: all 0.5s $ease;
-      }
-    }
-  }
-
   body.day-mode {
     background: $bg-color !important;
+
+    .light-triangle {
+      border-color: rgba(246,244,246,0.7) transparent transparent transparent;
+
+      .border {
+        border: 2px solid rgba(238,233,237,0.8);
+      }
+    }
 
     #go-to-header {
       background: rgba(#F6F4F6, 0.7);
@@ -201,6 +210,14 @@ $night-border-color: #697481;
   body.night-mode {
     background: $night-bg-color !important;
 
+    .light-triangle {
+      border-color: rgba(72,86,101,0.7) transparent transparent transparent;
+
+      .border {
+        border: 2px solid rgba(105,116,129,0.8);
+      }
+    }
+
     #go-to-header {
       background: rgba(#485665, 0.7);
       border: 2px solid rgba($night-border-color, .8);
@@ -214,146 +231,71 @@ $night-border-color: #697481;
 
   body {
     transition: 0.5s all cubic-bezier(0.65, 0.05, 0.36, 1);
+
+    .light-triangle {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 70px 70px 0 0;
+
+      .border {
+        height: 70px;
+        position: fixed;
+        width: 120px;
+        left: -60px;
+        top: -20px;
+        transform: rotate(-45deg);
+      }
+
+      .light-toggle {
+        position: absolute;
+        top: -60px;
+
+        .moon-icon,
+        .sun-icon {
+          &.off {
+            display: none;
+          }
+        }
+
+        #dayIcon, #nightIcon {
+          cursor: pointer;
+        }
+
+        #dayIcon {
+          position: relative;
+          width: 26px;
+          height: 26px;
+          top: -3px;
+          margin: 0 7px;
+          fill: $primary-color;
+          // fill: #9caec0;
+        }
+
+        #nightIcon {
+          position: relative;
+          width: 26px;
+          height: 26px;
+          top: -3px;
+          margin: 0 7px;
+          fill: $night-primary-color;
+          // fill: #9caec0;
+        }
+
+        .toggle {
+          display: none;
+        }
+      }
+    }
   }
 
   section {
     margin-bottom: 2em;
   }
-
-  
-  #dayIcon, #nightIcon {
-    cursor: pointer;
-  }
-
-  /* Created By Joseph Shenton @TeamiHackify */
-  // START TOGGLE CSS
-  .button-con {
-    cursor: default;
-    display: flex;
-    align-items: baseline;
-    padding-top: 1em;
-    margin-left: -5%;
-  }
-
-  #dayIcon {
-    position: relative;
-    width: 26px;
-    height: 26px;
-    top: -3px;
-    margin: 0 7px;
-    // fill: #9caec0;
-  }
-
-  #nightIcon {
-    position: relative;
-    width: 26px;
-    height: 26px;
-    top: -3px;
-    margin: 0 7px;
-    // fill: #9caec0;
-  }
-
-  .toggle {
-    display: none;
-  }
-
-  .toggle, .toggle:after, .toggle:before, .toggle *, .toggle *:after, .toggle *:before, .toggle + .toggle-button {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  .toggle::-moz-selection, .toggle:after::-moz-selection, .toggle:before::-moz-selection, .toggle *::-moz-selection, .toggle *:after::-moz-selection, .toggle *:before::-moz-selection, .toggle + .toggle-button::-moz-selection {
-    background: none;
-  }
-
-  .toggle::selection, .toggle:after::selection, .toggle:before::selection, .toggle *::selection, .toggle *:after::selection, .toggle *:before::selection, .toggle + .toggle-button::selection {
-    background: none;
-  }
-
-  .toggle + .toggle-button {
-    outline: 0;
-    display: inline-block;
-    width: 64px;
-    height: 32px;
-    position: relative;
-    cursor: pointer;
-    border: 2px solid #333;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  .toggle + .toggle-button:after, .toggle + .toggle-button:before {
-    position: relative;
-    display: block;
-    content: "";
-    width: 50%;
-    height: 100%;
-  }
-
-  .toggle + .toggle-button:after {
-    left: 0;
-  }
-
-  .toggle + .toggle-button:before {
-    display: none;
-  }
-
-  .toggle:checked + .toggle-button:after {
-    left: 50%;
-  }
-
-  .toggle + .toggle-button {
-    padding: 2px;
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
-    // border: 2px solid rgba(156, 174, 192, 0.27);
-    border-radius: 2em;
-  }
-
-  body.day-mode {
-    #dayIcon {
-      fill: $primary-color;
-    }
-    #nightIcon {
-      fill: $primary-color;
-    }
-    .toggle + .toggle-button {
-      border: 2px solid rgba($primary-color, 1);
-    }
-    .toggle + .toggle-button:after {
-      background: rgba($primary-color, 1);
-    }
-  }
-
-  body.night-mode {
-    #dayIcon {
-      fill: $night-primary-color;
-    }
-    #nightIcon {
-      fill: $night-primary-color;
-    }
-    .toggle + .toggle-button {
-      border: 2px solid rgba($night-primary-color, 1);
-    }
-    .toggle + .toggle-button:after {
-      background: rgba($night-primary-color, 1);
-    }
-  }
-
-  .toggle + .toggle-button:after {
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
-    // background: rgba(156, 174, 192, 0.27);
-    content: "";
-    border-radius: 1em;
-  }
-
-  .toggle:checked + .toggle-button:after {
-    left: 50%;
-  }
-  // END TOGGLE CSS
 }
 
 @import 'navbar';
