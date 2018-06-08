@@ -45,6 +45,11 @@
     justify-content: space-between;
     display: flex;
     margin: auto 0;
+    align-items: center;
+
+    .mobile-logo {
+      display: none;
+    }
 
     .name {
       cursor: default;
@@ -123,6 +128,12 @@
   // MOBILE
   @media screen and (max-width: $navbar-breakpoint) {
     body.day-mode {
+      .navbar-container {
+        .mobile-logo {
+          border: double 5px $primary-color;
+        }
+      }
+
       .toggle-icon {
         border-bottom: 4px solid $primary-color;
 
@@ -133,6 +144,11 @@
     }
 
     body.night-mode {
+      .navbar-container {
+        .mobile-logo {
+          border: double 5px $night-primary-color;
+        }
+      }
       .toggle-icon {
         border-bottom: 4px solid $night-primary-color;
 
@@ -145,6 +161,15 @@
     .navbar-container {
       padding-left: 1em;
       padding-right: 1em;
+
+      .name {
+        display: none;
+      }
+
+      .mobile-logo {
+        display: inline;
+        padding: 4px 3px 0 4px;
+      }
     }
     
     .menu {
