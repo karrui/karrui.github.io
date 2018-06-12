@@ -20,7 +20,7 @@
           }
 
           &:after {
-            color: $primary-color;
+            color: rgba($primary-color, 0.7);
           }
         }
       }
@@ -52,7 +52,7 @@
           }
 
           &:after {
-            color: $night-primary-color;
+            color: rgba($night-primary-color, 0.7);
           }
         }
       }
@@ -114,37 +114,31 @@
       }
 
       input.question + .field-label:after {
-        top: 16px;
+        top: 12px;
         left: 0;
       }
       
       textarea.question {
-        min-height: 115px;
+        min-height: 70px;
         padding-top: 13px;
         padding-bottom: 13px;
       }
       
       textarea.question + .field-label:after {
-        top: 16px;
+        top: 12px;
         left: 0;
       }
       
+      .has-val.question + .field-label:after,
+      .question:hover + .field-label:after,
       .question:focus + .field-label:after {
-        top: -13px;
+        top: -20px;
       }
       
+      .has-val.question + .field-label:before,
       .question:focus + .field-label:before {
         width: 100%;
       }
-      
-      .has-val.question + .field-label:after {
-        top: -13px;
-      }
-      
-      .has-val.question + .field-label:before {
-        width: 100%;
-      }
-      
 
       .field-label {
         position: absolute;
@@ -177,7 +171,7 @@
           position: absolute;
           top: 0px;
           left: 0;
-          font-size: 18px;
+          font-size: 20px;
           line-height: 1.2;
 
           -webkit-transition: all 0.4s;

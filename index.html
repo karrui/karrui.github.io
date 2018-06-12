@@ -371,12 +371,12 @@
         <div class="contact-blurb">
           Write to me at <a href="mailto:karrui.lau@gmail.com">karrui.lau@gmail.com</a>, or fill in the contact form below!
         </div>
-        <form class="contact-form" id="validate-form" name="contact" method="POST" netlify-honeypot="interesting-field" netlify>
+        <form class="contact-form" name="contact" method="POST" netlify-honeypot="interesting-field" netlify>
           <p class="hidden">
             <label>Don’t fill this out if you're human: <input name="interesting-field" /></label>
           </p>
           <div class="field-wrapper validate-input" data-validate="Please enter a name">
-            <input type="text" name="first" required class="question" id="name"/>
+            <input type="text" name="name" required class="question" id="name"/>
             <span class="field-label" placeholder="What's your name?"></span>
           </div>
           <div class="field-wrapper validate-input" data-validate="Please enter a valid email: john@example.com">
