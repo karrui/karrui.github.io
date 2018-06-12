@@ -369,7 +369,29 @@
       </div>
       <div class="section-content">
         <div class="contact-blurb">
-          Write to me at <a href="mailto:karrui.lau@gmail.com">karrui.lau@gmail.com</a>
+          Write to me at <a href="mailto:karrui.lau@gmail.com">karrui.lau@gmail.com</a>, or fill in the contact form below!
+          <form class="contact-form" name="contact" method="POST" netlify-honeypot="interesting-field" netlify>
+            <div class="contact-form-wrapper">
+              <p class="hidden">
+                <label>Don’t fill this out if you're human: <input name="interesting-field" /></label>
+              </p>
+              <div class="field-wrapper validate-input alert-validate" data-validate="Please enter a name">
+                <input type="text" name="name" class="question" id="name"/>
+                <span class="field-label" placeholder="What's your name?"></span>
+              </div>
+              <div class="field-wrapper validate-input alert-validate" data-validate="Please enter a valid email: john@example.com">
+                <input type="email" name="email" class="question" id="email" />
+                <span class="field-label" placeholder="What's your email?"></span>
+              </div>
+              <div class="field-wrapper validate-input alert-validate" data-validate="Please do enter a message">
+                <textarea name="message" class="question" id="message"></textarea>
+                <span class="field-label" placeholder="What do you want to talk about?"></span>
+              </div>
+              
+              <button class="contact-btn" type="submit">Send</button>
+              
+            </div>
+          </form>
         </div>
       </div>
     </section>

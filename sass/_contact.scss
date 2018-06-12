@@ -1,0 +1,175 @@
+@import 'jacket';
+
+@include jacket(non-critical) {
+  body.day-mode {
+    .contact-form-wrapper {
+      // input::-webkit-input-placeholder { color: #999999; }
+      // input:-moz-placeholder { color: #999999; }
+      // input::-moz-placeholder { color: #999999; }
+      // input:-ms-input-placeholder { color: #999999; }
+      
+      // textarea::-webkit-input-placeholder { color: #999999; }
+      // textarea:-moz-placeholder { color: #999999; }
+      // textarea::-moz-placeholder { color: #999999; }
+      // textarea:-ms-input-placeholder { color: #999999; }
+
+      .field-wrapper {
+        border-bottom: 2px solid #adadad;
+
+        .question {
+          color: #555555;
+        }
+
+        .field-label {
+          &:before {
+            background: rgba(219,21,99,1);
+            background: -webkit-linear-gradient(45deg, #d5007d, #e53935);
+            background: -o-linear-gradient(45deg, #d5007d, #e53935);
+            background: -moz-linear-gradient(45deg, #d5007d, #e53935);
+            background: linear-gradient(45deg, #d5007d, #e53935);
+          }
+
+          &:after {
+            color: #999999;
+          }
+        }
+      }
+    }
+  }
+
+  body.night-mode {
+
+  }
+
+
+  .contact-form-wrapper {
+
+    padding: 1.5em 0;
+
+    .hidden {
+      display: none;
+    }
+
+    input,
+    textarea {
+      outline: none;
+      border: none;
+      background: transparent;
+    }
+    
+    textarea:focus, input:focus {
+      border-color: transparent !important;
+    }
+    
+    input:focus::-webkit-input-placeholder { color:transparent; }
+    input:focus:-moz-placeholder { color:transparent; }
+    input:focus::-moz-placeholder { color:transparent; }
+    input:focus:-ms-input-placeholder { color:transparent; }
+    
+    textarea:focus::-webkit-input-placeholder { color:transparent; }
+    textarea:focus:-moz-placeholder { color:transparent; }
+    textarea:focus::-moz-placeholder { color:transparent; }
+    textarea:focus:-ms-input-placeholder { color:transparent; }
+
+    .field-wrapper {
+      width: 100%;
+      position: relative;
+      margin-bottom: 37px;
+
+      .question {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.2;
+      }
+
+      input.question {
+        height: 45px;
+        padding: 0;
+      }
+
+      input.question + .field-label:after {
+        top: 16px;
+        left: 0;
+      }
+      
+      textarea.question {
+        min-height: 115px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+      }
+      
+      textarea.question + .field-label:after {
+        top: 16px;
+        left: 0;
+      }
+      
+      .question:focus + .field-label:after {
+        top: -13px;
+      }
+      
+      .question:focus + .field-label:before {
+        width: 100%;
+      }
+      
+      .has-val.question + .field-label:after {
+        top: -13px;
+      }
+      
+      .has-val.question + .field-label:before {
+        width: 100%;
+      }
+      
+
+      .field-label {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 2px;
+
+          -webkit-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          transition: all 0.4s;
+        }
+
+        &:after {
+          content: attr(placeholder);
+          display: block;
+          width: 100%;
+          position: absolute;
+          top: 0px;
+          left: 0;
+          font-size: 18px;
+          line-height: 1.2;
+
+          -webkit-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          transition: all 0.4s;
+        }
+      }
+    }
+
+    button.contact-btn {
+      padding: 8px 24px;
+      margin: 0 8px;
+      background: transparent;
+      font-weight: 300;
+      font-style: normal;
+      cursor: pointer;
+    }
+  }
+}
