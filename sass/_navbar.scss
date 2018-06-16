@@ -14,6 +14,11 @@
 
       .navbar-container {
         color: $primary-color;
+
+        .mobile-logo {
+          border: double 5px $primary-color;
+          color: $primary-color;
+        }
       }
     }
   }
@@ -31,6 +36,10 @@
 
       .navbar-container {
         color: $night-primary-color;
+        .mobile-logo {
+          border: double 5px $night-primary-color;
+          color: $night-primary-color;
+        }
       }
     }
   }
@@ -40,12 +49,25 @@
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2em 0;
+    padding: 1.5em 0;
     display: flex;
     justify-content: space-between;
     display: flex;
     margin: auto 0;
+    align-items: center;
 
+    .mobile-logo {
+      display: inline;
+      font-size: 2em;
+      letter-spacing: -4px;
+      /* padding-right: 4px; */
+      margin: auto 0;
+      padding: 4px 8.3px 4px 4.3px;
+
+      &:before {
+        content: "Kr."
+      }
+    }
     .name {
       cursor: default;
       font-size: 1.8em;
@@ -143,8 +165,11 @@
     }
 
     .navbar-container {
-      padding-left: 1em;
-      padding-right: 1em;
+      padding: 1.5em 1em;
+
+      .name {
+        display: none;
+      }
     }
     
     .menu {

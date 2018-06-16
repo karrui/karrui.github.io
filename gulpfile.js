@@ -11,4 +11,4 @@ gulp.task('styles', function() {
 
 gulp.task('default', ['styles'], function() {
     gulp.watch('styles/**/*.scss', ['styles']);
-})
+});

@@ -147,3 +147,14 @@ if (!linkSupportsPreload) {
 $(window).scroll(function(){
   $(".intro").css("opacity", 1 - ($(window).scrollTop() - 200) / 600);
 });
+
+$('.question').each(function(){
+  $(this).on('blur', function(){
+      if($(this).val().trim() != "") {
+          $(this).addClass('has-val');
+      }
+      else {
+          $(this).removeClass('has-val');
+      }
+  })    
+})
