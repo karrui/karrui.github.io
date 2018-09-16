@@ -79,3 +79,8 @@
 .devicon-typescript-plain:before {
   content: "\e920";
 }
+
+.devicon-cplusplus-plain:before,
+.devicon-cplusplus-plain-wordmark:before {
+	content: "\e635";
+}
