@@ -116,7 +116,7 @@ $(document).ready(function () {
       $('.moon-icon').addClass('off');
     }
 
-    localStorage.nightmode = $('#light').prop('checked'); 
+    localStorage.nightmode = $('#light').prop('checked');
   }
 });
 
@@ -136,7 +136,7 @@ var DOMTokenListSupports = function(tokenList, token) {
 };
 
 // check for preload compatibility!
-var linkSupportsPreload = DOMTokenListSupports(document.createElement("link").relList, "preload"); 
+var linkSupportsPreload = DOMTokenListSupports(document.createElement("link").relList, "preload");
 if (!linkSupportsPreload) {
   $('head').append('<link rel="stylesheet" type="text/css" href="./styles/non-critical.css">');
   $('head').append('<link rel="stylesheet" type="text/css" href="./styles/devicon-reduced.min.css">');
@@ -148,13 +148,13 @@ if (!linkSupportsPreload) {
 //   $(".intro").css("opacity", 1 - ($(window).scrollTop() - 200) / 600);
 // });
 
-// $('.question').each(function(){
-//   $(this).on('blur', function(){
-//       if($(this).val().trim() != "") {
-//           $(this).addClass('has-val');
-//       }
-//       else {
-//           $(this).removeClass('has-val');
-//       }
-//   })    
-// })
+$('.question').each(function(){
+  $(this).on('blur', function(){
+      if($(this).val().trim() != "") {
+          $(this).addClass('has-val');
+      }
+      else {
+          $(this).removeClass('has-val');
+      }
+  })
+})
