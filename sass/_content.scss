@@ -1,14 +1,15 @@
-@import 'jacket';
-
 @include jacket(critical) {
-
   body.day-mode {
     .container {
       color: $primary-color;
 
       a {
         color: $primary-color;
-        background-image: linear-gradient(120deg, $gradient-left 0%, $gradient-right 100%);
+        background-image: linear-gradient(
+          120deg,
+          $gradient-left 0%,
+          $gradient-right 100%
+        );
       }
 
       .divider {
@@ -17,14 +18,17 @@
     }
   }
 
-
   body.night-mode {
     .container {
       color: $night-primary-color;
 
       a {
         color: $night-primary-color;
-        background-image: linear-gradient(120deg, $night-gradient-left 0%, $night-gradient-right 100%);
+        background-image: linear-gradient(
+          120deg,
+          $night-gradient-left 0%,
+          $night-gradient-right 100%
+        );
       }
 
       .divider {
@@ -34,16 +38,16 @@
   }
 
   .container {
-    font-family: 'Radley', Georgia, 'Times New Roman', Times, serif !important;
+    font-family: "Radley", Georgia, "Times New Roman", Times, serif !important;
     font-size: 18px;
-    max-width:850px;
+    max-width: 850px;
     margin: 0 auto;
 
     p {
       line-height: 1.5em;
     }
 
-    a { 
+    a {
       text-decoration: none;
       font-weight: 600;
       font-style: italic;
@@ -70,7 +74,8 @@
         font-size: 1.9em;
         font-weight: bold;
         letter-spacing: -1px;
-        font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+        font-family: "Libre Baskerville", Georgia, "Times New Roman", Times,
+          serif;
       }
     }
 
@@ -79,7 +84,8 @@
         font-size: 1.5em;
         font-weight: bold;
         letter-spacing: -1px;
-        font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+        font-family: "Libre Baskerville", Georgia, "Times New Roman", Times,
+          serif;
       }
     }
 

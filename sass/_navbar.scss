@@ -1,12 +1,12 @@
-@import 'jacket';
-
 @include jacket(critical) {
   body.day-mode {
     header {
-      a, a:active, a:focus {
+      a,
+      a:active,
+      a:focus {
         color: $primary-color;
         text-decoration: none;
-    
+
         &:visited {
           color: $primary-color;
         }
@@ -25,10 +25,12 @@
 
   body.night-mode {
     header {
-      a, a:active, a:focus {
+      a,
+      a:active,
+      a:focus {
         color: $night-primary-color;
         text-decoration: none;
-    
+
         &:visited {
           color: $night-primary-color;
         }
@@ -45,7 +47,7 @@
   }
 
   .navbar-container {
-    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+    font-family: "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
@@ -65,7 +67,7 @@
       padding: 4px 8.3px 4px 4.3px;
 
       &:before {
-        content: "Kr."
+        content: "Kr.";
       }
     }
     .name {
@@ -82,7 +84,11 @@
         .menu {
           li.nav-item {
             a:hover {
-              background-image: linear-gradient(120deg, $gradient-left 0%, $gradient-right 100%);
+              background-image: linear-gradient(
+                120deg,
+                $gradient-left 0%,
+                $gradient-right 100%
+              );
             }
           }
         }
@@ -94,20 +100,23 @@
         .menu {
           li.nav-item {
             a:hover {
-              background-image: linear-gradient(120deg, $night-gradient-left 0%, $night-gradient-right 100%);
+              background-image: linear-gradient(
+                120deg,
+                $night-gradient-left 0%,
+                $night-gradient-right 100%
+              );
             }
           }
         }
       }
     }
 
-
     .navbar-container {
       padding-left: 2.2em;
       padding-right: 2.2em;
       margin: 0 auto;
     }
-    
+
     .menu {
       margin: auto 0 auto auto;
       padding: 0;
@@ -148,7 +157,8 @@
       .toggle-icon {
         border-bottom: 4px solid $primary-color;
 
-        &:before, &:after {
+        &:before,
+        &:after {
           border-top: 4px solid $primary-color;
         }
       }
@@ -158,7 +168,8 @@
       .toggle-icon {
         border-bottom: 4px solid $night-primary-color;
 
-        &:before, &:after {
+        &:before,
+        &:after {
           border-top: 4px solid $night-primary-color;
         }
       }
@@ -171,7 +182,7 @@
         display: none;
       }
     }
-    
+
     .menu {
       display: none;
     }
@@ -184,7 +195,7 @@
         li.mobile-nav-item {
           list-style: none;
           font-size: 1.5em;
-          padding: .5em 0;
+          padding: 0.5em 0;
 
           a:focus {
             background-size: 100% 88%;
@@ -215,10 +226,11 @@
           padding-top: 22px;
           display: block;
 
-          &:before, &:after {
+          &:before,
+          &:after {
             transition-delay: 0s;
             transform-origin: center;
-            content: '';
+            content: "";
             position: absolute;
             left: 0;
             right: 0;
@@ -232,7 +244,7 @@
             bottom: 4px;
           }
         }
-        
+
         .toggle-label {
           text-align: center;
           display: block;

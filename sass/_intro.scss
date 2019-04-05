@@ -1,5 +1,3 @@
-@import 'jacket';
-
 @include jacket(critical) {
   // MOBILE
   @media screen and (max-width: $navbar-breakpoint) {
@@ -20,11 +18,11 @@
       .intro-tagline {
         font-size: 1.2em;
       }
-  
+
       .current-status {
         font-size: 1.1em;
       }
-  
+
       .contact-pages {
         margin: 1em 0 2em;
         font-size: 1.1em;
@@ -48,12 +46,12 @@
         font-size: 1.1em;
         margin: 0;
       }
-  
+
       .current-status {
         font-size: 1.1em;
         margin: 0;
       }
-  
+
       .contact-pages {
         font-size: 1.1em;
         margin: 0;
@@ -78,11 +76,11 @@
       .intro-tagline {
         font-size: 26px;
       }
-  
+
       .current-status {
         font-size: 22px;
       }
-  
+
       .contact-pages {
         font-size: 1.2em;
       }
@@ -115,10 +113,10 @@
       display: flex;
       justify-content: flex-end;
       // float: right;
-      font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+      font-family: "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
 
       a {
-        margin-right: .5em;
+        margin-right: 0.5em;
       }
     }
   }

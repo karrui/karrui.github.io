@@ -1,10 +1,8 @@
-@import 'jacket';
-
 @include jacket(non-critical) {
   body.day-mode {
     .contact-form {
       .field-wrapper {
-        border-bottom: 2px solid rgb(238,233,237);
+        border-bottom: 2px solid rgb(238, 233, 237);
 
         .question {
           color: $primary-color;
@@ -12,11 +10,27 @@
 
         .field-label {
           &:before {
-            background: rgba(219,21,99,1);
-            background: -webkit-linear-gradient(120deg, $gradient-left 0%, $gradient-right 100%);
-            background: -o-linear-gradient(120deg, $gradient-left 0%, $gradient-right 100%);
-            background: -moz-linear-gradient(120deg, $gradient-left 0%, $gradient-right 100%);
-            background: linear-gradient(120deg, $gradient-left 0%, $gradient-right 100%);
+            background: rgba(219, 21, 99, 1);
+            background: -webkit-linear-gradient(
+              120deg,
+              $gradient-left 0%,
+              $gradient-right 100%
+            );
+            background: -o-linear-gradient(
+              120deg,
+              $gradient-left 0%,
+              $gradient-right 100%
+            );
+            background: -moz-linear-gradient(
+              120deg,
+              $gradient-left 0%,
+              $gradient-right 100%
+            );
+            background: linear-gradient(
+              120deg,
+              $gradient-left 0%,
+              $gradient-right 100%
+            );
           }
 
           &:after {
@@ -27,12 +41,12 @@
 
       button.contact-btn {
         background: transparent;
-        border: 2px solid rgb(238,233,237);
+        border: 2px solid rgb(238, 233, 237);
         color: $primary-color;
 
         &:hover {
-          background: rgba(246,244,246,0.7);
-          border: 2px solid rgba(238,233,237,0.8);
+          background: rgba(246, 244, 246, 0.7);
+          border: 2px solid rgba(238, 233, 237, 0.8);
         }
       }
     }
@@ -41,7 +55,7 @@
   body.night-mode {
     .contact-form {
       .field-wrapper {
-        border-bottom: 2px solid rgb(105,116,129);
+        border-bottom: 2px solid rgb(105, 116, 129);
 
         .question {
           color: $night-primary-color;
@@ -49,11 +63,27 @@
 
         .field-label {
           &:before {
-            background: rgba(219,21,99,1);
-            background: -webkit-linear-gradient(120deg, $night-gradient-left 0%, $night-gradient-right 100%);
-            background: -o-linear-gradient(120deg, $night-gradient-left 0%, $night-gradient-right 100%);
-            background: -moz-linear-gradient(120deg, $night-gradient-left 0%, $night-gradient-right 100%);
-            background: linear-gradient(120deg, $night-gradient-left 0%, $night-gradient-right 100%);
+            background: rgba(219, 21, 99, 1);
+            background: -webkit-linear-gradient(
+              120deg,
+              $night-gradient-left 0%,
+              $night-gradient-right 100%
+            );
+            background: -o-linear-gradient(
+              120deg,
+              $night-gradient-left 0%,
+              $night-gradient-right 100%
+            );
+            background: -moz-linear-gradient(
+              120deg,
+              $night-gradient-left 0%,
+              $night-gradient-right 100%
+            );
+            background: linear-gradient(
+              120deg,
+              $night-gradient-left 0%,
+              $night-gradient-right 100%
+            );
           }
 
           &:after {
@@ -64,20 +94,18 @@
 
       button.contact-btn {
         background: transparent;
-        border: 2px solid rgb(105,116,129);
+        border: 2px solid rgb(105, 116, 129);
         color: $night-primary-color;
 
         &:hover {
-          background: rgba(72,86,101,0.7);
-          border: 2px solid rgba(105,116,129,0.8);
+          background: rgba(72, 86, 101, 0.7);
+          border: 2px solid rgba(105, 116, 129, 0.8);
         }
       }
     }
   }
 
-
   .contact-form {
-
     padding: 2.5em 0;
 
     .hidden {
@@ -90,20 +118,37 @@
       border: none;
       background: transparent;
     }
-    
-    textarea:focus, input:focus {
+
+    textarea:focus,
+    input:focus {
       border-color: transparent !important;
     }
-    
-    input:focus::-webkit-input-placeholder { color:transparent; }
-    input:focus:-moz-placeholder { color:transparent; }
-    input:focus::-moz-placeholder { color:transparent; }
-    input:focus:-ms-input-placeholder { color:transparent; }
-    
-    textarea:focus::-webkit-input-placeholder { color:transparent; }
-    textarea:focus:-moz-placeholder { color:transparent; }
-    textarea:focus::-moz-placeholder { color:transparent; }
-    textarea:focus:-ms-input-placeholder { color:transparent; }
+
+    input:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+    input:focus:-moz-placeholder {
+      color: transparent;
+    }
+    input:focus::-moz-placeholder {
+      color: transparent;
+    }
+    input:focus:-ms-input-placeholder {
+      color: transparent;
+    }
+
+    textarea:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+    textarea:focus:-moz-placeholder {
+      color: transparent;
+    }
+    textarea:focus::-moz-placeholder {
+      color: transparent;
+    }
+    textarea:focus:-ms-input-placeholder {
+      color: transparent;
+    }
 
     .field-wrapper {
       width: 100%;
@@ -127,24 +172,24 @@
         top: 12px;
         left: 0;
       }
-      
+
       textarea.question {
         min-height: 70px;
         padding-top: 13px;
         padding-bottom: 13px;
       }
-      
+
       textarea.question + .field-label:after {
         top: 12px;
         left: 0;
       }
-      
+
       .has-val.question + .field-label:after,
       .question:hover + .field-label:after,
       .question:focus + .field-label:after {
         top: -20px;
       }
-      
+
       .has-val.question + .field-label:before,
       .question:focus + .field-label:before {
         width: 100%;
