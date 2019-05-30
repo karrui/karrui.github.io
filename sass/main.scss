@@ -212,6 +212,30 @@ $night-border-color: #697481;
       U+2215, U+FEFF, U+FFFD;
   }
 
+  span.google-wrapper {
+    display: inline-flex;
+    span {
+      &:nth-child(1) {
+        color: #4285f4;
+      }
+      &:nth-child(2) {
+        color: #db4437;
+      }
+      &:nth-child(3) {
+        color: #f4b400;
+      }
+      &:nth-child(4) {
+        color: #4285f4;
+      }
+      &:nth-child(5) {
+        color: #0f9d58;
+      }
+      &:nth-child(6) {
+        color: #db4437;
+      }
+    }
+  }
+
   body.day-mode {
     background: $bg-color !important;
 
