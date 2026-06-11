@@ -107,7 +107,6 @@
         <ul class="menu">
           <li class="nav-item"><a href="#about">About</a></li>
           <li class="nav-item"><a href="#experience">Experience</a></li>
-          <li class="nav-item"><a href="#projects">Projects</a></li>
           <li class="nav-item"><a href="#contact">Contact</a></li>
         </ul>
         <div class="mobile-hamburger">
@@ -122,7 +121,6 @@
         <ul class="mobile-menu">
           <li class="mobile-nav-item"><a href="#about">About</a></li>
           <li class="mobile-nav-item"><a href="#experience">Experience</a></li>
-          <li class="mobile-nav-item"><a href="#projects">Projects</a></li>
           <li class="mobile-nav-item"><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -145,7 +143,7 @@
           <div class="current-status">
             <strong>Currently: </strong>
             <span
-              >Senior Software Engineer @
+              >Lead Software Engineer @
               <a href="https://open.gov.sg/">Open Government Products</a></span
             >
           </div>
@@ -154,7 +152,7 @@
               >LinkedIn</a
             >
             <a href="https://github.com/karrui" class="github-btn">Github</a>
-            <a href="mailto:contact@karrui.dev" class="mail-btn">Mail</a>
+            <a href="mailto:hello@karrui.dev" class="mail-btn">Mail</a>
           </div>
         </div>
       </section>
@@ -198,6 +196,9 @@
             >
             <i class="devicon-react-original colored"
               ><span class="text">ReactJS</span></i
+            >
+            <i class="devicon-nextjs-plain colored"
+              ><span class="text">Next.js</span></i
             >
             <i class="devicon-nodejs-plain colored"
               ><span class="text">NodeJS</span></i
@@ -244,91 +245,106 @@
           <ul class="company-list">
             <!-- OGP start -->
             <li class="company-wrapper">
-              <div class="timeline">Oct 2021 - Current</div>
+              <div class="timeline">Apr 2024 - Current</div>
               <h2 class="company-info">
-                <span class="job-title">Senior Software Engineer</span>
+                <span class="job-title">Lead Software Engineer</span>
                 <span class="company-name"
                   ><a href="https://open.gov.sg/">Open Government Products</a>
                 </span>
+              </h2>
+              <div class="timeline">Oct 2021 - Apr 2024</div>
+              <h2 class="company-info">
+                <span class="job-title">Senior Software Engineer</span>
               </h2>
               <div class="timeline">Feb 2020 - Oct 2021</div>
               <h2 class="company-info">
                 <span class="job-title">Software Engineer</span>
               </h2>
               <div class="company-desc">
-                We build systems and improve public good. I am mainly
-                responsible for OGP’s Design System and
-                <a href="https://form.gov.sg">FormSG</a>, an official Singapore
-                Government’s form builder application. I was also part of the
-                team tasked to work on Singapore’s COVID-19 response.
+                We build systems and improve public good. I work across design
+                systems, full-stack product development, and developer
+                infrastructure — and was part of the team tasked to work on
+                Singapore’s COVID-19 response.
               </div>
               <ul class="full-desc">
                 <li>
-                  <span>
-                    Epic lead for two major frontend and backend migrations for
-                    <a href="https://github.com/opengovsg/formsg">FormSG</a> as
-                    part of tech debt cleanup, resulting in improved developer
-                    confidence and experience when implementing features.
-                  </span>
-                  <ul>
-                    <li>
-                      Successfully scoped and contributed significantly to the
-                      migration of FormSG’s frontend framework from AngularJS to
-                      modern React.
-                    </li>
-                    <li>
-                      Successfully scoped and completed full rehaul of FormSG’s
-                      backend API endpoints (with backwards compatibility),
-                      which includes renaming, simplifying, and refactoring
-                      endpoints to a more RESTful and meaningful state.
-                    </li>
-                  </ul>
+                  Evolved OGP’s internal design system into
+                  <a href="https://oui.open.gov.sg">oui</a>, an SSR-compatible
+                  successor with 36+ accessible components for Next.js App
+                  Router — now the default design system for newly created
+                  products across the organisation.
                 </li>
                 <li>
-                  <span>
-                    Owner and maintainer of OGP’s internal design system,
-                    released as an
-                    <a
-                      href="https://www.npmjs.com/package/@opengovsg/design-system-react"
-                      >npm package</a
-                    >. This has allowed for much faster product iteration,
-                    visual continuity and consistency across OGP products.
-                  </span>
+                  Diagnosed <a href="https://ask.gov.sg">ask.gov.sg</a>’s
+                  end-of-life framework as a maintainability and open-source
+                  risk and led a 4-month rewrite through influence rather than
+                  positional authority — zero regressions, with measurable
+                  performance and SEO gains; the architecture patterns became
+                  the org-wide
+                  <a href="https://github.com/opengovsg/starter-kit"
+                    >Starter Kit</a
+                  >.
                 </li>
                 <li>
-                  Promoted the use of Storybook and Chromatic as a visual
-                  regression testing and usage-guidelines tool to other software
-                  engineers.
+                  Inherited <a href="https://maps.gov.sg">maps.gov.sg</a> as a
+                  hackathon POC and hardened it with queuing, auth middleware,
+                  and rate limiting — sustaining 20× growth (25k → 502k views)
+                  with no app-level incidents before a clean handoff to a
+                  dedicated team.
                 </li>
                 <li>
-                  Built the entire clinician-facing frontend application for
-                  Singapore’s COVID-19 Appointment System to allow clinic staff
-                  to manage appointments and patients coming in for their
-                  vaccinations.
+                  Built an internal CLI tool that replaces multi-day manual
+                  infrastructure provisioning, generating isolated,
+                  production-ready AWS environments with CI/CD in ~10 minutes —
+                  now the standard for new product infrastructure.
                 </li>
                 <li>
-                  Wrote lambda pipelines to automate parts of patient and case
-                  management tasks relating to Singapore’s COVID-19 Endemic
-                  response.
+                  Embedded in the
+                  <a href="https://github.com/opengovsg/isomer">Isomer</a>
+                  rebuild to set up engineering foundations: CI/CD, Storybook
+                  and Chromatic for design–engineer handoff, and lightweight
+                  ADRs — practices that persisted after handoff.
+                </li>
+                <li>
+                  Tech-led <a href="https://active.gov.sg">MyActiveSG+</a>
+                  end-to-end, building a one-day prototype that secured internal
+                  buy-in and countered a vendor lock-in (saving ~S$12M), and
+                  drove it through two pilots to public launch at ~150k
+                  bookings/month at handoff.
+                </li>
+                <li>
+                  Led the zero-downtime migration of
+                  <a href="https://form.gov.sg">FormSG</a>’s frontend from
+                  AngularJS to React, and a full TypeScript migration of its
+                  REST API to RESTful, end-to-end type-safe conventions.
+                </li>
+                <li>
+                  Built the clinician-facing frontend for Singapore’s national
+                  COVID-19 vaccination appointment system — the primary
+                  interface for clinic staff managing patient vaccinations at
+                  scale.
                 </li>
               </ul>
               <div class="tech-stack">
                 <h3 class="stack">Tech stack:</h3>
                 <div class="tools">
-                  <i class="devicon-javascript-plain colored"
-                    ><span class="text">JavaScript</span></i
-                  >
                   <i class="devicon-typescript-plain colored"
                     ><span class="text">TypeScript</span></i
+                  >
+                  <i class="devicon-javascript-plain colored"
+                    ><span class="text">JavaScript</span></i
                   >
                   <i class="devicon-react-plain colored"
                     ><span class="text">ReactJS</span></i
                   >
-                  <i class="devicon-git-plain colored"
-                    ><span class="text">git</span></i
+                  <i class="devicon-nextjs-plain colored"
+                    ><span class="text">Next.js</span></i
                   >
-                  <i class="devicon-github-plain colored"
-                    ><span class="text">GitHub</span></i
+                  <i class="devicon-nodejs-plain colored"
+                    ><span class="text">NodeJS</span></i
+                  >
+                  <i class="devicon-amazonwebservices-plain-wordmark colored"
+                    ><span class="text">AWS</span></i
                   >
                 </div>
               </div>
@@ -383,100 +399,6 @@
               </div>
             </li>
             <!-- Google end -->
-            <!-- INTELLLEX start -->
-            <li class="company-wrapper">
-              <div class="timeline">May 2018 - Aug 2018</div>
-              <h2 class="company-info">
-                <span class="job-title"
-                  >Software Engineering Intern (Frontend)</span
-                >
-                <span class="company-name"
-                  ><a href="https://www.intelllex.com">INTELLLEX</a></span
-                >
-              </h2>
-              <div class="company-desc">
-                A legal tech startup that helps lawyers search faster, keep
-                notes and organise their research better with AI.
-              </div>
-              <ul class="full-desc">
-                <li>
-                  Implemented new features related to the design overhaul of our
-                  main enterprise application
-                </li>
-                <li>
-                  In charge of making sure rendered components look the same as
-                  the designed prototype
-                </li>
-                <li>
-                  Refactored many tightly coupled components into pure
-                  functional components, improving efficiency and testability
-                </li>
-                <li>Participate in product planning and design</li>
-                <li>
-                  Wrote clean, well-documented and efficient code and tests
-                </li>
-              </ul>
-              <div class="tech-stack">
-                <h3 class="stack">Tech stack:</h3>
-                <div class="tools">
-                  <i class="devicon-javascript-plain colored"
-                    ><span class="text">JavaScript</span></i
-                  >
-                  <i class="devicon-react-plain colored"
-                    ><span class="text">ReactJS</span></i
-                  >
-                  <i class="devicon-git-plain colored"
-                    ><span class="text">git</span></i
-                  >
-                  <i class="devicon-gitlab-plain colored"
-                    ><span class="text">GitLab</span></i
-                  >
-                </div>
-              </div>
-            </li>
-            <!-- INTELLLEX end -->
-            <!-- NUS TA start -->
-            <li class="company-wrapper">
-              <div class="timeline">Jan 2018 - May 2018</div>
-              <h2 class="company-info">
-                <span class="job-title">Teaching Assistant</span>
-                <span class="company-name"
-                  ><a href="http://www.nus.edu.sg/"
-                    >National University of Singapore</a
-                  ></span
-                >
-              </h2>
-              <div class="company-desc">
-                Conduct weekly tutorials and code reviews for CS2103, Software
-                Engineering.
-              </div>
-              <ul class="full-desc">
-                <li>
-                  Review student’s weekly progress of their module project on
-                  their Github pull requests
-                </li>
-                <li>
-                  Topics discussed: OO system analysis, modeling and design,
-                  implementation, testing, software engineering principles,
-                  forming test cases
-                </li>
-              </ul>
-              <div class="tech-stack">
-                <h3 class="stack">Tech stack:</h3>
-                <div class="tools">
-                  <i class="devicon-java-plain colored"
-                    ><span class="text">Java</span></i
-                  >
-                  <i class="devicon-git-plain colored"
-                    ><span class="text">git</span></i
-                  >
-                  <i class="devicon-github-plain colored"
-                    ><span class="text">Github</span></i
-                  >
-                </div>
-              </div>
-            </li>
-            <!-- NUS TA end -->
           </ul>
           <!-- RESUME LINK -->
           <div class="resume-section">
@@ -497,7 +419,7 @@
         <div class="section-content">
           <div class="contact-blurb">
             Write to me at
-            <a href="mailto:contact@karrui.dev">contact@karrui.dev</a>, or fill
+            <a href="mailto:hello@karrui.dev">hello@karrui.dev</a>, or fill
             in the contact form below!
           </div>
           <form
@@ -578,7 +500,7 @@
             <a href="https://github.com/karrui">>>Github</a>
             <a href="https://linkedin.com/in/karrui">>>LinkedIn</a>
             <a href="./docs/cv.pdf">>>Resume</a>
-            <a href="mailto:contact@karrui.dev">>>Email</a>
+            <a href="mailto:hello@karrui.dev">>>Email</a>
           </li>
         </ul>
       </div>
